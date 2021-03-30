@@ -1,0 +1,13 @@
+.navbarContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    height: 50px;
+    border-bottom: 1px solid gray;
+    align-items: center;
+    background: #5680e9;
+}
+
+.loginSignupLogoutContainer {
+    display: flex;
+}
