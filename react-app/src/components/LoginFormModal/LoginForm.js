@@ -1,21 +1,41 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
-import { login } from "../../services/auth";
+import { useDispatch } from "react-redux";
+import * as sessionActions from "../../store/session";
+import { closeLogin } from "../../store/modal";
+
+import "./LoginForm.css";
 
 const LoginForm = ({ authenticated, setAuthenticated }) => {
+  const dispatch = useDispatch();
   const [errors, setErrors] = useState([]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const onLogin = async (e) => {
+  const onLogin = (e) => {
     e.preventDefault();
-    const user = await login(email, password);
+    const user = dispatch(sessionActions.login({ email, password }));
+
     if (!user.errors) {
       setAuthenticated(true);
     } else {
       setErrors(user.errors);
     }
+
+    dispatch(closeLogin());
   };
+
+  const email1 = "demo@aa.io";
+  const password1 = "password";
+
+  const demoUser = (e) => {
+    setEmail(email1);
+    setPassword(password1);
+    dispatch(sessionActions.login({ email: email1, password: password1 }));
+    dispatch(closeLogin());
+  };
+
+  const closeModal = () => dispatch(closeLogin()); // if you want a button to close the modal
 
   const updateEmail = (e) => {
     setEmail(e.target.value);
@@ -57,6 +77,13 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
         />
         <button type="submit">Login</button>
       </div>
+      <button
+        onClick={(e) => demoUser(e)}
+        className="LoginModalSubmit"
+        type="submit"
+      >
+        Demo User
+      </button>
     </form>
   );
 };

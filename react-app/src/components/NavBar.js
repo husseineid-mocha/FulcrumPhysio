@@ -1,8 +1,12 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import LogoutButton from './auth/LogoutButton';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import LogoutButton from "./auth/LogoutButton";
+import { useDispatch, useSelector } from "react-redux";
+import { openLogin, openSignup } from "../store/modal";
 
 const NavBar = ({ setAuthenticated }) => {
+  const dispatch = useDispatch();
+
   return (
     <nav>
       <ul>
@@ -13,12 +17,12 @@ const NavBar = ({ setAuthenticated }) => {
         </li>
         <li>
           <NavLink to="/login" exact={true} activeClassName="active">
-            Login
+            <p onClick={() => dispatch(openLogin())}>Log in</p>
           </NavLink>
         </li>
         <li>
           <NavLink to="/sign-up" exact={true} activeClassName="active">
-            Sign Up
+            <p onClick={() => dispatch(openSignup())}>Sign up</p>
           </NavLink>
         </li>
         <li>
@@ -32,6 +36,6 @@ const NavBar = ({ setAuthenticated }) => {
       </ul>
     </nav>
   );
-}
+};
 
 export default NavBar;
