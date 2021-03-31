@@ -5,16 +5,19 @@ import App from "./App";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import configureStore from "./store";
+import { StylesProvider } from "@material-ui/core/styles";
 
 const store = configureStore();
 
 function Root() {
   return (
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>
+    <StylesProvider injectFirst>
+      <Provider store={store}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </Provider>
+    </StylesProvider>
   );
 }
 ReactDOM.render(

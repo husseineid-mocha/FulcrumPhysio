@@ -5,7 +5,19 @@
     height: 50px;
     border-bottom: 1px solid gray;
     align-items: center;
-    background: #5680e9;
+    background: #f0f0f0;
+}
+
+.loginButton {
+    background-color: green;
+}
+
+a {
+    text-decoration: none;
+}
+
+.loginSignupContainer {
+    display: flex;
 }
 
 .loginSignupLogoutContainer {
