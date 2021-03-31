@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import NavBar from "./components/Navbar";
 import Home from "./components/Home";
+import Footer from "./components/Footer";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import UsersList from "./components/UsersList";
 import User from "./components/User";
@@ -39,22 +40,23 @@ function App() {
         authenticated={authenticated}
         setAuthenticated={setAuthenticated}
       />
+      <LoginModal
+        authenticated={authenticated}
+        setAuthenticated={setAuthenticated}
+      ></LoginModal>
+      <SignUpModal
+        authenticated={authenticated}
+        setAuthenticated={setAuthenticated}
+      />
       <Switch>
         <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/login" exact={true}>
-          <LoginModal
-            authenticated={authenticated}
-            setAuthenticated={setAuthenticated}
-          ></LoginModal>
-        </Route>
-        <Route path="/sign-up" exact={true}>
-          <SignUpModal
+          <Home
             authenticated={authenticated}
             setAuthenticated={setAuthenticated}
           />
         </Route>
+        <Route path="/login" exact={true}></Route>
+        <Route path="/sign-up" exact={true}></Route>
         <ProtectedRoute
           path="/users"
           exact={true}
@@ -73,6 +75,7 @@ function App() {
           <h1>My Home Page</h1>
         </ProtectedRoute>
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }

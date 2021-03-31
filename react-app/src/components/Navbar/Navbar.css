@@ -1,11 +1,11 @@
 .navbarContainer {
     display: flex;
     justify-content: space-between;
-    padding: 5px;
-    height: 50px;
-    border-bottom: 1px solid gray;
+    padding: 0px 70px;
+    height: 100px;
     align-items: center;
     background: #f0f0f0;
+    box-shadow: 1px 1px 8px rgb(112 111 111 / 36%);
 }
 
 .loginButton {
@@ -16,10 +16,21 @@ a {
     text-decoration: none;
 }
 
+button.MuiButtonBase-root.MuiButton-root.MuiButton-text.sc-bdDrOH.dJbxgy {
+    margin-right: 6px;
+    height: 50px;
+    width: 100px;
+}
+
 .loginSignupContainer {
     display: flex;
 }
 
 .loginSignupLogoutContainer {
     display: flex;
+}
+
+.logo {
+    height: 75px;
+    width: 135px;
 }

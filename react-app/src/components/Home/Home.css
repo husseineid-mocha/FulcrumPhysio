@@ -1,0 +1,143 @@
+.headerImage {
+    background-image: linear-gradient( 180deg, #104db3 0%, #104db3 5%, rgba(16, 77, 179, 0) 20%), url("https://s32374.pcdn.co/wp-content/uploads/2019/12/header-homepage.jpg");
+    height: 100vh;
+    max-height: 1400px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.align-center {
+    width: 900px;
+}
+
+.firstText {
+    color: white;
+    font-size: 64px;
+    line-height: 80px;
+    font-weight: normal;
+    margin-bottom: 18px;
+}
+
+.secondText {
+    color: white;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 300;
+}
+
+.page-heading-large {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-content-containers {
+    display: flex;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.pageBreak {
+    display: flex;
+}
+
+.pageBreak1 {
+    width: 50%;
+    background-color: #f0f0f0;
+    height: 240px;
+    clip-path: polygon(0 0, 0% 100%, 100% 50%);
+}
+
+.pageBreak2 {
+    height: 240px;
+    width: 50%;
+    background-color: #0663f0;
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.pageBreak3 {
+    position: absolute;
+    height: 120px;
+    width: 100%;
+    background-color: #104db3;
+    box-shadow: 0 -5px 5px -5px #333;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.pageBreak4 {
+    position: absolute;
+    height: 120px;
+    width: 100%;
+    margin-top: 120px;
+    background-color: #f0f0f0;
+    box-shadow: 0 -5px 5px -5px #333;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+
+.gridContainer {
+    height: 100vh;
+    max-height: 1200px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box1and2 {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.box3and4 {
+    display: flex;
+}
+
+.box1 {
+    font-size: 24px;
+    line-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 20px;
+    height: 400px;
+    width: 400px;
+    /* border: 1px solid black; */
+}
+
+.box2 {
+    margin-left: 20px;
+    height: 400px;
+    width: 400px;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../../images/PT1.jpeg);
+}
+
+.box3 {
+    margin-right: 20px;
+    height: 400px;
+    width: 400px;
+    border: 1px solid black;
+}
+
+.box4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 20px;
+    height: 400px;
+    width: 400px;
+    border: 1px solid black;
+}

@@ -5,6 +5,45 @@ import * as sessionActions from "../../store/session";
 import { closeLogin } from "../../store/modal";
 
 import "./LoginForm.css";
+import { Button } from "@material-ui/core";
+import styled from "styled-components";
+
+const StyledButton = styled(Button)`
+  background-color: #2657bc;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 7px 14px;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 10px 15px;
+  height: 48px;
+  width: 400px;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 5px;
+  &:hover {
+    background-color: #5b7b90;
+  }
+`;
+
+const StyledButton2 = styled(Button)`
+  background-color: white;
+  color: black;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 7px 14px;
+  font-size: 16px;
+  line-height: 18px;
+  border: 1px solid black
+  padding: 10px 15px;
+  height: 48px;
+  width: 400px;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 5px;
+  &:hover {
+    background-color: #5b7b90;
+  }
+`;
 
 const LoginForm = ({ authenticated, setAuthenticated }) => {
   const dispatch = useDispatch();
@@ -50,41 +89,59 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
   }
 
   return (
-    <form onSubmit={onLogin}>
-      <div>
-        {errors.map((error) => (
-          <div>{error}</div>
-        ))}
-      </div>
-      <div>
-        <label htmlFor="email">Email</label>
-        <input
-          name="email"
-          type="text"
-          placeholder="Email"
-          value={email}
-          onChange={updateEmail}
-        />
-      </div>
-      <div>
-        <label htmlFor="password">Password</label>
-        <input
-          name="password"
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={updatePassword}
-        />
-        <button type="submit">Login</button>
-      </div>
-      <button
-        onClick={(e) => demoUser(e)}
-        className="LoginModalSubmit"
-        type="submit"
-      >
-        Demo User
-      </button>
-    </form>
+    <div className="login-container">
+      <div id="login-title">Welcome Back</div>
+      <form onSubmit={onLogin}>
+        <div>
+          {errors.map((error) => (
+            <div className="login__errors">{error}</div>
+          ))}
+        </div>
+        <div>
+          <div className="login-input-container">
+            <input
+              name="email"
+              type="text"
+              placeholder="Email"
+              value={email}
+              onChange={updateEmail}
+              className="login-inputs"
+              required
+            />
+          </div>
+          <div>
+            <input
+              name="password"
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={updatePassword}
+              className="login-inputs"
+              required
+            />
+            <div className="loginAndDemo">
+              <div>
+                <div>
+                  <StyledButton type="submit">Log in</StyledButton>
+                </div>
+                <div className="login-or">
+                  <div className="before-or"></div>
+                  <div>or</div>
+                  <div className="after-or"></div>
+                </div>
+              </div>
+              <StyledButton2
+                onClick={(e) => demoUser(e)}
+                type="submit"
+                id="demoBtn"
+              >
+                Demo User
+              </StyledButton2>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
   );
 };
 

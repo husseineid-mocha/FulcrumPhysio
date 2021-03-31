@@ -1,15 +1,16 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import LogoutButton from "../auth/LogoutButton";
 import { useDispatch, useSelector } from "react-redux";
 import { openLogin, openSignup } from "../../store/modal";
+import { logout } from "../../store/session";
+import logo from "../../images/fulcrumLogo.png";
 
 import "./Navbar.css";
 import { Button } from "@material-ui/core";
 import styled from "styled-components";
 
 const StyledButton = styled(Button)`
-  background-color: #154360;
+  background-color: #2657bc;
   color: #fff;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   padding: 7px 14px;
@@ -23,12 +24,18 @@ const NavBar = ({ authenticated, setAuthenticated }) => {
 
   const user = useSelector((state) => state.session);
 
+  const onLogout = (e) => {
+    dispatch(logout());
+    setAuthenticated(false);
+  };
+
   return (
     <nav>
+      {/* <div className="navbar"> */}
       <div className="navbarContainer">
         <div>
           <NavLink to="/" exact={true} activeClassName="active">
-            Home
+            <img src={logo} className="logo" />
           </NavLink>
         </div>
         <div className="loginSignupLogoutContainer">
@@ -37,44 +44,34 @@ const NavBar = ({ authenticated, setAuthenticated }) => {
             {authenticated === true ? (
               ""
             ) : (
-              <NavLink to="/login" exact={true} activeClassName="active">
-                {/* <button onClick={() => dispatch(openLogin())}>Log in</button> */}
-                <StyledButton onClick={() => dispatch(openLogin())}>
-                  Log in
-                </StyledButton>
-              </NavLink>
+              <StyledButton onClick={() => dispatch(openLogin())}>
+                Log in
+              </StyledButton>
             )}
           </div>
           <div>
             {authenticated === true ? (
               ""
             ) : (
-              <NavLink to="/sign-up" exact={true} activeClassName="active">
-                <StyledButton onClick={() => dispatch(openSignup())}>
-                  Sign up
-                </StyledButton>
-              </NavLink>
+              <StyledButton onClick={() => dispatch(openSignup())}>
+                Sign up
+              </StyledButton>
             )}
           </div>
           {/* </div> */}
           <div>
-            {authenticated === false ? (
-              ""
-            ) : (
-              <NavLink to="/user" exact={true} activeClassName="active">
-                Users
-              </NavLink>
-            )}
+            {authenticated === false ? "" : <StyledButton>User</StyledButton>}
           </div>
           <div>
             {authenticated === false ? (
               ""
             ) : (
-              <LogoutButton setAuthenticated={setAuthenticated} />
+              <StyledButton onClick={onLogout}>Logout</StyledButton>
             )}
           </div>
         </div>
       </div>
+      {/* </div> */}
     </nav>
   );
 };

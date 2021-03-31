@@ -1,60 +1,123 @@
-/* modal css .ReactModal__Overlay {
-    opacity: 0;
-    transform: translateY(100px);
-    transition: all 200ms ease-in-out;
-    z-index: 15;
-}
-
-.ReactModal__Overlay--after-open { */
-
-
-/* background-color: hsla(0, 0%, 94.9%, 0.9); */
-
-
-/* opacity: 1;
-    transform: translateY(0px);
-}
-
-.ReactModal__Overlay--before-close {
-    opacity: 0;
-    transform: translateY(100px); */
-
-
-/* transform: translateY(100px); */
-
-
-/* transition: all 500ms ease-in-out; */
-
-
-/* } */
-
-
-/* .OuterModal {
+.login-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.2);
-    height: 100%;
     width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    border: none;
+    font-size: 20px;
+    margin: 0 auto;
+    max-width: 450px;
+    width: 1000px;
+    height: 420px;
+    border-radius: 20px;
+    box-sizing: border-box;
 }
 
-.InnerModal {
-    text-decoration: none;
-    height: 100%;
-    background: white;
-    height: fit-content;
-    border-radius: 20px;
-    /* position: fixed; */
+.login-inputs {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    width: 400px;
+    height: 46px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    margin: 0;
+}
 
+.close__modal {
+    position: relative;
+    font-size: 16px;
+    bottom: 20px;
+    right: 250px;
+    border: none;
+    border-radius: 50%;
+    color: gray;
+}
 
-/* } */
+.close__modal:hover {
+    background-color: rgb(244, 244, 244);
+}
 
+#login-title {
+    display: flex;
+    position: relative;
+    bottom: 30px;
+}
 
-/* .InnerModal:focus {
-    outline: 0;
-} */
+#demoBtn {
+    background-color: white;
+    color: black;
+    border: 2px solid gray;
+    font-size: 14px;
+}
+
+#demoBtn:hover {
+    border: 2px solid black;
+}
+
+.login-or {
+    margin: 1em auto;
+    position: relative;
+    bottom: 0px;
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+    /* font-weight: 800; */
+}
+
+.before-or {
+    display: inline-block;
+    position: relative;
+    right: 30px;
+    width: 160px;
+    top: 100px;
+    border-top: 1px solid lightgray;
+    content: " ";
+    position: absolute;
+    top: 0.7em;
+}
+
+.after-or {
+    display: inline-block;
+    position: relative;
+    left: 30px;
+    width: 160px;
+    top: 100px;
+    border-top: 1px solid lightgray;
+    content: " ";
+    position: absolute;
+    top: 0.7em;
+}
+
+.loginAndDemo {
+    margin-top: 18px;
+}
+
+.login__switch {
+    color: gray;
+    font-size: 16px;
+    position: relative;
+    top: 20px;
+    right: 153px;
+}
+
+.login_switch_btn {
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.login__errors {
+    font-size: 14px;
+    color: red;
+    position: relative;
+    left: 170px;
+}
+
+.login-input-container {
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
