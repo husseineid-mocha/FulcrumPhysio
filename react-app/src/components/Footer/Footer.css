@@ -8,6 +8,7 @@
 .footerContent {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .logoFooter img {
@@ -38,4 +39,9 @@ h5 {
 
 .link__logo2 {
     margin-left: 10px;
+}
+
+.disclaimer {
+    font-size: 12px;
+    padding: 35px;
 }

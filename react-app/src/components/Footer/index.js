@@ -28,11 +28,22 @@ function Footer() {
               </div>
               <div className="link__logo2">
                 <a href="https://github.com/husseineid-mocha" target="_blank">
-                  <GitHubIcon style={{ color: "white" }} />
+                  <GitHubIcon style={{ color: "black" }} />
                 </a>
               </div>
             </div>
           </div>
+        </div>
+        <div className="disclaimer">
+          Medical content is intended for informational and educational purposes
+          only. Information and potential diagnoses obtained through this
+          application should not be treated as a doctor's advice, a medical
+          consultation, or a firm diagnosis. Always see you healthcare provider
+          regarding any medical conditions. Fulcrum Physical Therapy and the
+          developer of this application expressly disclaim all liability for
+          your reliance on information found in this app. If you are
+          experiencing a medical emergency, please call 911 or the appropriate
+          emergency services number in your area.
         </div>
       </div>
     </div>

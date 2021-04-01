@@ -8,6 +8,7 @@ import ProtectedRoute from "./components/auth/ProtectedRoute";
 import UsersList from "./components/UsersList";
 import User from "./components/User";
 import Homepage from "./components/Homepage";
+import Exercises from "./components/Exercises";
 import { authenticate } from "./services/auth";
 
 import * as sessionActions from "./store/session";
@@ -56,8 +57,18 @@ function App() {
             setAuthenticated={setAuthenticated}
           />
         </Route>
-        <ProtectedRoute authenticated={authenticated} exact path="/home">
+        <ProtectedRoute authenticated={authenticated} exact={true} path="/home">
           <Homepage
+            authenticated={authenticated}
+            setAuthenticated={setAuthenticated}
+          />
+        </ProtectedRoute>
+        <ProtectedRoute
+          authenticated={authenticated}
+          exact={true}
+          path="/exercises"
+        >
+          <Exercises
             authenticated={authenticated}
             setAuthenticated={setAuthenticated}
           />

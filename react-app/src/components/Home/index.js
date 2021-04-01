@@ -47,17 +47,17 @@ function Home({ authenticated, setAuthenticated }) {
         </div>
       </div>
       <div>
-        <div class="pageBreak">
-          <div class="pageBreak1">
+        <div className="pageBreak">
+          <div className="pageBreak1">
             <div className="slopedDiv1"></div>
           </div>
-          <div class="pageBreak2">
+          <div className="pageBreak2">
             <div className="slopedDiv2"></div>
           </div>
-          <div class="pageBreak3">
+          <div className="pageBreak3">
             <div className="slopedDiv3"></div>
           </div>
-          <div class="pageBreak4">
+          <div className="pageBreak4">
             <div className="slopedDiv4"></div>
           </div>
         </div>
