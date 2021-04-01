@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { openLogin, openSignup } from "../../store/modal";
 import { logout } from "../../store/session";
@@ -21,12 +21,14 @@ const StyledButton = styled(Button)`
 
 const NavBar = ({ authenticated, setAuthenticated }) => {
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const user = useSelector((state) => state.session);
 
   const onLogout = (e) => {
     dispatch(logout());
     setAuthenticated(false);
+    return history.push("/");
   };
 
   return (

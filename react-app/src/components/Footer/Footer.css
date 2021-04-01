@@ -2,10 +2,12 @@
     height: 160px;
     border-top: 1px solid grey;
     display: flex;
+    justify-content: space-between;
 }
 
 .footerContent {
     display: flex;
+    justify-content: space-between;
 }
 
 .logoFooter img {

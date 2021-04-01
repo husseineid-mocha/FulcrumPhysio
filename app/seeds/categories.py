@@ -2,15 +2,15 @@ from app.models import db
 from app.models.category import Category
 
 
-def seed_category():
+def seed_categories():
 
-    hip = Category(name='Hip'),
-    knee = Category(name='Knee'),
-    ankle = Category(name='Ankle'),
-    shoulder = Category(name='Shoulder'),
-    elbow = Category(name='Elbow'),
-    wrist = Category(name='Wrist'),
-    neck = Category(name='Neck'),
+    hip = Category(name='Hip')
+    knee = Category(name='Knee')
+    ankle = Category(name='Ankle')
+    shoulder = Category(name='Shoulder')
+    elbow = Category(name='Elbow')
+    wrist = Category(name='Wrist')
+    neck = Category(name='Neck')
     back = Category(name='Back')
 
     db.session.add(hip)
@@ -25,6 +25,6 @@ def seed_category():
     db.session.commit()
 
 
-def undo_category():
+def undo_categories():
     db.session.execute('TRUNCATE categories CASCADE;')
     db.session.commit()

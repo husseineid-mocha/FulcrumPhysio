@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { Redirect, useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import * as sessionActions from "../../store/session";
 import { closeLogin } from "../../store/modal";
 
@@ -47,13 +47,17 @@ const StyledButton2 = styled(Button)`
 
 const LoginForm = ({ authenticated, setAuthenticated }) => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const [errors, setErrors] = useState([]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const onLogin = (e) => {
+  const user = useSelector((state) => state.session.user);
+
+  const onLogin = async (e) => {
     e.preventDefault();
-    const user = dispatch(sessionActions.login({ email, password }));
+    const user = await dispatch(sessionActions.login({ email, password }));
+    console.log(user);
 
     if (!user.errors) {
       setAuthenticated(true);
@@ -61,7 +65,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
       setErrors(user.errors);
     }
 
-    dispatch(closeLogin());
+    // dispatch(closeLogin());
   };
 
   const email1 = "demo@aa.io";
@@ -73,6 +77,11 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
     dispatch(sessionActions.login({ email: email1, password: password1 }));
     dispatch(closeLogin());
   };
+
+  console.log(authenticated);
+  if (authenticated) {
+    return <Redirect to="/home" />;
+  }
 
   const closeModal = () => dispatch(closeLogin()); // if you want a button to close the modal
 

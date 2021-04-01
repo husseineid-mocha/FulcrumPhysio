@@ -28,7 +28,7 @@ function Footer() {
               </div>
               <div className="link__logo2">
                 <a href="https://github.com/husseineid-mocha" target="_blank">
-                  <GitHubIcon style={{ color: "black" }} />
+                  <GitHubIcon style={{ color: "white" }} />
                 </a>
               </div>
             </div>
