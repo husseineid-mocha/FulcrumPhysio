@@ -1,4 +1,39 @@
-.FooterContainer {
-    height: 200px;
+.footerContainer {
+    height: 160px;
     border-top: 1px solid grey;
+    display: flex;
+}
+
+.footerContent {
+    display: flex;
+}
+
+.logoFooter img {
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+}
+
+.footerInformation {
+    padding: 20px;
+}
+
+h2,
+h5 {
+    color: black;
+    text-align: center;
+}
+
+.link__logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.link__logo1 {
+    margin-right: 10px;
+}
+
+.link__logo2 {
+    margin-left: 10px;
 }

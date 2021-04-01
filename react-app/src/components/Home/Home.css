@@ -84,6 +84,7 @@ strong {
 .gridContainer {
     height: 100vh;
     max-height: 1200px;
+    min-height: 1200px;
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
@@ -93,7 +94,7 @@ strong {
 
 .box1and2 {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 125px;
 }
 
 .box3and4 {
@@ -107,16 +108,17 @@ strong {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-right: 20px;
+    margin-right: 40px;
     height: 400px;
     width: 400px;
+    text-align: center;
     /* border: 1px solid black; */
 }
 
 .box2 {
-    margin-left: 20px;
+    margin-left: 40px;
     height: 400px;
-    width: 400px;
+    width: 450px;
     /* border: 1px solid black; */
     border-radius: 5px;
     background-size: cover;
@@ -125,19 +127,29 @@ strong {
 }
 
 .box3 {
-    margin-right: 20px;
+    margin-right: 40px;
     height: 400px;
-    width: 400px;
-    border: 1px solid black;
+    width: 450px;
+    background-size: 100% 100%;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../images/PT2.png);
 }
 
 .box4 {
+    font-size: 24px;
+    line-height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-left: 20px;
+    margin-left: 40px;
     height: 400px;
     width: 400px;
-    border: 1px solid black;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
 }

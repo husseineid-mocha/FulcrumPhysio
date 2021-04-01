@@ -65,18 +65,18 @@ function Home({ authenticated, setAuthenticated }) {
       <div className="gridContainer">
         <div className="box1and2">
           <div className="box1">
-            <h1>Home Exercise Program</h1>
+            <h1>Take Charge of Your Care</h1>
             Use our algorithm based home exercise program selector to get
             exercises specific to your condition
           </div>
           <div className="box2"></div>
         </div>
         <div className="box3and4">
-          <div className="box3">Hello</div>
+          <div className="box3"></div>
           <div className="box4">
-            <h1>Patient experience</h1>
-            Our Home Exercise Program gives you the tools you need to improve
-            patient adherence and satisfaction.
+            <h1>Educate Yourself</h1>
+            Find out exactly what's going on with your body and what you need to
+            get back to 100%
           </div>
         </div>
       </div>
