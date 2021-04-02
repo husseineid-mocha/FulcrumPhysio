@@ -7,8 +7,9 @@ exercise_routes = Blueprint('exercises', __name__)
 @exercise_routes.route('/', methods=['PUT'])
 def get_exercises():
     categoryId = request.json
-    exercises = Exercise.query.filter(
-        Exercise.categoryId == categoryId).all()
-    print('XXXXXXXX')
-    print(categoryId.to_dict())
-    # return jsonify(categoryId)
+    categoryId = (categoryId["categoryId"])
+    exercises = Exercise.query.filter_by(
+        categoryId=categoryId).all()
+    exercises = [exercise.to_dict() for exercise in exercises]
+    print(exercises)
+    return (exercises)

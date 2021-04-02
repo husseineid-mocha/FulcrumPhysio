@@ -10,4 +10,8 @@ def get_categories():
     categoryList = []
     for category in categories:
         categoryList.append(category.to_dict())
+    for category in categoryList:
+        exercises = Exercise.query.filter_by(categoryId=category['id']).all()
+        category['exercises'] = [exercise.to_dict() for exercise in exercises]
+    print(categoryList)
     return jsonify(categoryList)

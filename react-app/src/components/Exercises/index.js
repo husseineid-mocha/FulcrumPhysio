@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { fetchCategories } from "../../store/category";
-import { fetchExercises } from "../../store/exercise";
+import { saveExercisesToState } from "../../store/exercise";
+// import { fetchExercises } from "../../store/exercise";
 
 import "./Exercises.css";
 import { Button } from "@material-ui/core";
@@ -23,15 +24,15 @@ function Exercises({ authenticated, setAuthenticated }) {
   const dispatch = useDispatch();
 
   const categories = useSelector((state) => Object.values(state.category));
-  console.log(categories);
+  const exercises = useSelector((state) => state.exercise);
+  console.log(exercises);
 
   useEffect(() => {
     dispatch(fetchCategories());
   }, []);
 
-  const clickCategory = (categoryId) => {
-    console.log(categoryId);
-    dispatch(fetchExercises(categoryId));
+  const clickCategory = (category) => {
+    dispatch(saveExercisesToState(category.exercises));
   };
 
   return (
@@ -41,10 +42,10 @@ function Exercises({ authenticated, setAuthenticated }) {
           <div className="categoryContainer">
             <div className="categoryText">Categories</div>
             <div className="nameList">
-              {categories.map((category, idx) => (
+              {categories?.map((category, idx) => (
                 <StyledButton
                   key={idx}
-                  onClick={() => clickCategory(category.id)}
+                  onClick={() => clickCategory(category)}
                   className="categoryName"
                 >
                   {category.name}
@@ -54,7 +55,11 @@ function Exercises({ authenticated, setAuthenticated }) {
           </div>
           <div className="selectedContainer">selectedContainer</div>
         </div>
-        <div className="exercisesContainer">exercises</div>
+        <div className="exercisesContainer">
+          exercises
+          {exercises &&
+            exercises?.map((exercise) => <div>{exercise.description}</div>)}
+        </div>
       </div>
     </div>
   );
