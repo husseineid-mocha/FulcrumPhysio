@@ -3,11 +3,13 @@ import thunk from "redux-thunk";
 import sessionReducer from "./session";
 import modalReducer from "./modal";
 import categoryReducer from "./category";
+import exerciseReducer from "./exercise";
 
 const rootReducer = combineReducers({
   session: sessionReducer,
   modal: modalReducer,
   category: categoryReducer,
+  exercise: exerciseReducer,
 });
 
 let enhancer;

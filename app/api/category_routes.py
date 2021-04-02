@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify
-from app.models import Category
+from app.models import Category, Exercise
 
 category_routes = Blueprint('categories', __name__)
 

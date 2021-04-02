@@ -22,12 +22,7 @@ const categoryReducer = (state = {}, action) => {
   let newState = {};
   switch (action.type) {
     case GET_CATEGORIES:
-      action.payload.forEach((category) => {
-        newState[category.id] = {
-          name: category.name,
-        };
-      });
-      return newState;
+      return action.payload;
     default:
       return state;
   }
