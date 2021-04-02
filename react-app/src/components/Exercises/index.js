@@ -15,6 +15,9 @@ const StyledButton = styled(Button)`
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   padding: 7px 14px;
   width: 100%;
+  height: 4.1em;
+  border-radius: 0px;
+  justify-content: left;
   &:hover {
     background-color: #5b7b90;
   }
@@ -33,6 +36,10 @@ function Exercises({ authenticated, setAuthenticated }) {
 
   const clickCategory = (category) => {
     dispatch(saveExercisesToState(category.exercises));
+  };
+
+  const exerciseModal = () => {
+    console.log("hello");
   };
 
   return (
@@ -56,9 +63,20 @@ function Exercises({ authenticated, setAuthenticated }) {
           <div className="selectedContainer">selectedContainer</div>
         </div>
         <div className="exercisesContainer">
-          exercises
-          {exercises &&
-            exercises?.map((exercise) => <div>{exercise.description}</div>)}
+          <div className="exercisesText">Select Exercises</div>
+          <div className="exerciseContainer">
+            {exercises &&
+              exercises?.map((exercise, idx) => (
+                <div key={idx} className="exerciseTile">
+                  <img
+                    onClick={exerciseModal}
+                    className="exerciseImages"
+                    src={exercise.image}
+                  />
+                  <div>{exercise.name}</div>
+                </div>
+              ))}
+          </div>
         </div>
       </div>
     </div>

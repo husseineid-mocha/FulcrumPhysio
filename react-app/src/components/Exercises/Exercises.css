@@ -1,19 +1,21 @@
 .container {
     display: flex;
     justify-content: center;
-    padding: 30px;
+    padding: 20px;
 }
 
 .outerExerciseContainer {
     height: 1000px;
     width: 100vw;
-    border: 1px solid black;
+    border: 5px solid #3252a8;
     display: flex;
     padding: 15px;
+    border-radius: 8px;
+    background: #f0f0f0;
 }
 
 .categoryAndSelectedContainer {
-    flex: 0.25;
+    flex: 0.22;
 }
 
 .categoryContainer {
@@ -23,6 +25,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    border-radius: 5px;
 }
 
 .selectedContainer {
@@ -31,9 +34,10 @@
 }
 
 .exercisesContainer {
-    flex: 0.75;
+    flex: 0.78;
     border: 1px solid black;
     margin-left: 20px;
+    border-radius: 5px;
 }
 
 .nameList {
@@ -46,9 +50,44 @@
 }
 
 .categoryText {
-    height: 10%;
+    height: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    background-color: #3252a8;
+    color: white;
+    font-weight: bold;
+}
+
+.exerciseContainer {
+    padding: 8px;
+    display: flex;
+}
+
+.exercisesText {
+    background: 3252a8;
+    background: #3252a8;
+    height: 4%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.exerciseImages {
+    height: 160px;
+    width: 160px;
+    max-width: 160px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    /* padding: 10px; */
+}
+
+.exerciseTile {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    max-width: 160px;
 }
