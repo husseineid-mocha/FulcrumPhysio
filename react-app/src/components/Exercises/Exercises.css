@@ -1,5 +1,45 @@
-.exerciseContainer {
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.outerExerciseContainer {
     height: 1000px;
     width: 100vw;
     border: 1px solid black;
+    display: flex;
+    padding: 15px;
+}
+
+.categoryAndSelectedContainer {
+    flex: 0.25;
+}
+
+.categoryContainer {
+    height: 60%;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.selectedContainer {
+    border: 1px solid black;
+    height: 35%;
+}
+
+.exercisesContainer {
+    flex: 0.75;
+    border: 1px solid black;
+    margin-left: 20px;
+}
+
+.nameList {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }

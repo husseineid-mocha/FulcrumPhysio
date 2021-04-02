@@ -32,7 +32,7 @@ function Homepage({ authenticated, setAuthenticated }) {
         </h1>
       </div>
       <div className="containers2and3">
-        <div className="container2">Container2</div>
+        <div className="container2"></div>
         <div className="containers3and4">
           <div className="container3">
             <p>Or maybe you know exactly what you need?</p>
