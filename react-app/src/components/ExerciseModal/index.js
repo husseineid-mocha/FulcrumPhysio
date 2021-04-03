@@ -2,37 +2,31 @@ import React from "react";
 import Modal from "react-modal";
 import { useSelector, useDispatch } from "react-redux";
 import { closeExercise } from "../../store/modal.js";
-import LoginForm from "./LoginForm";
+import ExercisePicker from "./ExercisePicker";
 
 Modal.setAppElement(document.getElementById("root"));
 
-const ExerciseModal = ({ authenticated, setAuthenticated }) => {
+const ExerciseModal = ({ exercise, authenticated, setAuthenticated }) => {
   const dispatch = useDispatch();
-  const loginState = useSelector((state) => state.modal.loginShow);
+  const exerciseState = useSelector((state) => state.modal.exerciseShow);
 
-  const closeModal = () => dispatch(closeLogin());
-  // const customStyles = {
-  //   content: {},
-  // };
+  const closeModal = () => dispatch(closeExercise());
 
   return (
     <>
       <Modal
-        isOpen={loginState}
+        isOpen={exerciseState}
         closeTimeoutMS={200}
         onRequestClose={closeModal}
-        contentLabel="Login Modal"
-        overlayClassName="OuterModal"
+        contentLabel="Exercise Modal"
+        overlayClassName="OuterModalExercise"
         // style={customStyles}
-        className="InnerModal"
+        className="InnerModalExercise"
       >
-        <LoginForm
-          authenticated={authenticated}
-          setAuthenticated={setAuthenticated}
-        />
+        <ExercisePicker />
       </Modal>
     </>
   );
 };
 
-export default LoginModal;
+export default ExerciseModal;

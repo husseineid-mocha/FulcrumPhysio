@@ -1,0 +1,48 @@
+/* modal css */
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 200ms ease-in-out;
+    z-index: 15;
+}
+
+.ReactModal__Overlay--after-open {
+    /* background-color: hsla(0, 0%, 94.9%, 0.9); */
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.ReactModal__Overlay--before-close {
+    opacity: 0;
+    transform: translateY(100px);
+    /* transform: translateY(100px); */
+    /* transition: all 500ms ease-in-out; */
+}
+
+.OuterModalExercise {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    border: none;
+}
+
+.InnerModalExercise {
+    text-decoration: none;
+    height: 100%;
+    background: white;
+    height: fit-content;
+    border-radius: 20px;
+    /* position: fixed; */
+}
+
+.InnerModalExercise:focus {
+    outline: 0;
+}

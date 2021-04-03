@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { fetchCategories } from "../../store/category";
 import { saveExercisesToState } from "../../store/exercise";
+import { openExercise } from "../../store/modal";
 // import { fetchExercises } from "../../store/exercise";
 
 import "./Exercises.css";
@@ -24,6 +25,8 @@ const StyledButton = styled(Button)`
 `;
 
 function Exercises({ authenticated, setAuthenticated }) {
+  const [exercise, setExercise] = useState([]);
+  console.log(exercise);
   const dispatch = useDispatch();
 
   const categories = useSelector((state) => Object.values(state.category));
@@ -38,8 +41,9 @@ function Exercises({ authenticated, setAuthenticated }) {
     dispatch(saveExercisesToState(category.exercises));
   };
 
-  const exerciseModal = () => {
-    console.log("hello");
+  const clickImage = (exercise) => {
+    // setExercise(exercise);
+    dispatch(openExercise(exercise));
   };
 
   return (
@@ -69,7 +73,7 @@ function Exercises({ authenticated, setAuthenticated }) {
               exercises?.map((exercise, idx) => (
                 <div key={idx} className="exerciseTile">
                   <img
-                    onClick={exerciseModal}
+                    onClick={() => dispatch(openExercise(exercise))}
                     className="exerciseImages"
                     src={exercise.image}
                   />

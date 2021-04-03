@@ -29,9 +29,10 @@ export const closeSignup = () => {
   };
 };
 
-export const openExercise = () => {
+export const openExercise = (exercise) => {
   return {
     type: MODAL_OPEN_EXERCISE,
+    exercise,
   };
 };
 
@@ -63,7 +64,10 @@ const modalReducer = (state = initialState, action) => {
       newState = Object.assign({}, state, { signupShow: false });
       return newState;
     case MODAL_OPEN_EXERCISE:
-      newState = Object.assign({}, state, { exerciseShow: true });
+      newState = Object.assign({}, state, {
+        exerciseShow: true,
+        exercise: action.exercise,
+      });
       return newState;
     case MODAL_CLOSE_EXERCISE:
       newState = Object.assign({}, state, { exerciseShow: false });

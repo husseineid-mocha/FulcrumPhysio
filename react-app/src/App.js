@@ -15,6 +15,7 @@ import * as sessionActions from "./store/session";
 
 import LoginModal from "./components/LoginFormModal";
 import SignUpModal from "./components/SignUpFormModal";
+import ExerciseModal from "./components/ExerciseModal";
 
 function App() {
   const dispatch = useDispatch();
@@ -47,6 +48,10 @@ function App() {
         setAuthenticated={setAuthenticated}
       ></LoginModal>
       <SignUpModal
+        authenticated={authenticated}
+        setAuthenticated={setAuthenticated}
+      />
+      <ExerciseModal
         authenticated={authenticated}
         setAuthenticated={setAuthenticated}
       />
