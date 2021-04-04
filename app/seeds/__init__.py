@@ -2,7 +2,7 @@ from flask.cli import AppGroup
 from .users import seed_users, undo_users
 from .categories import seed_categories, undo_categories
 from .exercises import seed_exercises, undo_exercises
-from .questions import seed_questions, undo_questions
+from .questions import seed_questions, undo_questions, seed_from_csv
 
 # Creates a seed group to hold our commands
 # So we can type `flask seed --help`
@@ -17,6 +17,7 @@ def seed():
     seed_categories()
     seed_exercises()
     seed_questions()
+    seed_from_csv()
     # Add other seed functions here
 
 # Creates the `flask seed undo` command

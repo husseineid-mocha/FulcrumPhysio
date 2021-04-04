@@ -1,5 +1,6 @@
 from app.models import db
 from app.models.question import Question
+import csv
 
 
 def seed_questions():
@@ -59,4 +60,18 @@ def seed_questions():
 
 def undo_questions():
     db.session.execute('TRUNCATE questions CASCADE;')
+    db.session.commit()
+
+
+def seed_from_csv():
+    with open ('app/seeds/questions.csv') as csvFile:
+        data = csv.reader(csvFile, delimiter=',')
+        FirstLine = True
+        questions = []
+        next(data, None)
+        for row in data:
+            print(row)
+            questions.append(Question(promptId=row[0], prompt=row[1], promptType=row[2], displayText=row[3], displayValue=row[4], dx=row[5]))
+    print(questions)
+    db.session.add_all(questions)
     db.session.commit()
