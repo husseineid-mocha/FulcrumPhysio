@@ -3,6 +3,7 @@ import { NavLink, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { openLogin, openSignup } from "../../store/modal";
 import { logout } from "../../store/session";
+import { removeSelectedExercise } from "../../store/selected";
 import logo from "../../images/fulcrumLogo.png";
 
 import "./Navbar.css";
@@ -26,6 +27,7 @@ const NavBar = ({ authenticated, setAuthenticated }) => {
   const user = useSelector((state) => state.session);
 
   const onLogout = (e) => {
+    dispatch(removeSelectedExercise());
     dispatch(logout());
     setAuthenticated(false);
     return history.push("/");

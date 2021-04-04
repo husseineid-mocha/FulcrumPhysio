@@ -1,12 +1,6 @@
-const GET_EXERCISES = "exercise/get";
 const SAVE_EXERCISES = "exercises/save";
 const SAVE_EXERCISE = "exercise/save";
-
-// const getExercises = (exercises) => {
-//   return {
-//     type: GET_EXERCISES,
-//   };
-// };
+// const SAVE_TO_SELECTED = "exercises/save/selected";
 
 const saveExercises = (exercises) => ({
   type: SAVE_EXERCISES,
@@ -18,6 +12,11 @@ const saveExercise = (exercise) => ({
   exercise,
 });
 
+// const saveToSelected = (exercise) => ({
+//   type: SAVE_TO_SELECTED,
+//   exercise,
+// });
+
 export const saveExercisesToState = (exercises) => (dispatch) => {
   dispatch(saveExercises(exercises));
 };
@@ -26,25 +25,9 @@ export const saveExerciseToState = (exercise) => (dispatch) => {
   dispatch(saveExercise(exercise));
 };
 
-//get exercises for the categoryId
-// export const fetchExercises = (categoryId) => async (dispatch) => {
-//   console.log(categoryId);
-//   const response = await fetch(`/api/exercise/`, {
-//     method: "PUT",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify({
-//       categoryId,
-//     }),
-//   });
-//   if (response.ok) {
-//     const data = await response.json();
-//     dispatch(getExercises(data));
-//     return data;
-//   } else {
-//     return response;
-//   }
+// export const saveExerciseToSelected = (exercise) => (dispatch) => {
+//   console.log(exercise);
+//   dispatch(saveToSelected(exercise));
 // };
 
 let initialState = [];
@@ -52,12 +35,14 @@ let initialState = [];
 const exerciseReducer = (state = initialState, action) => {
   let newState = {};
   switch (action.type) {
-    // case GET_EXERCISES:
-    //   return action.payload;
     case SAVE_EXERCISES:
       return action.exercises;
     case SAVE_EXERCISE:
       return action.exercise;
+    // case SAVE_TO_SELECTED:
+    //   newState = { exercise: action.exercise };
+    //   console.log(newState);
+    // return newState;
     default:
       return state;
   }
