@@ -4,12 +4,14 @@ import sessionReducer from "./session";
 import modalReducer from "./modal";
 import categoryReducer from "./category";
 import exerciseReducer from "./exercise";
+import selectedReducer from "./selected";
 
 const rootReducer = combineReducers({
   session: sessionReducer,
   modal: modalReducer,
   category: categoryReducer,
   exercise: exerciseReducer,
+  selected: selectedReducer,
 });
 
 let enhancer;

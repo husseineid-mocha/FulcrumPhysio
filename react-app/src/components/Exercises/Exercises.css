@@ -30,7 +30,8 @@
 
 .selectedContainer {
     border: 1px solid black;
-    height: 35%;
+    border-radius: 5px;
+    height: 47.5%;
 }
 
 .exercisesContainer {
@@ -91,4 +92,20 @@
     flex-direction: column;
     padding: 10px;
     max-width: 160px;
+}
+
+.textAndButton {
+    height: 11.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #3252a8;
+    color: white;
+    font-weight: bold;
+}
+
+.miniExerciseImage {
+    height: 40px;
+    width: 40px;
 }
