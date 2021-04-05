@@ -59,7 +59,7 @@ function Exercises({ authenticated, setAuthenticated }) {
   };
 
   const saveToUser = (selected, userId) => {
-    dispatch(saveExercisesToUser(selected, userId));
+    dispatch(saveExercisesToUser(Object.values(selected), userId));
   };
 
   return (

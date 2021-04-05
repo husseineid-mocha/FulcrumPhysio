@@ -42,7 +42,7 @@ export const saveExercisesToUser = (exercises, userId) => async (dispatch) => {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(exercises, userId),
+    body: JSON.stringify({ exercises, userId }),
   });
   const data = await response.json();
   dispatch(saveToUser(data));
