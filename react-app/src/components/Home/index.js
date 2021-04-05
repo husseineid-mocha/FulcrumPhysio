@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import { useDispatch } from "react-redux";
 import { openSignup } from "../../store/modal";
+import { Redirect } from "react-router-dom";
 
 import { Button } from "@material-ui/core";
 import styled from "styled-components";
@@ -21,6 +22,10 @@ const StyledButton1 = styled(Button)`
 
 function Home({ authenticated, setAuthenticated }) {
   const dispatch = useDispatch();
+
+  if (authenticated) {
+    return <Redirect to="/home" />;
+  }
 
   return (
     <div>

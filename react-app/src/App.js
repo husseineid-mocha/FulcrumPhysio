@@ -88,7 +88,7 @@ function App() {
           <UsersList />
         </ProtectedRoute>
         <ProtectedRoute
-          path="/users/:userId"
+          path="/users/:id"
           exact={true}
           authenticated={authenticated}
         >

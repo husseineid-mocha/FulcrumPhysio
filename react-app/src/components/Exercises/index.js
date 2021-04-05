@@ -4,8 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchCategories } from "../../store/category";
 import { saveExercisesToState } from "../../store/exercise";
 import { openExercise } from "../../store/modal";
+import { saveExercisesToUser } from "../../store/selected";
+
 import { restoreSelectedExercises } from "../../store/selected";
-// import { fetchExercises } from "../../store/exercise";
 
 import "./Exercises.css";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
@@ -35,9 +36,10 @@ function Exercises({ authenticated, setAuthenticated }) {
   const categories = useSelector((state) => Object.values(state.category));
   const exercises = useSelector((state) => state.exercise);
   const selected = useSelector((state) => state.selected);
+  const user = useSelector((state) => state.session.user);
   const [select, setSelect] = useState({});
   console.log(selected);
-  // console.log(exercises);
+  // console.log(user);
 
   useEffect(() => {
     setSelect(selected);
@@ -56,10 +58,9 @@ function Exercises({ authenticated, setAuthenticated }) {
     dispatch(saveExercisesToState(category.exercises));
   };
 
-  // const clickImage = (exercise) => {
-  //   // setExercise(exercise);
-  //   dispatch(openExercise(exercise));
-  // };
+  const saveToUser = (selected, userId) => {
+    dispatch(saveExercisesToUser(selected, userId));
+  };
 
   return (
     <div className="container">
@@ -83,7 +84,10 @@ function Exercises({ authenticated, setAuthenticated }) {
             <div className="textAndButton">
               <div className="selectedContainerText">Selected Exercises</div>
               <div>
-                <IconButton className="iconButton">
+                <IconButton
+                  onClick={() => saveToUser(selected, user.id)}
+                  className="iconButton"
+                >
                   <AddCircleOutlineIcon />
                 </IconButton>
               </div>

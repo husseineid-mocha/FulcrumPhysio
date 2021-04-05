@@ -1,6 +1,7 @@
 const SAVE_TO_SELECTED = "selected/save";
 const REMOVE_SELECTED = "selected/remove";
 const RESTORE_SELECTED = "selected/restore";
+const SAVE_TO_USER = "selected/save/user";
 
 const saveToSelected = (exercise) => ({
   type: SAVE_TO_SELECTED,
@@ -16,6 +17,11 @@ const restoreSelected = (exercises) => ({
   exercises,
 });
 
+const saveToUser = (exercises) => ({
+  type: SAVE_TO_USER,
+  exercises,
+});
+
 export const saveExerciseToSelected = (exercise) => (dispatch) => {
   console.log(exercise);
   dispatch(saveToSelected(exercise));
@@ -27,6 +33,20 @@ export const removeSelectedExercise = () => (dispatch) => {
 
 export const restoreSelectedExercises = (exercises) => (dispatch) => {
   dispatch(restoreSelected(exercises));
+};
+
+export const saveExercisesToUser = (exercises, userId) => async (dispatch) => {
+  console.log(exercises, userId);
+  const response = await fetch(`/api/selected/`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(exercises, userId),
+  });
+  const data = await response.json();
+  dispatch(saveToUser(data));
+  return data;
 };
 
 const selectedReducer = (state = {}, action) => {

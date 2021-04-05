@@ -25,12 +25,22 @@ const NavBar = ({ authenticated, setAuthenticated }) => {
   const history = useHistory();
 
   const user = useSelector((state) => state.session);
+  console.log(user);
+  console.log(user.id);
 
   const onLogout = (e) => {
     dispatch(removeSelectedExercise());
     dispatch(logout());
     setAuthenticated(false);
     return history.push("/");
+  };
+
+  const onUser = (e) => {
+    if (user) {
+      return history.push(`/users/${user.user.id}`);
+    } else {
+      alert("Try again!");
+    }
   };
 
   return (
@@ -64,7 +74,11 @@ const NavBar = ({ authenticated, setAuthenticated }) => {
           </div>
           {/* </div> */}
           <div>
-            {authenticated === false ? "" : <StyledButton>User</StyledButton>}
+            {authenticated === false ? (
+              ""
+            ) : (
+              <StyledButton onClick={onUser}>User</StyledButton>
+            )}
           </div>
           <div>
             {authenticated === false ? (

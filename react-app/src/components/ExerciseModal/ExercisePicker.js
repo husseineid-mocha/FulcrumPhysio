@@ -6,6 +6,18 @@ import { closeExercise } from "../../store/modal";
 import { saveExerciseToSelected } from "../../store/selected";
 
 import "./ExerciseModal.css";
+import { Button } from "@material-ui/core";
+import styled from "styled-components";
+
+const StyledButton = styled(Button)`
+  background-color: #2657bc;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 7px 14px;
+  &:hover {
+    background-color: #5b7b90;
+  }
+`;
 
 const ExercisePicker = ({ authenticated, setAuthenticated }) => {
   const dispatch = useDispatch();
@@ -59,7 +71,7 @@ const ExercisePicker = ({ authenticated, setAuthenticated }) => {
                     placeholder="0"
                     value={sets}
                     onChange={(e) => setSets(e.target.value)}
-                    className="setInput"
+                    className="inputField"
                     required
                   ></input>
                 </div>
@@ -71,7 +83,7 @@ const ExercisePicker = ({ authenticated, setAuthenticated }) => {
                     placeholder="0"
                     value={reps}
                     onChange={(e) => setReps(e.target.value)}
-                    className="repInput"
+                    className="inputField"
                     required
                   ></input>
                 </div>
@@ -83,14 +95,14 @@ const ExercisePicker = ({ authenticated, setAuthenticated }) => {
                     placeholder="0"
                     value={timesPerWeek}
                     onChange={(e) => setTimesPerWeek(e.target.value)}
-                    className="timesPerWeekInput"
+                    className="inputField"
                     required
                   ></input>
                 </div>
               </div>
-              <div>
-                <button type="submit">Add Exercise</button>
-              </div>
+            </div>
+            <div>
+              <StyledButton type="submit">Add Exercise</StyledButton>
             </div>
           </div>
         </div>
