@@ -8,13 +8,11 @@ import DeleteIcon from "@material-ui/icons/Delete";
 function User() {
   const [user, setUser] = useState({});
   const [exercises, setExercises] = useState({});
+  console.log(exercises);
 
   // Notice we use useParams here instead of getting the params
   // From props.
   const { id } = useParams();
-  // const userInfo = useSelector((state) => state.session);
-  // const userInfo = useSelector((state) => state.session);
-  // console.log(userInfo);
 
   useEffect(() => {
     async function fetchExercises() {
@@ -50,8 +48,12 @@ function User() {
       },
       body: JSON.stringify({ exerciseId: exerciseId, userId: userId }),
     });
+    for (const exercise in exercises) {
+      delete exercise.exerciseId;
+    }
+    console.log(exercises);
+    // return setExercises(deletedList);
   };
-
 
   return (
     <div>

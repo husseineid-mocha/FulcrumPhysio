@@ -32,6 +32,12 @@
     border: 1px solid black;
     border-radius: 5px;
     height: 47.5%;
+    overflow: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
 }
 
 .exercisesContainer {

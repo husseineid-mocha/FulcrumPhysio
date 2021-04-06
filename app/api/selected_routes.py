@@ -46,8 +46,10 @@ def get_userExercises(id):
 def delete_userExercise():
     data = request.get_json()
     userId = data['userId']
+    exerciseId = data['exerciseId']
     print(userId)
     entry = UserExercise.query.filter_by(
         userId=userId).filter_by(exerciseId=exerciseId).first()
-    print(entry)
-    print(data['exerciseId'])
+    db.session.delete(entry)
+    db.session.commit()
+    return {"message": 'success'}
