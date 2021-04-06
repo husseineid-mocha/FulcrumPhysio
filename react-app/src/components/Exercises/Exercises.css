@@ -106,6 +106,39 @@
 }
 
 .miniExerciseImage {
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
+    margin-right: 25px;
+}
+
+.miniExerciseBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid #3252a8;
+    padding: 7px;
+    margin-top: 7px;
+    font-weight: 450;
+}
+
+.miniExerciseImageAndInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.miniExerciseName {
+    margin-bottom: 10px;
+    font-weight: 800px;
+}
+
+.bigSelectedBox {
+    padding: 0px 5px 5px 5px;
+}
+
+.MuiSvgIcon-root {
+    color: white;
 }

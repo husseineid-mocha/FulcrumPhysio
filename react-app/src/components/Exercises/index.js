@@ -13,6 +13,7 @@ import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import IconButton from "@material-ui/core/IconButton";
 import { Button } from "@material-ui/core";
 import styled from "styled-components";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const StyledButton = styled(Button)`
   background-color: #2657bc;
@@ -37,13 +38,16 @@ function Exercises({ authenticated, setAuthenticated }) {
   const exercises = useSelector((state) => state.exercise);
   const selected = useSelector((state) => state.selected);
   const user = useSelector((state) => state.session.user);
-  const [select, setSelect] = useState({});
-  console.log(selected);
+  const [selectedExercises, setSelectedExercises] = useState("");
+  // console.log(selectedExercises);
   // console.log(user);
 
-  useEffect(() => {
-    setSelect(selected);
-  }, []);
+  // useEffect(() => {
+  //   localStorage.setItem("selected", JSON.stringify(selected));
+  // }, [selected]);
+
+  // const exercisesFromStorage = localStorage.getItem("selected");
+  // console.log(exercisesFromStorage);
 
   useEffect(() => {
     dispatch(fetchCategories());
@@ -84,25 +88,35 @@ function Exercises({ authenticated, setAuthenticated }) {
             <div className="textAndButton">
               <div className="selectedContainerText">Selected Exercises</div>
               <div>
-                <IconButton
-                  onClick={() => saveToUser(selected, user.id)}
-                  className="iconButton"
+                <Tooltip
+                  title="Add Exercises to Program"
+                  key="home"
+                  placement="bottom"
+                  className="tooltip"
+                  arrow={true}
                 >
-                  <AddCircleOutlineIcon />
-                </IconButton>
+                  <IconButton
+                    onClick={() => saveToUser(selected, user.id)}
+                    className="iconButton"
+                  >
+                    <AddCircleOutlineIcon />
+                  </IconButton>
+                </Tooltip>
               </div>
             </div>
-            <div>
+            <div className="bigSelectedBox">
               {Object.values(selected).map((exercise, idx) => (
-                <div key={idx}>
+                <div className="miniExerciseBox" key={idx}>
                   <div>
                     <div className="miniExerciseName">{exercise.name}</div>
                   </div>
-                  <img className="miniExerciseImage" src={exercise.image} />
-                  <div className="miniSetsRepsTimes">
-                    <div> Sets: {exercise.sets}</div>
-                    <div> Reps: {exercise.reps}</div>
-                    <div> Times Per Week:{exercise.timesPerWeek}</div>
+                  <div className="miniExerciseImageAndInfo">
+                    <img className="miniExerciseImage" src={exercise.image} />
+                    <div className="miniSetsRepsTimes">
+                      <div> Sets: {exercise.sets}</div>
+                      <div> Reps: {exercise.reps}</div>
+                      <div> Times Per Week:{exercise.timesPerWeek}</div>
+                    </div>
                   </div>
                 </div>
               ))}

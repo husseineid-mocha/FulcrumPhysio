@@ -1,0 +1,48 @@
+.userContainer {
+    display: flex;
+    /* flex-direction: column; */
+    padding: 30px;
+}
+
+.profileWelcome {
+    /* display: flex; */
+    padding: 30px 30px 0px 30px;
+    font-size: larger;
+}
+
+.exerciseContainers {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.ExerciseImage {
+    height: 100px;
+    width: 100px;
+    margin-right: 25px;
+}
+
+.ExerciseBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid #3252a8;
+    padding: 7px;
+    margin-top: 7px;
+    font-weight: 450;
+    height: 150px;
+}
+
+.ExerciseImageAndInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ExerciseName {
+    margin-bottom: 10px;
+    font-weight: 800px;
+}

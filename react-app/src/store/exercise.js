@@ -1,6 +1,6 @@
 const SAVE_EXERCISES = "exercises/save";
 const SAVE_EXERCISE = "exercise/save";
-// const SAVE_TO_SELECTED = "exercises/save/selected";
+// const DELETE_EXERCISE = "exercises/save/selected";
 
 const saveExercises = (exercises) => ({
   type: SAVE_EXERCISES,
@@ -12,11 +12,6 @@ const saveExercise = (exercise) => ({
   exercise,
 });
 
-// const saveToSelected = (exercise) => ({
-//   type: SAVE_TO_SELECTED,
-//   exercise,
-// });
-
 export const saveExercisesToState = (exercises) => (dispatch) => {
   dispatch(saveExercises(exercises));
 };
@@ -24,11 +19,6 @@ export const saveExercisesToState = (exercises) => (dispatch) => {
 export const saveExerciseToState = (exercise) => (dispatch) => {
   dispatch(saveExercise(exercise));
 };
-
-// export const saveExerciseToSelected = (exercise) => (dispatch) => {
-//   console.log(exercise);
-//   dispatch(saveToSelected(exercise));
-// };
 
 let initialState = [];
 
@@ -39,10 +29,6 @@ const exerciseReducer = (state = initialState, action) => {
       return action.exercises;
     case SAVE_EXERCISE:
       return action.exercise;
-    // case SAVE_TO_SELECTED:
-    //   newState = { exercise: action.exercise };
-    //   console.log(newState);
-    // return newState;
     default:
       return state;
   }
