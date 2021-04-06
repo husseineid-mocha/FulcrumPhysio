@@ -2,6 +2,7 @@ const SAVE_TO_SELECTED = "selected/save";
 const REMOVE_SELECTED = "selected/remove";
 const RESTORE_SELECTED = "selected/restore";
 const SAVE_TO_USER = "selected/save/user";
+const CLEAR_SELECTED = "selected/clear";
 
 const saveToSelected = (exercise) => ({
   type: SAVE_TO_SELECTED,
@@ -22,6 +23,10 @@ const saveToUser = (exercises) => ({
   exercises,
 });
 
+const clearSelected = () => ({
+  type: CLEAR_SELECTED,
+});
+
 export const saveExerciseToSelected = (exercise) => (dispatch) => {
   console.log(exercise);
   dispatch(saveToSelected(exercise));
@@ -33,6 +38,10 @@ export const removeSelectedExercise = () => (dispatch) => {
 
 export const restoreSelectedExercises = (exercises) => (dispatch) => {
   dispatch(restoreSelected(exercises));
+};
+
+export const clearSelectedExercises = () => (dispatch) => {
+  dispatch(clearSelected());
 };
 
 export const saveExercisesToUser = (exercises, userId) => async (dispatch) => {
@@ -62,6 +71,8 @@ const selectedReducer = (state = {}, action) => {
       return newState;
     case RESTORE_SELECTED:
       newState = { ...state, exercises: action.exercises };
+      return newState;
+    case CLEAR_SELECTED:
       return newState;
     default:
       return state;

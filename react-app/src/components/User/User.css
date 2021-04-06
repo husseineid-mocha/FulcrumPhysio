@@ -46,3 +46,37 @@
     margin-bottom: 10px;
     font-weight: 800px;
 }
+
+.profileSidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0.33 1;
+    justify-content: center;
+    border: 1px solid black;
+    height: fit-content;
+    margin-right: 14px;
+}
+
+.exerciseContainersAndButton {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+    border: 6px solid #3252a8;
+    padding: 20px;
+    border-radius: 5px;
+    height: 63em;
+    overflow: scroll;
+}
+
+.addExerciseButton {
+    margin-top: 10px;
+}
+
+.yourExercisesText {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}

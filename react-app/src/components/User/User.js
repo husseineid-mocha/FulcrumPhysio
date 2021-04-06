@@ -1,11 +1,28 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Redirect, useHistory } from "react-router-dom";
 
 import "./User.css";
 import DeleteIcon from "@material-ui/icons/Delete";
+import { Button } from "@material-ui/core";
+import styled from "styled-components";
+
+const StyledButton = styled(Button)`
+  background-color: #2657bc;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 7px 14px;
+  height: 4.1em;
+  border-radius: 4px;
+  justify-content: center;
+  &:hover {
+    background-color: #5b7b90;
+  }
+`;
 
 function User() {
+  const history = useHistory();
   const [user, setUser] = useState({});
   const [exercises, setExercises] = useState({});
   console.log(exercises);
@@ -40,19 +57,22 @@ function User() {
     return null;
   }
 
-  const deleteExercise = (exerciseId, userId) => {
-    fetch(`/api/selected/delete`, {
+  const deleteExercise = async (exerciseId, userId) => {
+    await fetch(`/api/selected/delete`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ exerciseId: exerciseId, userId: userId }),
     });
-    for (const exercise in exercises) {
-      delete exercise.exerciseId;
-    }
-    console.log(exercises);
-    // return setExercises(deletedList);
+    const list = { ...exercises };
+    delete list[exerciseId];
+    setExercises(list);
+    console.log(list);
+  };
+
+  const addExercise = () => {
+    history.push("/exercises");
   };
 
   return (
@@ -61,33 +81,45 @@ function User() {
         <strong>Welcome Back</strong> {user.username}
       </div>
       <div className="userContainer">
-        <div>
-          <strong>Email</strong> {user.email}
+        <div className="profileSidebar">
+          <div>Exercises</div>
+          <div>User Information</div>
         </div>
-        <div className="exerciseContainers">
-          {Object.values(exercises).map((exercise, idx) => (
-            <div className="ExerciseBox" key={idx}>
-              <div>
-                <div className="ExerciseName">
-                  {exercise.name}{" "}
-                  <button
-                    onClick={() => deleteExercise(exercise.id, user.id)}
-                    className="deleteButton"
-                  >
-                    <DeleteIcon />
-                  </button>
+
+        <div className="exerciseContainersAndButton">
+          <div className="yourExercisesText">Selected Exercises</div>
+          <div className="exerciseContainers">
+            {Object.values(exercises).map((exercise, idx) => (
+              <div className="ExerciseBox" key={idx}>
+                <div>
+                  <div className="ExerciseName">
+                    {exercise.name}{" "}
+                    <button
+                      onClick={() => deleteExercise(exercise.id, user.id)}
+                      className="deleteButton"
+                    >
+                      <DeleteIcon />
+                    </button>
+                  </div>
+                </div>
+                <div className="ExerciseImageAndInfo">
+                  <img className="ExerciseImage" src={exercise.image} />
+                  <div className="SetsRepsTimes">
+                    <div> Sets: {exercise.sets}</div>
+                    <div> Reps: {exercise.reps}</div>
+                    <div> Times Per Week:{exercise.timesPerWeek}</div>
+                  </div>
                 </div>
               </div>
-              <div className="ExerciseImageAndInfo">
-                <img className="ExerciseImage" src={exercise.image} />
-                <div className="SetsRepsTimes">
-                  <div> Sets: {exercise.sets}</div>
-                  <div> Reps: {exercise.reps}</div>
-                  <div> Times Per Week:{exercise.timesPerWeek}</div>
-                </div>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <StyledButton
+            className="addExerciseButton"
+            type="submit"
+            onClick={addExercise}
+          >
+            Add Exercise
+          </StyledButton>
         </div>
       </div>
     </div>

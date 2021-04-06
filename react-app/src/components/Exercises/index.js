@@ -6,7 +6,7 @@ import { saveExercisesToState } from "../../store/exercise";
 import { openExercise } from "../../store/modal";
 import { saveExercisesToUser } from "../../store/selected";
 
-import { restoreSelectedExercises } from "../../store/selected";
+import { clearSelectedExercises } from "../../store/selected";
 
 import "./Exercises.css";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
@@ -64,6 +64,8 @@ function Exercises({ authenticated, setAuthenticated }) {
 
   const saveToUser = (selected, userId) => {
     dispatch(saveExercisesToUser(Object.values(selected), userId));
+
+    dispatch(clearSelectedExercises());
   };
 
   return (
