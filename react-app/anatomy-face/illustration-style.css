@@ -1,0 +1,87 @@
+#anawrapper {
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 0 0;
+	background-color: transparent;
+	min-width: 220px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+#anawrapper svg {
+	max-height: 100%;
+	width: 100%;
+	margin: 0;
+}
+.gob, .goa{
+	fill: #72B8FC;
+	opacity: 0.05;
+	-webkit-transition: fill 0.1s ease;
+	-moz-transition: fill 0.1s ease;
+	-o-transition: fill 0.1s ease;
+	transition: fill 0.1s ease;
+	cursor: pointer;
+}
+.gob:hover, .goa:hover{
+	opacity: 0.4;
+}
+#anatip {
+	font: 14px/16px Trebuchet MS, Helvetica, Arial, sans-serif;
+	display: none;
+	padding: 5px;
+	max-width: 40%;
+	border: 1px solid #404040;
+	color: #404040;
+	z-index: 1000;
+	float: left;
+	position: absolute;
+	background: rgba(265, 265, 265, 0.9);
+	word-break: keep-all;
+		box-shadow:1px 2px 4px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:1px 2px 4px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow:1px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#anatip p {
+	margin: 0!important;
+	color: #404040!important;
+}
+#anatip img {
+	float: left;
+	padding: 3px;
+}
+@media screen and (max-width: 320px){
+	#anawrapper svg {
+		height:260px;
+	}
+	#anatip {
+		max-width: 40%;
+	}
+	#anatip img {
+		max-width: 95%;
+	}
+}
+@media screen and (max-width: 400px) and (min-width: 321px) {
+	#anawrapper svg {
+		height:510px;
+	}
+}
+@media screen and (max-width: 480px) and (min-width: 401px) {
+	#anawrapper svg {
+		height:550px;
+	}
+}
+@media screen and (max-width: 568px) and (min-width: 481px) {
+	#anawrapper svg {
+		height:550px;
+	}
+}
+@media screen and (min-width: 569px) {
+	#anawrapper svg {
+		height:550px;
+	}
+}

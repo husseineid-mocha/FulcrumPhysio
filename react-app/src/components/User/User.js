@@ -78,7 +78,25 @@ function User() {
   return (
     <div>
       <div className="profileWelcome">
-        <strong>Welcome Back</strong> {user.username}
+        <div className="welcomeText">
+          <strong>Welcome Back</strong> {user.username}
+        </div>
+        <div>
+          <div className="UpageBreak">
+            <div className="UpageBreak1">
+              <div className="UslopedDiv1"></div>
+            </div>
+            <div className="UpageBreak2">
+              <div className="UslopedDiv2"></div>
+            </div>
+            <div className="UpageBreak3">
+              <div className="UslopedDiv3"></div>
+            </div>
+            <div className="UpageBreak4">
+              <div className="UslopedDiv4"></div>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="userContainer">
         <div className="profileSidebar">

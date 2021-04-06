@@ -2,11 +2,12 @@
     display: flex;
     /* flex-direction: column; */
     padding: 30px;
+    background: #f0f0f0;
 }
 
 .profileWelcome {
     /* display: flex; */
-    padding: 30px 30px 0px 30px;
+    /* padding: 30px 30px 0px 30px; */
     font-size: larger;
 }
 
@@ -67,6 +68,7 @@
     border-radius: 5px;
     height: 63em;
     overflow: scroll;
+    background-color: white;
 }
 
 .addExerciseButton {
@@ -79,4 +81,48 @@
     margin-bottom: 20px;
     font-size: 20px;
     font-weight: 600;
+}
+
+.UpageBreak {
+    display: flex;
+}
+
+.UpageBreak1 {
+    width: 50%;
+    background-color: #f0f0f0;
+    height: 150px;
+    clip-path: polygon(0 0, 0% 100%, 100% 50%);
+}
+
+.UpageBreak2 {
+    height: 150px;
+    width: 50%;
+    background-color: #0663f0;
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.UpageBreak3 {
+    position: absolute;
+    height: 75px;
+    width: 100%;
+    background-color: #104db3;
+    box-shadow: 0 -5px 5px -5px #333;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.UpageBreak4 {
+    position: absolute;
+    height: 75px;
+    width: 100%;
+    margin-top: 75px;
+    background-color: #f0f0f0;
+    box-shadow: 0 -5px 5px -5px #333;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+
+.welcomeText {
+    position: absolute;
+    z-index: 10;
+    margin-top: 70px;
+    padding: 21px 42px 42px 42px;
 }

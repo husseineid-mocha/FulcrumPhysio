@@ -4,10 +4,142 @@
 <head>
     <meta charset="utf-8" />
     <title>Fulcrum Physio</title>
+    <link href="react-app/anatomy-face/illustration-style.css" rel="stylesheet" type="text/css" />
+    <script src="/Users/husseineid/Desktop/appAcademy/appAcademy/fullStackProject/react-app/anatomy-face/jquery.min.js"></script>
+    <script src="/Users/husseineid/Desktop/appAcademy/appAcademy/fullStackProject/react-app/anatomy-face/anatomy-settings.js"></script>
+    <script src="/Users/husseineid/Desktop/appAcademy/appAcademy/fullStackProject/react-app/anatomy-face/spots-settings.js"></script>
+    <script src="/Users/husseineid/Desktop/appAcademy/appAcademy/fullStackProject/react-app/anatomy-face/interact-script.js"></script>
 </head>
 
 <body>
     <div id="root"></div>
+    <span id="anatip"></span>
+    <div id="anawrapper">
+        <!-- V1.000.2.3 JS-->
+        <div id="basea">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="485px" height="509px" viewBox="0 0 485 509" xml:space="preserve">
+          <image
+            overflow="visible"
+            width="485"
+            height="509"
+            xlink:href="images/modela.png"
+          ></image>
+          <path
+            id="ana1"
+            class="full-face"
+            fill="transparent"
+            stroke="#8c8c8c"
+            vector-effect="non-scaling-stroke"
+            d="M242.5,422c17.167,0,32.75-3.75,48.167-14.667c10.451-7.4,26.801-20.26,39.333-40c12.75-20.083,16-45,20-70.333s6.666-76,2-100.667s-18.013-62.44-42.333-79.333C260,82.5,209.663,86.692,164.5,126c-19.528,16.997-33.5,56-33.5,85c0,24.5,2.213,58.969,4,80.667c2.333,28.333,11.882,63.146,20,76c12,19,26.477,30.206,34.667,35.666C202.667,412,225.495,422,242.5,422z"
+          />
+          <path
+            id="ana2"
+            class="forehead"
+            fill="transparent"
+            stroke="#8c8c8c"
+            vector-effect="non-scaling-stroke"
+            d="M184,198c20.86-3.65,38.466,12.5,57.991,12.5C259,210.5,285.5,193,308.5,197c14.696,2.556,24.041-9.063,15.5-26.5c-10.776-22-35.018-47.5-81.009-47.5s-69.768,24.5-82.125,51.5C154.432,188.559,164,201.5,184,198z"
+          />
+          <path
+            id="ana3"
+            class="eye-rt"
+            fill="transparent"
+            stroke="#8c8c8c"
+            vector-effect="non-scaling-stroke"
+            d="M159.18,247.25c5,2.75,14.75,14,26.5,15.75s31.75-7.25,36-10.5c5-3.824-15-19-27.25-20.25s-25.5,5.5-31.25,7.5S154.18,244.5,159.18,247.25z"
+          />
+          <path
+            id="ana4"
+            class="eye-lt"
+            fill="transparent"
+            stroke="#8c8c8c"
+            vector-effect="non-scaling-stroke"
+            d="M321,239.75c-5.75-2-19-8.75-31.25-7.5s-32.25,16.426-27.25,20.25c4.25,3.25,24.25,12.25,36,10.5s21.5-13,26.5-15.75S326.75,241.75,321,239.75z"
+          />
+          <path
+            id="ana5"
+            class="nose"
+            fill="transparent"
+            stroke="#8c8c8c"
+            vector-effect="non-scaling-stroke"
+            d="M233.574,318.857c4.03,0.482,3.801,2.976,8.926,2.976c5.75,0,6.559-3.431,12.113-2.621c6.262,0.913,10.762,0.163,13.887-6.212c2.955-6.028,0.167-14-5.166-21.333c-6.473-8.9-9.333-21.387-9.5-28.443S251.375,239.5,241.5,239.5c-9.75,0-11,17.447-11.5,23.724s-1.5,20.026-6.534,26.276c-3.692,4.584-11.833,21.66-1.866,27.91C226.441,320.446,228.5,318.25,233.574,318.857z"
+          />
+          <path
+            id="ana6"
+            class="mouth"
+            fill="transparent"
+            stroke="#8c8c8c"
+            vector-effect="non-scaling-stroke"
+            d="M261.581,339.646c-5.361-3.479-11.893-1.866-15.029-0.302c-1.684,0.84-6.308,0.853-9.782-0.65c-7.77-3.36-16.964,2.978-20.27,4.973c-9.667,5.834-17.978,7.998-18.017,10.485c-0.085,5.349,10.684,7.015,19.017,12.515c3.99,2.634,13.833,5.552,27.142,5.552c14.025,0,20.295-3.884,25.289-6.637c7.506-4.138,15.569-8.915,15.569-11.086C285.5,351.334,276,349.001,261.581,339.646z"
+          />
+          <path
+            id="ana7"
+            class="ear-rt"
+            fill="transparent"
+            stroke="#8c8c8c"
+            vector-effect="non-scaling-stroke"
+            d="M132.464,254.831c-3.547-5.067-7.377-15.045-17.267-12.215c-6.042,1.729-8.842,16.31-6.698,26.937c2.143,10.627,8.379,28.172,13.834,37.068c4.596,7.494,9.503,17.155,16.061,9.353c-1.558-8.198-2.751-16.498-3.395-24.307C134.157,281.434,133.22,268.359,132.464,254.831z"
+          />
+          <path
+            id="ana8"
+            class="ear-lt"
+            fill="transparent"
+            stroke="#8c8c8c"
+            vector-effect="non-scaling-stroke"
+            d="M346.907,316.264c6.427,7.24,11.266-2.248,15.8-9.643c5.455-8.896,11.691-26.441,13.834-37.068c2.145-10.627-0.655-25.208-6.697-26.937c-8.576-2.454-12.595,4.723-15.824,9.978c-0.723,16.804-2.237,33.121-4.02,44.407C348.978,303.474,348.003,309.918,346.907,316.264z"
+          />
+          <path
+            id="ana9"
+            class="cheek-rt"
+            fill="transparent"
+            stroke="#8c8c8c"
+            vector-effect="non-scaling-stroke"
+            d="M190.113,377.667c4-10-4.157-17.481-4-25c0.334-16,20.999-9.093,18.667-59c-0.453-9.697-0.002-12.682-15-10.667c-26,3.493-45.752-25.519-47.667-14.666c-3,17,5,72,17.869,91C165.936,368.123,184.084,392.74,190.113,377.667z"
+          />
+          <path
+            id="ana10"
+            class="cheek-lt"
+            fill="transparent"
+            stroke="#8c8c8c"
+            vector-effect="non-scaling-stroke"
+            d="M296.667,283c-14.998-2.015-14.547,0.97-15,10.667c-2.332,49.907,18.333,43,18.667,59c0.157,7.519-8,15-4,25c6.029,15.073,24.178-9.544,30.131-18.333c12.869-19,20.869-74,17.869-91C342.419,257.481,322.667,286.493,296.667,283z"
+          />
+          <path
+            id="ana11"
+            class="chin"
+            fill="transparent"
+            stroke="#8c8c8c"
+            vector-effect="non-scaling-stroke"
+            d="M242.5,384.446c-11.165-0.191-35.25-9.696-33.167,11.554c0.722,7.366,13.404,20.667,33.928,20.667c18.738,0,38.222-9.167,38.222-22.333C281.483,374,260.25,384.75,242.5,384.446z"
+          />
+          <path
+            id="ana12"
+            class="neck"
+            fill="transparent"
+            stroke="#8c8c8c"
+            vector-effect="non-scaling-stroke"
+            d="M330,367.333c-12.532,19.74-28.882,32.6-39.333,40C275.25,418.25,259.667,422,242.5,422c-17.005,0-39.833-10-52.833-18.667c-8.19-5.46-22.667-16.666-34.667-35.666c5.5,32.833,8.654,58.535,2.5,77.333c-0.933,2.851-2.02,5.508-3.305,7.998c41.468,41.337,140.212,42.466,177.224-0.774c-0.521-0.962-0.99-1.944-1.392-2.952C323.698,433.381,326,397.667,330,367.333z"
+          />
+          <text
+            id="karma"
+            transform="matrix(1 0 0 1 5 506)"
+            fill="#d9c6bf"
+            font-size="9"
+          >
+            Brought to you by
+            <a
+              xlink:href="https://www.humananatomyillustrations.com/"
+              target="_blank"
+            >
+              <tspan fill="#402d26">HumanAnatomyIllustrations.com</tspan>
+            </a>
+          </text>
+          <g id="anaspotsa"></g>
+        </svg>
+        </div>
+        <!-- basea-->
+    </div>
+    <div class="clear"></div>
 </body>
 
 </html>
