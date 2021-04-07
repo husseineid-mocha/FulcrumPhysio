@@ -1,17 +1,10 @@
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify, request
 from app.models import Category, Question
 
 question_routes = Blueprint('questions', __name__)
 
 
-@question_routes.route('/')
+@question_routes.route('/', methods=['PUT'])
 def get_questions():
-    questions = Question.query.all()
-    QuestionList = []
-    for question in questions:
-        QuestionList.append(question.to_dict())
-    for question in QuestionList:
-        categories = Category.query.filter_by(categoryId=category['id']).all()
-        question['category'] = [category.to_dict() for category in categories]
-    print(QuestionList)
-    return jsonify(QuestionList)
+    questionId = request.json
+    Question

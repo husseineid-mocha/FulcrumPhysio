@@ -11,6 +11,7 @@ from .api.auth_routes import auth_routes
 from .api.category_routes import category_routes
 from .api.exercise_routes import exercise_routes
 from .api.selected_routes import selected_routes
+from .api.question_routes import question_routes
 
 from .seeds import seed_commands
 
@@ -37,6 +38,7 @@ app.register_blueprint(auth_routes, url_prefix='/api/auth')
 app.register_blueprint(category_routes, url_prefix='/api/category')
 app.register_blueprint(exercise_routes, url_prefix='/api/exercise')
 app.register_blueprint(selected_routes, url_prefix='/api/selected')
+app.register_blueprint(question_routes, url_prefix='/api/questions')
 db.init_app(app)
 Migrate(app, db)
 

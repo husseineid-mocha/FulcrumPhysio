@@ -26,10 +26,7 @@ const StyledButton = styled(Button)`
 function Homepage({ authenticated, setAuthenticated }) {
   const dispatch = useDispatch();
   const history = useHistory();
-  const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   const createYourOwn = () => {
     history.push("/exercises");
   };
@@ -49,7 +46,10 @@ function Homepage({ authenticated, setAuthenticated }) {
           </div>
           <div className="bodyPartButtons">
             <div className="shoulderButton">
-              <Button variant="primary" onClick={handleShow}>
+              <Button
+                variant="primary"
+                onClick={() => dispatch(openQuestion())}
+              >
                 Shoulder
               </Button>
             </div>
@@ -92,41 +92,3 @@ function Homepage({ authenticated, setAuthenticated }) {
 }
 
 export default Homepage;
-
-// function ModalRouter() {
-//   const question = useSelector(state => ....);
-
-//   if (!question) {
-//     render <BodyPArts />;
-//   }
-
-//   if (question.prompType === 'radio') {
-//     return <RadioQuestion question={question} />
-//   }
-
-//   if (question.prompType === null) {
-//     return <ShowDiagnosis question={question} />
-//   }
-
-//   return null;
-
-// }
-
-// const ansqerQuestion(promptId, value) {
-//   fetch(/bakcend, {prmpotId, value }).then(() => setNextQuestion(res.json()))
-
-// }
-
-// function RadioQuestion(question) {
-// const handleClic0k (bool) => {
-
-//   dispatch(ansqerQuestion(question.promptId, bool))
-// }
-
-//   return <div>
-//     {question.prompt}
-//     <button onClick={() => handleClick(true)}>question.promptType[0]</button>
-//     <button onClick={() => handleClick(false)}>question.promptType[1]</button>
-
-//   </div>
-// }

@@ -81,11 +81,10 @@ function App() {
           authenticated={authenticated}
           setAuthenticated={setAuthenticated}
         />
-        {/* //? THIS IS JUST IN CASE WE WANT TO GO BACK TO REACTMODAL */}
-        {/* <QuestionModal
+        <QuestionModal
           authenticated={authenticated}
           setAuthenticated={setAuthenticated}
-        /> */}
+        />
         <Switch>
           <Route exact path="/">
             <Home

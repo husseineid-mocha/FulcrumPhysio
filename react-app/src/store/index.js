@@ -5,6 +5,7 @@ import modalReducer from "./modal";
 import categoryReducer from "./category";
 import exerciseReducer from "./exercise";
 import selectedReducer from "./selected";
+import questionReducer from "./question";
 
 const rootReducer = combineReducers({
   session: sessionReducer,
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
   category: categoryReducer,
   exercise: exerciseReducer,
   selected: selectedReducer,
+  question: questionReducer,
 });
 
 let enhancer;

@@ -2,7 +2,7 @@ import React from "react";
 import Modal from "react-modal";
 import { useSelector, useDispatch } from "react-redux";
 import { closeQuestion } from "../../store/modal";
-// import SignUpForm from "./SignUpForm";
+import QuestionRouter from "./QuestionRouter";
 
 Modal.setAppElement(document.getElementById("root"));
 
@@ -23,7 +23,7 @@ const QuestionModal = ({ authenticated, setAuthenticated }) => {
         // style={customStyles}
         className="InnerModal"
       >
-        hello
+        <QuestionRouter />
       </Modal>
     </>
   );
