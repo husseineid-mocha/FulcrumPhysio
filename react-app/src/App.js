@@ -16,6 +16,7 @@ import * as sessionActions from "./store/session";
 import LoginModal from "./components/LoginFormModal";
 import SignUpModal from "./components/SignUpFormModal";
 import ExerciseModal from "./components/ExerciseModal";
+import QuestionModal from "./components/Homepage/QuestionModal";
 
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
@@ -77,6 +78,10 @@ function App() {
           setAuthenticated={setAuthenticated}
         />
         <ExerciseModal
+          authenticated={authenticated}
+          setAuthenticated={setAuthenticated}
+        />
+        <QuestionModal
           authenticated={authenticated}
           setAuthenticated={setAuthenticated}
         />

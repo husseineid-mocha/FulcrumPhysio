@@ -1,9 +1,14 @@
 import React from "react";
 import { Redirect, useHistory } from "react-router-dom";
+import Modal from "react-modal";
+import { useDispatch } from "react-redux";
+import { openQuestion } from "../../store/modal";
 
 import "./Homepage.css";
 import { Button } from "@material-ui/core";
 import styled from "styled-components";
+
+Modal.setAppElement(document.getElementById("root"));
 
 const StyledButton = styled(Button)`
   background-color: #b9212b;
@@ -18,10 +23,13 @@ const StyledButton = styled(Button)`
 `;
 
 function Homepage({ authenticated, setAuthenticated }) {
+  const dispatch = useDispatch();
   const history = useHistory();
   const createYourOwn = () => {
     history.push("/exercises");
   };
+
+  const shoulderClick = () => {};
 
   return (
     <div className="containers">
@@ -32,7 +40,39 @@ function Homepage({ authenticated, setAuthenticated }) {
         </h1>
       </div>
       <div className="containers2and3">
-        <div className="container2"></div>
+        <div className="container2">
+          <div className="headerText">
+            Please select your body part from below
+          </div>
+          <div className="bodyPartButtons">
+            <div className="shoulderButton">
+              <button onClick={() => dispatch(openQuestion())} type="submit">
+                Shoulder
+              </button>
+            </div>
+            <div className="neckButton">
+              <button type="submit">Neck</button>
+            </div>
+            <div className="elbowButton">
+              <button type="submit">Elbow</button>
+            </div>
+            <div className="wristButton">
+              <button type="submit">wrist</button>
+            </div>
+            <div className="hipButton">
+              <button type="submit">Hip</button>
+            </div>
+            <div className="kneeButton">
+              <button type="submit">Knee</button>
+            </div>
+            <div className="ankleButton">
+              <button type="submit">Ankle</button>
+            </div>
+            <div className="backButton">
+              <button type="submit">Back</button>
+            </div>
+          </div>
+        </div>
         <div className="containers3and4">
           <div className="container3">
             <p>Or maybe you know exactly what you need?</p>

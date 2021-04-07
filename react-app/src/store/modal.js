@@ -4,6 +4,8 @@ const MODAL_OPEN_SIGNUP = "signupModal/open";
 const MODAL_CLOSE_SIGNUP = "signupModal/close";
 const MODAL_OPEN_EXERCISE = "exerciseModal/open";
 const MODAL_CLOSE_EXERCISE = "exerciseModal/close";
+const MODAL_OPEN_QUESTION = "questionModal/open";
+const MODAL_CLOSE_QUESTION = "questionModal/close";
 
 export const openLogin = () => {
   return {
@@ -42,10 +44,23 @@ export const closeExercise = () => {
   };
 };
 
+export const openQuestion = () => {
+  return {
+    type: MODAL_OPEN_QUESTION,
+  };
+};
+
+export const closeQuestion = () => {
+  return {
+    type: MODAL_CLOSE_QUESTION,
+  };
+};
+
 const initialState = {
   loginShow: false,
   signupShow: false,
   exerciseShow: false,
+  questionShow: false,
 };
 
 const modalReducer = (state = initialState, action) => {
@@ -71,6 +86,12 @@ const modalReducer = (state = initialState, action) => {
       return newState;
     case MODAL_CLOSE_EXERCISE:
       newState = Object.assign({}, state, { exerciseShow: false });
+      return newState;
+    case MODAL_OPEN_QUESTION:
+      newState = Object.assign({}, state, { questionShow: true });
+      return newState;
+    case MODAL_CLOSE_QUESTION:
+      newState = Object.assign({}, state, { questionShow: false });
       return newState;
     default:
       return state;
