@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Redirect, useHistory } from "react-router-dom";
+//? MODAL BELOW IS IN CASE WE NEED REACT MODAL QUESTIONMODAL
 import Modal from "react-modal";
 import { useDispatch } from "react-redux";
 import { openQuestion } from "../../store/modal";
+// import Modal from "react-bootstrap/Modal"; //GET RID OF BOOTSTRAP
 
 import "./Homepage.css";
 import { Button } from "@material-ui/core";
 import styled from "styled-components";
-
-Modal.setAppElement(document.getElementById("root"));
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 const StyledButton = styled(Button)`
   background-color: #b9212b;
@@ -25,11 +26,13 @@ const StyledButton = styled(Button)`
 function Homepage({ authenticated, setAuthenticated }) {
   const dispatch = useDispatch();
   const history = useHistory();
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const createYourOwn = () => {
     history.push("/exercises");
   };
-
-  const shoulderClick = () => {};
 
   return (
     <div className="containers">
@@ -46,9 +49,9 @@ function Homepage({ authenticated, setAuthenticated }) {
           </div>
           <div className="bodyPartButtons">
             <div className="shoulderButton">
-              <button onClick={() => dispatch(openQuestion())} type="submit">
+              <Button variant="primary" onClick={handleShow}>
                 Shoulder
-              </button>
+              </Button>
             </div>
             <div className="neckButton">
               <button type="submit">Neck</button>
@@ -89,3 +92,41 @@ function Homepage({ authenticated, setAuthenticated }) {
 }
 
 export default Homepage;
+
+// function ModalRouter() {
+//   const question = useSelector(state => ....);
+
+//   if (!question) {
+//     render <BodyPArts />;
+//   }
+
+//   if (question.prompType === 'radio') {
+//     return <RadioQuestion question={question} />
+//   }
+
+//   if (question.prompType === null) {
+//     return <ShowDiagnosis question={question} />
+//   }
+
+//   return null;
+
+// }
+
+// const ansqerQuestion(promptId, value) {
+//   fetch(/bakcend, {prmpotId, value }).then(() => setNextQuestion(res.json()))
+
+// }
+
+// function RadioQuestion(question) {
+// const handleClic0k (bool) => {
+
+//   dispatch(ansqerQuestion(question.promptId, bool))
+// }
+
+//   return <div>
+//     {question.prompt}
+//     <button onClick={() => handleClick(true)}>question.promptType[0]</button>
+//     <button onClick={() => handleClick(false)}>question.promptType[1]</button>
+
+//   </div>
+// }

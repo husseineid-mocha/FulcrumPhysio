@@ -107,21 +107,22 @@ function Exercises({ authenticated, setAuthenticated }) {
               </div>
             </div>
             <div className="bigSelectedBox">
-              {Object.values(selected).map((exercise, idx) => (
-                <div className="miniExerciseBox" key={idx}>
-                  <div>
-                    <div className="miniExerciseName">{exercise.name}</div>
-                  </div>
-                  <div className="miniExerciseImageAndInfo">
-                    <img className="miniExerciseImage" src={exercise.image} />
-                    <div className="miniSetsRepsTimes">
-                      <div> Sets: {exercise.sets}</div>
-                      <div> Reps: {exercise.reps}</div>
-                      <div> Times Per Week:{exercise.timesPerWeek}</div>
+              {selected &&
+                Object.values(selected)?.map((exercise, idx) => (
+                  <div className="miniExerciseBox" key={idx}>
+                    <div>
+                      <div className="miniExerciseName">{exercise.name}</div>
+                    </div>
+                    <div className="miniExerciseImageAndInfo">
+                      <img className="miniExerciseImage" src={exercise.image} />
+                      <div className="miniSetsRepsTimes">
+                        <div> Sets: {exercise.sets}</div>
+                        <div> Reps: {exercise.reps}</div>
+                        <div> Times Per Week:{exercise.timesPerWeek}</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
         </div>

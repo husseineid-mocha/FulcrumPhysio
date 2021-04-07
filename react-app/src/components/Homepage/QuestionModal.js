@@ -23,7 +23,7 @@ const QuestionModal = ({ authenticated, setAuthenticated }) => {
         // style={customStyles}
         className="InnerModal"
       >
-        'Hello'
+        hello
       </Modal>
     </>
   );
