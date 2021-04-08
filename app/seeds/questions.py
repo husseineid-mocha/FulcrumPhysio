@@ -32,7 +32,7 @@ def seed_questions():
     question3 = Question(
         promptId=3, prompt='Is there a pinching sensation when reaching behind your head?', promptType='radio', displayText='["yes", "no"]', displayValue='[15, 16]', dx=None)
     question16 = Question(
-        promptId=16, prompt='Does the pain feel better when you are gripping a moderately heavy object?', promptType='radio', displayText='["yes", "no"]', displayValue='[10, 7]', dx=None)
+        promptId=16, prompt='Does the pain feel better when you are gripping a moderately heavy object?', promptType='radio', displayText='["yes", "no"]', displayValue='[10, 17]', dx=None)
     question17 = Question(
         promptId=17, prompt='Can you see your shoulder blade come off your body when doing an activity?', promptType='radio', displayText='["yes", "no"]', displayValue='[12, 17]', dx=None)
     question12 = Question(
