@@ -47,7 +47,7 @@ function Homepage({ authenticated, setAuthenticated }) {
           <div className="bodyPartButtons">
             <div className="shoulderButton">
               <Button
-                variant="primary"
+                // variant="primary"
                 onClick={() => dispatch(openQuestion())}
               >
                 Shoulder

@@ -1,20 +1,44 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { findFirstQuestion } from "../../store/question";
+import { findFirstQuestion, fetchNextQuestion } from "../../store/question";
 
 import "./QuestionRouter.css";
 
 function QuestionRouter() {
   const dispatch = useDispatch();
+  const question = useSelector((state) => state.question);
+  const displayText = eval(question?.displayText);
+  const displayValue = eval(question?.displayValue);
+  console.log(displayValue);
+
+  // console.log(displayValue[0]);
 
   useEffect(() => {
     dispatch(findFirstQuestion(1));
   }, []);
 
+  const handleClickYes = (nextId) => {
+    dispatch(fetchNextQuestion(nextId));
+  };
+
+  const handleClickNo = (nextId) => {
+    dispatch(fetchNextQuestion(nextId));
+  };
+
   return (
-    <div>
-      <div></div>
-    </div>
+    <>
+      {question.displayText && (
+        <div>
+          <div>{question?.prompt}</div>
+          <div>
+            <button onClick={() => handleClickYes()}>{displayText[0]}</button>
+            <button onClick={() => handleClickNo(displayValue[1])}>
+              {displayText[1]}
+            </button>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 

@@ -26,6 +26,11 @@ class Question(db.Model):
     def to_dict(self):
         return{
             "id": self.id,
-            "question": self.question,
+            'promptId': self.promptId,
+            'prompt': self.prompt,
+            'promptType': self.promptType,
+            'displayText': self.displayText,
+            'displayValue': self.displayValue,
+            'dx': self.dx,
             "categoryId": self.categoryId
         }
