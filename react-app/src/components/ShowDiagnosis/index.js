@@ -1,7 +1,7 @@
 import React from "react";
 
 function ShowDiagnosis() {
-  return <div>Hello</div>;
+  return <div>Hello this is diagnosis</div>;
 }
 
 export default ShowDiagnosis;
