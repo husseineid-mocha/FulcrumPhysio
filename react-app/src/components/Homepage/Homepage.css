@@ -26,7 +26,8 @@
     height: 100vh;
     max-height: 815px;
     width: 509px;
-    border: 2px solid red;
+    border-radius: 6px;
+    border: 3px solid #154360;
 }
 
 .container3 {
@@ -65,6 +66,7 @@
 
 .shoulderClickRight {
     /* background: #0663f0; */
+    transition: 0.5s ease;
     height: 73px;
     width: 73px;
     cursor: pointer;
@@ -80,6 +82,7 @@
 
 .shoulderClickLeft {
     /* background: #0663f0; */
+    transition: 0.5s ease;
     height: 74px;
     width: 78px;
     cursor: pointer;
@@ -95,6 +98,7 @@
 
 .neckClick {
     /* background: #0663f0; */
+    transition: 0.5s ease;
     height: 65px;
     width: 123px;
     cursor: pointer;
@@ -110,6 +114,7 @@
 
 .elbowClickRight {
     /* background: #0663f0; */
+    transition: 0.5s ease;
     height: 73px;
     width: 73px;
     cursor: pointer;
@@ -125,6 +130,7 @@
 
 .elbowClickLeft {
     /* background: #0663f0; */
+    transition: 0.5s ease;
     height: 73px;
     width: 73px;
     cursor: pointer;
@@ -140,13 +146,14 @@
 
 .backClick {
     /* background: #0663f0; */
+    transition: 0.5s ease;
     height: 65px;
     width: 139px;
     cursor: pointer;
     position: absolute;
     clip-path: polygon( 4% 1%, 2% 38%, 1% 87%, 9% 99%, 91% 98%, 99% 89%, 99% 45%, 96% 1%);
     margin-left: 190px;
-    margin-top: 234px;
+    margin-top: 295px;
 }
 
 .backClick:hover {
@@ -155,6 +162,7 @@
 
 .wristClickRight {
     /* background: #0663f0; */
+    transition: 0.5s ease;
     height: 90px;
     width: 85px;
     cursor: pointer;
@@ -170,6 +178,7 @@
 
 .wristClickLeft {
     /* background: #0663f0; */
+    transition: 0.5s ease;
     height: 86px;
     width: 85px;
     cursor: pointer;
@@ -185,13 +194,15 @@
 
 .hipClickRight {
     /* background: #0663f0; */
-    height: 73px;
-    width: 73px;
+    transition: 0.5s ease;
+    height: 85px;
+    width: 97px;
     cursor: pointer;
     position: absolute;
-    clip-path: polygon( 0% 63%, 65% 94%, 79% 61%, 78% 44%, 92% 28%, 99% 2%, 33% 1%, 31% 25%, 15% 40%);
-    margin-left: 111px;
-    margin-top: 248px;
+    /* -webkit-clip-path: polygon( 33% 0%, 17% 40%, 12% 75%, 10% 94%, 95% 95%, 96% 67%, 83% 49%, 61% 19%, 40% 1%); */
+    clip-path: polygon( 32% 0%, 17% 40%, 12% 75%, 10% 94%, 95% 95%, 96% 67%, 83% 49%, 61% 19%, 40% 1%);
+    margin-left: 161px;
+    margin-top: 352px;
 }
 
 .hipClickRight:hover {
@@ -200,13 +211,15 @@
 
 .hipClickLeft {
     /* background: #0663f0; */
-    height: 73px;
-    width: 73px;
+    transition: 0.5s ease;
+    height: 87px;
+    width: 88px;
     cursor: pointer;
     position: absolute;
-    clip-path: polygon( 63% 7%, 64% 15%, 91% 45%, 100% 70%, 78% 83%, 46% 100%, 30% 80%, 18% 51%, 17% 33%, 0 9%);
-    margin-left: 340px;
-    margin-top: 257px;
+    /* -webkit-clip-path: polygon( 55% 14%, 72% 2%, 86% 35%, 97% 75%, 98% 98%, 46% 98%, 4% 98%, 4% 70%, 10% 60%, 38% 29%); */
+    clip-path: polygon( 55% 14%, 72% 2%, 86% 35%, 97% 75%, 98% 98%, 46% 98%, 4% 98%, 4% 70%, 10% 60%, 38% 29%);
+    margin-left: 263px;
+    margin-top: 349px;
 }
 
 .hipClickLeft:hover {
@@ -215,13 +228,15 @@
 
 .kneeClickRight {
     /* background: #0663f0; */
+    transition: 0.5s ease;
     height: 73px;
-    width: 73px;
+    width: 76px;
     cursor: pointer;
     position: absolute;
-    clip-path: polygon( 0% 63%, 65% 94%, 79% 61%, 78% 44%, 92% 28%, 99% 2%, 33% 1%, 31% 25%, 15% 40%);
-    margin-left: 111px;
-    margin-top: 248px;
+    /* -webkit-clip-path: polygon( 15% 1%, 97% 1%, 86% 22%, 85% 49%, 72% 80%, 72% 98%, 6% 97%, 10% 79%, 15% 72%, 18% 33%); */
+    clip-path: polygon( 15% 1%, 93% 1%, 86% 22%, 85% 49%, 72% 80%, 72% 98%, 6% 97%, 10% 79%, 15% 72%, 18% 33%);
+    margin-left: 167px;
+    margin-top: 521px;
 }
 
 .kneeClickRight:hover {
@@ -230,13 +245,14 @@
 
 .kneeClickLeft {
     /* background: #0663f0; */
+    transition: 0.5s ease;
     height: 73px;
     width: 73px;
     cursor: pointer;
     position: absolute;
-    clip-path: polygon( 63% 7%, 64% 15%, 91% 45%, 100% 70%, 78% 83%, 46% 100%, 30% 80%, 18% 51%, 17% 33%, 0 9%);
-    margin-left: 340px;
-    margin-top: 257px;
+    clip-path: polygon( 0 0, 87% 1%, 81% 21%, 83% 46%, 86% 78%, 89% 99%, 24% 99%, 19% 79%, 11% 56%, 9% 23%);
+    margin-left: 280px;
+    margin-top: 519px;
 }
 
 .kneeClickLeft:hover {
@@ -245,13 +261,14 @@
 
 .ankleClickRight {
     /* background: #0663f0; */
-    height: 73px;
+    transition: 0.5s ease;
+    height: 83px;
     width: 73px;
     cursor: pointer;
     position: absolute;
-    clip-path: polygon( 0% 63%, 65% 94%, 79% 61%, 78% 44%, 92% 28%, 99% 2%, 33% 1%, 31% 25%, 15% 40%);
-    margin-left: 111px;
-    margin-top: 248px;
+    clip-path: polygon( 49% 11%, 81% 11%, 87% 42%, 78% 60%, 76% 84%, 66% 97%, 37% 97%, 16% 91%, 15% 80%, 34% 53%);
+    margin-left: 139px;
+    margin-top: 716px;
 }
 
 .ankleClickRight:hover {
@@ -260,13 +277,14 @@
 
 .ankleClickLeft {
     /* background: #0663f0; */
-    height: 73px;
+    transition: 0.5s ease;
+    height: 80px;
     width: 73px;
     cursor: pointer;
     position: absolute;
-    clip-path: polygon( 63% 7%, 64% 15%, 91% 45%, 100% 70%, 78% 83%, 46% 100%, 30% 80%, 18% 51%, 17% 33%, 0 9%);
-    margin-left: 340px;
-    margin-top: 257px;
+    clip-path: polygon( 51% 1%, 51% 10%, 60% 26%, 65% 43%, 68% 53%, 88% 81%, 87% 96%, 38% 100%, 29% 93%, 22% 76%, 22% 63%, 14% 47%, 14% 34%, 21% 0);
+    margin-left: 307px;
+    margin-top: 715px;
 }
 
 .ankleClickLeft:hover {
