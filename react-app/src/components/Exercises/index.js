@@ -106,6 +106,7 @@ function Exercises({ authenticated, setAuthenticated }) {
                 </Tooltip>
               </div>
             </div>
+
             <div className="bigSelectedBox">
               {selected &&
                 Object.values(selected)?.map((exercise, idx) => (

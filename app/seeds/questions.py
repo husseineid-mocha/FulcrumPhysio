@@ -18,7 +18,7 @@ def seed_questions():
     question7 = Question(
         promptId=7, prompt='Are you able to reach behind your back with no discomfort?', promptType='radio', displayText='["yes", "no"]', displayValue='[9, 10]', dx=None)
     question9 = Question(
-        promptId=6, prompt=None, promptType=None, displayText=None, displayValue=None, dx='Mild Subacromial Pain Syndrome')
+        promptId=9, prompt=None, promptType=None, displayText=None, displayValue=None, dx='Mild Subacromial Pain Syndrome')
     question10 = Question(
         promptId=10, prompt=None, promptType=None, displayText=None, displayValue=None, dx='Moderate Subacromial Pain Syndrome')
     question8 = Question(

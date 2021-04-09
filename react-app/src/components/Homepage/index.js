@@ -40,39 +40,47 @@ function Homepage({ authenticated, setAuthenticated }) {
         </h1>
       </div>
       <div className="containers2and3">
+        <div className="headerText">
+          Please select your body part from below
+        </div>
         <div className="container2">
-          <div className="headerText">
-            Please select your body part from below
-          </div>
-          <div className="bodyPartButtons">
-            <div className="shoulderButton">
-              <Button
-                // variant="primary"
+          <div className="mainBodyImage">
+            <div className="bodyPartButtons">
+              <div
                 onClick={() => dispatch(openQuestion())}
-              >
-                Shoulder
-              </Button>
-            </div>
-            <div className="neckButton">
-              <button type="submit">Neck</button>
-            </div>
-            <div className="elbowButton">
-              <button type="submit">Elbow</button>
-            </div>
-            <div className="wristButton">
-              <button type="submit">wrist</button>
-            </div>
-            <div className="hipButton">
-              <button type="submit">Hip</button>
-            </div>
-            <div className="kneeButton">
-              <button type="submit">Knee</button>
-            </div>
-            <div className="ankleButton">
-              <button type="submit">Ankle</button>
-            </div>
-            <div className="backButton">
-              <button type="submit">Back</button>
+                className="shoulderClickRight"
+              ></div>
+              <div
+                onClick={() => dispatch(openQuestion())}
+                className="shoulderClickLeft"
+              ></div>
+              <div className="neckClick">
+                {/* <button type="submit">Neck</button> */}
+              </div>
+              <div className="elbowClickRight">
+                {/* <button type="submit">Elbow</button> */}
+              </div>
+              <div className="elbowClickLeft">
+                {/* <button type="submit">Elbow</button> */}
+              </div>
+              <div className="wristClickRight">
+                {/* <button type="submit">wrist</button> */}
+              </div>
+              <div className="wristClickLeft">
+                {/* <button type="submit">wrist</button> */}
+              </div>
+              <div className="hipButton">
+                <button type="submit">Hip</button>
+              </div>
+              <div className="kneeButton">
+                <button type="submit">Knee</button>
+              </div>
+              <div className="ankleButton">
+                <button type="submit">Ankle</button>
+              </div>
+              <div className="backClick">
+                {/* <button type="submit">Back</button> */}
+              </div>
             </div>
           </div>
         </div>

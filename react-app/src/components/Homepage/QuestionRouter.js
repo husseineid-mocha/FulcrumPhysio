@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import ShowDiagnosis from "../ShowDiagnosis";
 import { useDispatch, useSelector } from "react-redux";
 import { findFirstQuestion, fetchNextQuestion } from "../../store/question";
 
@@ -17,6 +18,10 @@ function QuestionRouter() {
     dispatch(findFirstQuestion(1));
   }, []);
 
+  if (question.promptType === null) {
+    return <ShowDiagnosis />;
+  }
+
   const handleClickYes = (nextId) => {
     dispatch(fetchNextQuestion(nextId));
   };
@@ -31,7 +36,9 @@ function QuestionRouter() {
         <div>
           <div>{question?.prompt}</div>
           <div>
-            <button onClick={() => handleClickYes()}>{displayText[0]}</button>
+            <button onClick={() => handleClickYes(displayValue[0])}>
+              {displayText[0]}
+            </button>
             <button onClick={() => handleClickNo(displayValue[1])}>
               {displayText[1]}
             </button>

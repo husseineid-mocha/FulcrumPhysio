@@ -18,7 +18,6 @@ const StyledButton = styled(Button)`
   justify-content: center;
   &:hover {
     background-color: #5b7b90;
-  }
 `;
 
 function User() {

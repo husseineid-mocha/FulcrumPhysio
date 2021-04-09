@@ -14,12 +14,21 @@ def seed_exercises():
         name='Shoulder External Rotation', image='https://fulcrumphysio.s3.amazonaws.com/Shoulder-External-Rotation.png', description='Pull the band from your belly button while rotating your arm to improve rotator cuff strength and deltoid coordination during activities', categoryId=4)
     open_book = Exercise(
         name='Open Book', image='https://fulcrumphysio.s3.amazonaws.com/open-the-book.jpeg', description='Laying on your side, open the arm facing upward to the ceiling and floor behind you while keeping your knees together. This will help improve your thoracic mobility and shoulder mobility.', categoryId=4)
+    band_rows = Exercise(
+        name='Band Rows', image='https://fulcrumphysio.s3.amazonaws.com/band-rows.jpeg', description='Holding elastic band with both hands, draw back the band as you bend your elbows. Keep your elbows near the side of your body.', categoryId=4)
+    shoulder_extensions = Exercise(
+        name='Shoulder Extensions', image='https://fulcrumphysio.s3.amazonaws.com/shoulder_extensions.jpeg', description='While holding an elastic band in front of you with your elbows straight, pull the band down and back towards your side.', categoryId=4)
+    pendulums = Exercise(
+        name='Pendulums', image='https://fulcrumphysio.s3.amazonaws.com/Pendulums.jpeg', description='Shift your body weight side to side to allow your injured arm to swing side to side freely. Your injured arm should be fully relaxed.', categoryId=4)
 
     db.session.add(sideplank_hip_abduction)
     db.session.add(kneeling_hip_flexor_stretch)
     db.session.add(shoulder_retraction)
     db.session.add(shoulder_external_rotation)
     db.session.add(open_book)
+    db.session.add(band_rows)
+    db.session.add(shoulder_extensions)
+    db.session.add(pendulums)
 
     db.session.commit()
 
