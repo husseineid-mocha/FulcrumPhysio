@@ -32,19 +32,21 @@ function QuestionRouter() {
 
   return (
     <>
-      {question.displayText && (
-        <div>
-          <div>{question?.prompt}</div>
+      <div className="questionContainer">
+        {question.displayText && (
           <div>
-            <button onClick={() => handleClickYes(displayValue[0])}>
-              {displayText[0]}
-            </button>
-            <button onClick={() => handleClickNo(displayValue[1])}>
-              {displayText[1]}
-            </button>
+            <div>{question?.prompt}</div>
+            <div>
+              <button onClick={() => handleClickYes(displayValue[0])}>
+                {displayText[0]}
+              </button>
+              <button onClick={() => handleClickNo(displayValue[1])}>
+                {displayText[1]}
+              </button>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </>
   );
 }
