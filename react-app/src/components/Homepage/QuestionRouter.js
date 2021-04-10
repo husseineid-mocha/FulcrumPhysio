@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
 import ShowDiagnosis from "../ShowDiagnosis";
 import { useDispatch, useSelector } from "react-redux";
-import { findFirstQuestion, fetchNextQuestion } from "../../store/question";
+import {
+  findFirstQuestion,
+  fetchNextQuestion,
+  fetchDx,
+} from "../../store/question";
 
 import "./QuestionRouter.css";
 
@@ -18,8 +22,10 @@ function QuestionRouter() {
     dispatch(findFirstQuestion(1));
   }, []);
 
-  if (question.promptType === null) {
-    return <ShowDiagnosis />;
+  if (question.diagnosisId !== null) {
+    dispatch(fetchDx(question.diagnosisId));
+    // return <ShowDiagnosis />;
+    // console.log(question.diagnosisId);
   }
 
   const handleClickYes = (nextId) => {
