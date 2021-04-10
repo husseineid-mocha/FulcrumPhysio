@@ -13,7 +13,6 @@ class Category(db.Model):
         db.DateTime, nullable=False, default=datetime.utcnow()
     )
 
-    questions = db.relationship('Question', back_populates='category')
     exercises = db.relationship('Exercise', back_populates='category')
 
     def to_dict(self):

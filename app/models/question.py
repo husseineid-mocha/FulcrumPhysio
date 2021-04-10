@@ -10,18 +10,17 @@ class Question(db.Model):
     promptType = db.Column(db.String(50), nullable=True)
     displayText = db.Column(db.String(50), nullable=True)
     displayValue = db.Column(db.String(50), nullable=True)
-    dx = db.Column(db.String(50), nullable=True)
+    diagnosisId = db.Column(
+        db.Integer, db.ForeignKey('diagnoses.id'), nullable=True
+    )
     created_at = db.Column(
         db.DateTime, nullable=False, default=datetime.utcnow()
     )
     updated_at = db.Column(
         db.DateTime, nullable=False, default=datetime.utcnow()
     )
-    categoryId = db.Column(
-        db.Integer, db.ForeignKey('categories.id'), nullable=True
-    )
 
-    category = db.relationship('Category', back_populates='questions')
+    diagnosis = db.relationship('Diagnosis', back_populates='exercises')
 
     def to_dict(self):
         return{
@@ -31,6 +30,5 @@ class Question(db.Model):
             'promptType': self.promptType,
             'displayText': self.displayText,
             'displayValue': self.displayValue,
-            'dx': self.dx,
-            "categoryId": self.categoryId
+            'diagnosisId': self.diagnosisId,
         }
