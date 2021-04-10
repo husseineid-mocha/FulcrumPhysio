@@ -20,7 +20,7 @@ class Question(db.Model):
         db.DateTime, nullable=False, default=datetime.utcnow()
     )
 
-    diagnosis = db.relationship('Diagnosis', back_populates='exercises')
+    diagnosis = db.relationship('Diagnosis', back_populates='questions')
 
     def to_dict(self):
         return{

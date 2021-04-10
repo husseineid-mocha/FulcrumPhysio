@@ -21,11 +21,13 @@ class Exercise(db.Model):
     categoryId = db.Column(
         db.Integer, db.ForeignKey('categories.id'), nullable=False
     )
+    diagnosisId = db.Column(
+        db.Integer, db.ForeignKey('diagnoses.id'), nullable=True
+    )
 
     category = db.relationship('Category', back_populates='exercises')
     userexercises = db.relationship('UserExercise', back_populates='exercises')
-    diagnosis1 = db.relationship('Diagnosis', back_populates='exercise1')
-    diagnosis2 = db.relationship('Diagnosis', back_populates='exercise2')
+    diagnosis = db.relationship('Diagnosis', back_populates='exercises')
 
     def to_dict(self):
         return{
@@ -36,5 +38,6 @@ class Exercise(db.Model):
             "reps": self.reps,
             "sets": self.sets,
             "timesPerWeek": self.timesPerWeek,
-            "categoryId": self.categoryId
+            "categoryId": self.categoryId,
+            "diagnosisId": self.diagnosisId
         }
