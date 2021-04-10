@@ -1,9 +1,11 @@
 from .db import db
 from datetime import datetime
 
+
 class Exercise(db.Model):
     __tablename__ = 'exercises'
-    id = db.Column(db.Integer, primary_key = True)
+
+    id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
     image = db.Column(db.String(100), nullable=True)
     description = db.Column(db.String(500), nullable=False)
@@ -22,6 +24,8 @@ class Exercise(db.Model):
 
     category = db.relationship('Category', back_populates='exercises')
     userexercises = db.relationship('UserExercise', back_populates='exercises')
+    diagnosisExercises = db.relationship(
+        'DiagnosisExercise', back_populates='exercises')
 
     def to_dict(self):
         return{
@@ -32,5 +36,5 @@ class Exercise(db.Model):
             "reps": self.reps,
             "sets": self.sets,
             "timesPerWeek": self.timesPerWeek,
-            "categoryId": self.categoryId
+            "categoryId": self.categoryId,
         }

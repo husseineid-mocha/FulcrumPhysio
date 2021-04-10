@@ -1,2 +1,1 @@
-promptid,prompt,promptType,displayText,displayValue,dx
-32,"How much does it hurt example","radio","[yes, no]","[1,2]",None
+promptid,prompt,promptType,displayText,displayValue,diagnosisId

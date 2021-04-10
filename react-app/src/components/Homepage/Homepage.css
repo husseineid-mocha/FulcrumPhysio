@@ -59,7 +59,7 @@
 .mainBodyImage {
     height: 100%;
     background-size: contain;
-    background-image: url(/static/media/MainPicture.67786472.png);
+    background-image: url(../../images/MainPicture.png);
     background-repeat: no-repeat;
     position: relative;
 }

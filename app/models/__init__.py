@@ -3,6 +3,7 @@ from .user import User
 from .category import Category
 from .exercise import Exercise
 from .progress import Progress
+from .diagnosis import Diagnosis
 from .question import Question
 from .userExercise import UserExercise
-
+from .diagnosisExercise import DiagnosisExercise
