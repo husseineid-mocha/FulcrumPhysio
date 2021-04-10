@@ -4,6 +4,7 @@ from .categories import seed_categories, undo_categories
 from .exercises import seed_exercises, undo_exercises
 from .questions import seed_questions, undo_questions, seed_from_csv
 from .diagnosis import seed_diagnoses, undo_diagnoses
+from .diagnosisExercise import seed_diagnosisExercise, undo_diagnosisExercise
 
 # Creates a seed group to hold our commands
 # So we can type `flask seed --help`
@@ -18,6 +19,7 @@ def seed():
     seed_categories()
     seed_exercises()
     seed_diagnoses()
+    seed_diagnosisExercise()
     seed_questions()
     seed_from_csv()
     # Add other seed functions here
