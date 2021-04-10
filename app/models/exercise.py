@@ -24,8 +24,8 @@ class Exercise(db.Model):
 
     category = db.relationship('Category', back_populates='exercises')
     userexercises = db.relationship('UserExercise', back_populates='exercises')
-    # diagnoses1 = db.relationship('Diagnosis', back_populates='exercise1')
-    # diagnoses2 = db.relationship('Diagnosis', back_populates='exercise2')
+    diagnosis1 = db.relationship('Diagnosis', back_populates='exercise1')
+    diagnosis2 = db.relationship('Diagnosis', back_populates='exercise2')
 
     def to_dict(self):
         return{
