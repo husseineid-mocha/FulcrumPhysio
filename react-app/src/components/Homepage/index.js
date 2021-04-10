@@ -54,30 +54,17 @@ function Homepage({ authenticated, setAuthenticated }) {
                 onClick={() => dispatch(openQuestion())}
                 className="shoulderClickLeft"
               ></div>
-              <div className="neckClick">
-                {/* <button type="submit">Neck</button> */}
-              </div>
-              <div className="elbowClickRight">
-                {/* <button type="submit">Elbow</button> */}
-              </div>
-              <div className="elbowClickLeft">
-                {/* <button type="submit">Elbow</button> */}
-              </div>
-              <div className="wristClickRight">
-                {/* <button type="submit">wrist</button> */}
-              </div>
-              <div className="wristClickLeft">
-                {/* <button type="submit">wrist</button> */}
-              </div>
-              <div className="hipButton">
-                <button type="submit">Hip</button>
-              </div>
-              <div className="kneeButton">
-                <button type="submit">Knee</button>
-              </div>
-              <div className="ankleButton">
-                <button type="submit">Ankle</button>
-              </div>
+              <div className="neckClick"></div>
+              <div className="elbowClickRight"></div>
+              <div className="elbowClickLeft"></div>
+              <div className="wristClickRight"></div>
+              <div className="wristClickLeft"></div>
+              <div className="hipClickRight"></div>
+              <div className="hipClickLeft"></div>
+              <div className="kneeClickRight"></div>
+              <div className="kneeClickLeft"></div>
+              <div className="ankleClickRight"></div>
+              <div className="ankleClickLeft"></div>
               <div className="backClick">
                 {/* <button type="submit">Back</button> */}
               </div>

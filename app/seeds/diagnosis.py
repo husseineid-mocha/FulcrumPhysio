@@ -1,5 +1,5 @@
 from app.models import db
-from app.models.question import Diagnosis
+from app.models.diagnosis import Diagnosis
 import csv
 
 

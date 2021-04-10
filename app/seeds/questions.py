@@ -72,7 +72,7 @@ def seed_from_csv():
         for row in data:
             print(row)
             questions.append(Question(
-                promptId=row[0], prompt=row[1], promptType=row[2], displayText=row[3], displayValue=row[4], dx=row[5]))
+                promptId=row[0], prompt=row[1], promptType=row[2], displayText=row[3], displayValue=row[4], diagnosisId=row[5]))
     print(questions)
     db.session.add_all(questions)
     db.session.commit()

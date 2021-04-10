@@ -37,5 +37,4 @@ class Exercise(db.Model):
             "sets": self.sets,
             "timesPerWeek": self.timesPerWeek,
             "categoryId": self.categoryId,
-            "diagnosisId": self.diagnosisId
         }
