@@ -14,21 +14,21 @@ def seed_questions():
     question5 = Question(
         promptId=5, prompt='Is there a pinching or stabbing feeling when reaching overhead?', promptType='radio', displayText='["yes", "no"]', displayValue='[7, 8]', diagnosisId=None)
     question6 = Question(
-        promptId=6, prompt=None, promptType=None, displayText=None, displayValue=None, diagnosisId='Shoulder Instability')
+        promptId=6, prompt=None, promptType=None, displayText=None, displayValue=None, diagnosisId=1)
     question7 = Question(
         promptId=7, prompt='Are you able to reach behind your back with no discomfort?', promptType='radio', displayText='["yes", "no"]', displayValue='[9, 10]', diagnosisId=None)
     question9 = Question(
-        promptId=9, prompt=None, promptType=None, displayText=None, displayValue=None, diagnosisId='Mild Subacromial Pain Syndrome')
+        promptId=9, prompt=None, promptType=None, displayText=None, displayValue=None, diagnosisId=2)
     question10 = Question(
-        promptId=10, prompt=None, promptType=None, displayText=None, displayValue=None, diagnosisId='Moderate Subacromial Pain Syndrome')
+        promptId=10, prompt=None, promptType=None, displayText=None, displayValue=None, diagnosisId=3)
     question8 = Question(
         promptId=8, prompt='Do you have pain at the top of your shoulder?', promptType='radio', displayText='["yes", "no"]', displayValue='[11, 12]', diagnosisId=None)
     question11 = Question(
         promptId=11, prompt='Is the top of your shoulder tender to touch?', promptType='radio', displayText='["yes", "no"]', displayValue='[14, 15]', diagnosisId=None)
     question14 = Question(
-        promptId=14, prompt=None, promptType=None, displayText=None, displayValue=None, diagnosisId='AC joint sprain')
+        promptId=14, prompt=None, promptType=None, displayText=None, displayValue=None, diagnosisId=4)
     question15 = Question(
-        promptId=15, prompt=None, promptType=None, displayText=None, displayValue=None, diagnosisId='Posterior Shoulder Impingement')
+        promptId=15, prompt=None, promptType=None, displayText=None, displayValue=None, diagnosisId=5)
     question3 = Question(
         promptId=3, prompt='Is there a pinching sensation when reaching behind your head?', promptType='radio', displayText='["yes", "no"]', displayValue='[15, 16]', diagnosisId=None)
     question16 = Question(
@@ -36,7 +36,7 @@ def seed_questions():
     question17 = Question(
         promptId=17, prompt='Can you see your shoulder blade come off your body when doing an activity?', promptType='radio', displayText='["yes", "no"]', displayValue='[12, 9]', diagnosisId=None)
     question12 = Question(
-        promptId=12, prompt=None, promptType=None, displayText=None, displayValue=None, diagnosisId='Scapular winging')
+        promptId=12, prompt=None, promptType=None, displayText=None, displayValue=None, diagnosisId=6)
 
     db.session.add(question1)
     db.session.add(question2)

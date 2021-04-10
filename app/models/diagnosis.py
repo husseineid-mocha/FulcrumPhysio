@@ -16,7 +16,8 @@ class Diagnosis(db.Model):
     )
 
     questions = db.relationship('Question', back_populates='diagnosis')
-    exercises = db.relationship('Exercise', back_populates='diagnosis')
+    diagnosisExercises = db.relationship(
+        'DiagnosisExercise', back_populates='diagnosis')
 
     def to_dict(self):
         return{

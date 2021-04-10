@@ -6,3 +6,4 @@ from .progress import Progress
 from .question import Question
 from .diagnosis import Diagnosis
 from .userExercise import UserExercise
+from .diagnosisExercise import DiagnosisExercise
