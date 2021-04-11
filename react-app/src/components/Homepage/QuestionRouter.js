@@ -14,7 +14,7 @@ function QuestionRouter() {
   const question = useSelector((state) => state.question);
   const displayText = eval(question?.displayText);
   const displayValue = eval(question?.displayValue);
-  console.log(displayValue);
+  // console.log(displayValue);
 
   // console.log(displayValue[0]);
 
@@ -23,8 +23,11 @@ function QuestionRouter() {
   }, []);
 
   if (question.diagnosisId !== null) {
-    dispatch(fetchDx(question.diagnosisId));
-    // return <ShowDiagnosis />;
+    {
+      question.diagnosisId && dispatch(fetchDx(question.diagnosisId));
+    }
+    return <ShowDiagnosis />;
+    // return <div>{question.diagnosis?.name}</div>;
     // console.log(question.diagnosisId);
   }
 

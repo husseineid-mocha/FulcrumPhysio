@@ -37,7 +37,6 @@ export const fetchNextQuestion = (questionId) => async (dispatch) => {
 };
 
 export const fetchDx = (DxId) => async (dispatch) => {
-  console.log(DxId);
   const response = await fetch(`/api/questions/diagnosis/${DxId}`);
   const dx = await response.json();
   console.log(dx);
