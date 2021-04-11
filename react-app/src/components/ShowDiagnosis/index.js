@@ -4,6 +4,7 @@ import {
   saveExerciseToSelected,
   saveExercisesToUser,
 } from "../../store/selected";
+import { closeQuestion } from "../../store/modal";
 
 import "./ShowDiagnosis.css";
 import { Button } from "@material-ui/core";
@@ -65,6 +66,11 @@ function ShowDiagnosis() {
   //   console.log(exerciseDescriptions);
   //   console.log(exerciseObject);
 
+  const submitDiagnosisExercises = () => {
+    dispatch(saveExercisesToUser(Object.values(sendExercises), user.user.id));
+    dispatch(closeQuestion());
+  };
+
   return (
     question && (
       <div className="diagnosisContainer">
@@ -95,11 +101,7 @@ function ShowDiagnosis() {
         </div>
         <StyledButton
           className="addToProgramButton"
-          onClick={() =>
-            dispatch(
-              saveExercisesToUser(Object.values(sendExercises), user.user.id)
-            )
-          }
+          onClick={submitDiagnosisExercises}
         >
           Add exercises to my program
         </StyledButton>

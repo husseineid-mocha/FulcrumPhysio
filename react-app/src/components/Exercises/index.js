@@ -38,16 +38,8 @@ function Exercises({ authenticated, setAuthenticated }) {
   const exercises = useSelector((state) => state.exercise);
   const selected = useSelector((state) => state.selected);
   const user = useSelector((state) => state.session.user);
-  const [selectedExercises, setSelectedExercises] = useState("");
   // console.log(selectedExercises);
   // console.log(user);
-
-  // useEffect(() => {
-  //   localStorage.setItem("selected", JSON.stringify(selected));
-  // }, [selected]);
-
-  // const exercisesFromStorage = localStorage.getItem("selected");
-  // console.log(exercisesFromStorage);
 
   useEffect(() => {
     dispatch(fetchCategories());
@@ -108,11 +100,11 @@ function Exercises({ authenticated, setAuthenticated }) {
             </div>
 
             <div className="bigSelectedBox">
-              {selected &&
+              {Object.values(selected).length !== 0 ? (
                 Object.values(selected)?.map((exercise, idx) => (
                   <div className="miniExerciseBox" key={idx}>
                     <div>
-                      <div className="miniExerciseName">{exercise.name}</div>
+                      <div className="miniExerciseName">{exercise?.name}</div>
                     </div>
                     <div className="miniExerciseImageAndInfo">
                       <img className="miniExerciseImage" src={exercise.image} />
@@ -123,14 +115,19 @@ function Exercises({ authenticated, setAuthenticated }) {
                       </div>
                     </div>
                   </div>
-                ))}
+                ))
+              ) : (
+                <div className="selectedEmptyText">
+                  You have no selected exercises
+                </div>
+              )}
             </div>
           </div>
         </div>
         <div className="exercisesContainer">
           <div className="exercisesText">Select Exercises</div>
           <div className="exerciseContainer">
-            {exercises &&
+            {exercises.length !== 0 ? (
               exercises?.map((exercise, idx) => (
                 <div key={idx} className="exerciseTile">
                   <img
@@ -140,7 +137,12 @@ function Exercises({ authenticated, setAuthenticated }) {
                   />
                   <div>{exercise.name}</div>
                 </div>
-              ))}
+              ))
+            ) : (
+              <div className="pleaseSelectText">
+                Please Select an Exercise From a Category on the Left
+              </div>
+            )}
           </div>
         </div>
       </div>

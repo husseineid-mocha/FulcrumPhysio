@@ -40,12 +40,17 @@
 
 .diagnosisEducation {
     margin-bottom: 20px;
+    text-align: justify;
+    line-height: 32px;
 }
 
 .diagnosisExerciseTile {
     display: flex;
     margin-bottom: 40px;
     align-items: center;
+    border: 2px solid#154360;
+    padding: 8px 20px;
+    border-radius: 5px;
 }
 
 img.exerciseImage {
@@ -56,4 +61,9 @@ img.exerciseImage {
 
 .diagnosisExerciseName {
     min-width: 185px;
+}
+
+.diagnosisExerciseDescription {
+    text-align: justify;
+    line-height: 30px;
 }

@@ -149,3 +149,21 @@
 .MuiSvgIcon-root {
     color: white;
 }
+
+.pleaseSelectText {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 40em;
+    font-size: x-large;
+}
+
+.selectedEmptyText {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 24em;
+    align-items: center;
+}

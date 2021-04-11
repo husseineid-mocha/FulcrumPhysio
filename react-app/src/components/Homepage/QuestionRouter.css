@@ -16,3 +16,8 @@
     flex-direction: column;
     align-items: center;
 }
+
+.prompt {
+    text-align: center;
+    line-height: 40px;
+}
