@@ -8,6 +8,23 @@ import {
 } from "../../store/question";
 
 import "./QuestionRouter.css";
+import { Button } from "@material-ui/core";
+import styled from "styled-components";
+
+const StyledButton = styled(Button)`
+  background-color: #2657bc;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 7px 14px;
+  height: 3.1em;
+  border-radius: 4px;
+  justify-content: center;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 20px;
+  &:hover {
+    background-color: #5b7b90;
+`;
 
 function QuestionRouter() {
   const dispatch = useDispatch();
@@ -43,15 +60,15 @@ function QuestionRouter() {
     <>
       <div className="questionContainer">
         {question.displayText && (
-          <div>
-            <div>{question?.prompt}</div>
-            <div>
-              <button onClick={() => handleClickYes(displayValue[0])}>
+          <div className="promptAndButtons">
+            <div className="prompt">{question?.prompt}</div>
+            <div className="promptButtons">
+              <StyledButton onClick={() => handleClickYes(displayValue[0])}>
                 {displayText[0]}
-              </button>
-              <button onClick={() => handleClickNo(displayValue[1])}>
+              </StyledButton>
+              <StyledButton onClick={() => handleClickNo(displayValue[1])}>
                 {displayText[1]}
-              </button>
+              </StyledButton>
             </div>
           </div>
         )}
