@@ -1,0 +1,59 @@
+.diagnosisContainer {
+    height: fit-content;
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    border: 4px solid #154360;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 25px;
+    box-sizing: border-box;
+    padding: 20px;
+    overflow: scroll;
+}
+
+.recommendedContainer {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.diagnosisNameHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 40px;
+    font-size: 30px;
+}
+
+.diagnosisName {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.tryTheseText {
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.diagnosisEducation {
+    margin-bottom: 20px;
+}
+
+.diagnosisExerciseTile {
+    display: flex;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+img.exerciseImage {
+    height: 140px;
+    width: 250px;
+    margin-right: 20px;
+}
+
+.diagnosisExerciseName {
+    min-width: 185px;
+}

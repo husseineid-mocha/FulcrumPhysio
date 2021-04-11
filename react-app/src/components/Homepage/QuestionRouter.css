@@ -10,3 +10,9 @@
     box-sizing: border-box;
     padding: 20px;
 }
+
+.promptAndButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
