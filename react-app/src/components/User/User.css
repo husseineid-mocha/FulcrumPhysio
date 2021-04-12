@@ -46,7 +46,8 @@
 .ExerciseName {
     margin-bottom: 10px;
     font-weight: 800px;
-    margin-right: 15px;
+    min-width: 116px;
+    max-width: 130px;
 }
 
 .profileSidebar {
