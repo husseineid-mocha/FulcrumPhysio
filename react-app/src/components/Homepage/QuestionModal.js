@@ -19,9 +19,9 @@ const QuestionModal = ({ authenticated, setAuthenticated }) => {
         closeTimeoutMS={200}
         onRequestClose={closeModal}
         contentLabel="Question Modal"
-        overlayClassName="OuterModal"
+        overlayClassName="OuterModalQuestion"
         // style={customStyles}
-        className="InnerModal"
+        className="InnerModalQuestion"
       >
         <QuestionRouter />
       </Modal>
