@@ -24,7 +24,8 @@ function User() {
   const history = useHistory();
   const [user, setUser] = useState({});
   const [exercises, setExercises] = useState({});
-  console.log(exercises);
+  const [navId, setNavId] = useState(1);
+  // console.log(exercises);
 
   // Notice we use useParams here instead of getting the params
   // From props.
@@ -74,6 +75,14 @@ function User() {
     history.push("/exercises");
   };
 
+  const click1 = () => {
+    setNavId(1);
+  };
+
+  const click2 = () => {
+    setNavId(2);
+  };
+
   return (
     <div>
       <div className="profileWelcome">
@@ -81,45 +90,62 @@ function User() {
       </div>
       <div className="userContainer">
         <div className="profileSidebar">
-          <div>Exercises</div>
-          <div>User Information</div>
+          <div className="sidebarDivs">
+            <div className="exercisesDiv" onClick={click1}>
+              Exercises
+            </div>
+            <div className="userInfoDiv" onClick={click2}>
+              User Information
+            </div>
+          </div>
         </div>
 
-        <div className="exerciseContainersAndButton">
-          <div className="yourExercisesText">Selected Exercises</div>
-          <div className="exerciseContainers">
-            {Object.values(exercises).map((exercise, idx) => (
-              <div className="ExerciseBox" key={idx}>
-                <div>
-                  <div className="ExerciseName">
-                    {exercise.name}{" "}
-                    <button
-                      onClick={() => deleteExercise(exercise.id, user.id)}
-                      className="deleteButton"
-                    >
-                      <DeleteIcon />
-                    </button>
+        {navId === 1 && (
+          <div className="exerciseContainersAndButton">
+            <div className="yourExercisesText">Selected Exercises</div>
+            <div className="exerciseContainers">
+              {Object.values(exercises).map((exercise, idx) => (
+                <div className="ExerciseBox" key={idx}>
+                  <div>
+                    <div className="ExerciseName">{exercise.name} </div>
                   </div>
-                </div>
-                <div className="ExerciseImageAndInfo">
-                  <img className="ExerciseImage" src={exercise.image} />
-                  <div className="SetsRepsTimes">
-                    <div> Sets: {exercise.sets}</div>
-                    <div> Reps: {exercise.reps}</div>
-                    <div> Times Per Week:{exercise.timesPerWeek}</div>
+                  <div className="ExerciseImageAndInfo">
+                    <img className="ExerciseImage" src={exercise.image} />
+                    <div className="SetsRepsTimes">
+                      <div> Sets: {exercise.sets}</div>
+                      <div> Reps: {exercise.reps}</div>
+                      <div> Times Per Week:{exercise.timesPerWeek}</div>
+                    </div>
                   </div>
+                  <div className="exerciseDescription">
+                    {exercise.description}
+                  </div>
+                  <button
+                    onClick={() => deleteExercise(exercise.id, user.id)}
+                    className="deleteButton"
+                  >
+                    <DeleteIcon />
+                  </button>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            <StyledButton
+              className="addExerciseButton"
+              type="submit"
+              onClick={addExercise}
+            >
+              Add Exercise
+            </StyledButton>
           </div>
-          <StyledButton
-            className="addExerciseButton"
-            type="submit"
-            onClick={addExercise}
-          >
-            Add Exercise
-          </StyledButton>
-        </div>
+        )}
+
+        {navId === 2 && (
+          <div className="userInfoContainer">
+            <div>Email : {user.email}</div>
+            <div>Username : {user.username}</div>
+          </div>
+        )}
       </div>
     </div>
   );

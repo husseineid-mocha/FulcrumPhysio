@@ -17,20 +17,20 @@
 }
 
 .ExerciseImage {
-    height: 100px;
-    width: 100px;
+    height: 130px;
+    width: 130px;
     margin-right: 25px;
 }
 
 .ExerciseBox {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     padding: 10px;
     border-radius: 4px;
     border: 2px solid #3252a8;
-    padding: 7px;
+    padding: 10px;
     margin-top: 7px;
     font-weight: 450;
     height: 150px;
@@ -40,11 +40,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 20px;
 }
 
 .ExerciseName {
     margin-bottom: 10px;
     font-weight: 800px;
+    margin-right: 15px;
 }
 
 .profileSidebar {
@@ -53,9 +55,43 @@
     align-items: center;
     flex: 0.33 1;
     justify-content: center;
-    border: 1px solid black;
+    border: 3px solid #3252a8;
     height: fit-content;
     margin-right: 14px;
+    border-radius: 3px;
+}
+
+.sidebarDivs {
+    width: 100%;
+    text-align: center;
+}
+
+.exercisesDiv {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #3252a8;
+    cursor: pointer;
+}
+
+.exercisesDiv:hover {
+    background-color: #2657bc;
+    color: white;
+}
+
+.userInfoDiv {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #3252a8;
+    cursor: pointer;
+}
+
+.userInfoDiv:hover {
+    background-color: #2657bc;
+    color: white;
 }
 
 .exerciseContainersAndButton {
@@ -79,4 +115,31 @@
     margin-bottom: 20px;
     font-size: 20px;
     font-weight: 600;
+}
+
+.exerciseDescription {
+    padding: 10px;
+}
+
+button.deleteButton {
+    /* color: blue; */
+    background: #3252a8;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.deleteButton:hover {
+    background: #d42d30;
+}
+
+.userInfoContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+    border: 6px solid #3252a8;
+    padding: 20px;
+    border-radius: 5px;
+    height: 63em;
+    overflow: scroll;
 }
