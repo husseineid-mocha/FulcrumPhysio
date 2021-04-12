@@ -23,7 +23,7 @@
 }
 
 .container2 {
-    height: 100vh;
+    height: 115vh;
     max-height: 815px;
     width: 509px;
     border-radius: 6px;
@@ -58,7 +58,7 @@
 
 .mainBodyImage {
     height: 100%;
-    background-size: contain;
+    background-size: cover;
     background-image: url(../../images/MainPicture.png);
     background-repeat: no-repeat;
     position: relative;
