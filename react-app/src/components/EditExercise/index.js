@@ -52,6 +52,10 @@ function EditExercise({ exercise, exercises, setExercises }) {
     console.log(list);
   };
 
+  const editExercise = async (e) => {
+    e.preventDefault();
+  };
+
   return (
     <>
       <div>
@@ -75,7 +79,7 @@ function EditExercise({ exercise, exercises, setExercises }) {
           ) : (
             <div>
               <img className="ExerciseImage" src={exercise.image} />
-              <form></form>
+              <form onSubmit={editExercise}></form>
             </div>
           )}
           <div>
