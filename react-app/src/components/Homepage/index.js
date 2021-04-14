@@ -65,9 +65,7 @@ function Homepage({ authenticated, setAuthenticated }) {
               <div className="kneeClickLeft"></div>
               <div className="ankleClickRight"></div>
               <div className="ankleClickLeft"></div>
-              <div className="backClick">
-                {/* <button type="submit">Back</button> */}
-              </div>
+              <div className="backClick"></div>
             </div>
           </div>
         </div>

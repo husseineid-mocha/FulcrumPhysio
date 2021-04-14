@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ShowDiagnosis from "../ShowDiagnosis";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -8,6 +8,7 @@ import {
 } from "../../store/question";
 
 import "./QuestionRouter.css";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import { Button } from "@material-ui/core";
 import styled from "styled-components";
 
@@ -28,6 +29,9 @@ const StyledButton = styled(Button)`
 
 function QuestionRouter() {
   const dispatch = useDispatch();
+
+  const [idList, setIdList] = useState([]);
+
   const question = useSelector((state) => state.question);
   const displayText = eval(question?.displayText);
   const displayValue = eval(question?.displayValue);
@@ -44,11 +48,20 @@ function QuestionRouter() {
   }
 
   const handleClickYes = (nextId) => {
+    idList.push(question.promptId);
     dispatch(fetchNextQuestion(nextId));
   };
 
   const handleClickNo = (nextId) => {
+    idList.push(question.promptId);
     dispatch(fetchNextQuestion(nextId));
+  };
+
+  const goBack = () => {
+    if (idList.length > 0) {
+      let newId = idList.pop();
+      dispatch(fetchNextQuestion(newId));
+    }
   };
 
   return (
@@ -63,6 +76,11 @@ function QuestionRouter() {
               </StyledButton>
               <StyledButton onClick={() => handleClickNo(displayValue[1])}>
                 {displayText[1]}
+              </StyledButton>
+            </div>
+            <div className="backButton">
+              <StyledButton onClick={goBack}>
+                <ArrowBackIcon />
               </StyledButton>
             </div>
           </div>
