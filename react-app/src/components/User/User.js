@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
+import EditExercise from "../EditExercise";
 
 import "./User.css";
-import DeleteIcon from "@material-ui/icons/Delete";
 import { Button } from "@material-ui/core";
 import styled from "styled-components";
 
@@ -25,7 +25,6 @@ function User() {
   const [user, setUser] = useState({});
   const [exercises, setExercises] = useState({});
   const [navId, setNavId] = useState(1);
-  // console.log(exercises);
 
   // Notice we use useParams here instead of getting the params
   // From props.
@@ -56,20 +55,6 @@ function User() {
   if (!user) {
     return null;
   }
-
-  const deleteExercise = async (exerciseId, userId) => {
-    await fetch(`/api/selected/delete`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ exerciseId: exerciseId, userId: userId }),
-    });
-    const list = { ...exercises };
-    delete list[exerciseId];
-    setExercises(list);
-    console.log(list);
-  };
 
   const addExercise = () => {
     history.push("/exercises");
@@ -105,28 +90,12 @@ function User() {
             <div className="yourExercisesText">Selected Exercises</div>
             <div className="exerciseContainers">
               {Object.values(exercises).map((exercise, idx) => (
-                <div className="ExerciseBox" key={idx}>
-                  <div>
-                    <div className="ExerciseName">{exercise.name} </div>
-                  </div>
-                  <div className="ExerciseImageAndInfo">
-                    <img className="ExerciseImage" src={exercise.image} />
-                    <div className="SetsRepsTimes">
-                      <div> Sets: {exercise.sets}</div>
-                      <div> Reps: {exercise.reps}</div>
-                      <div> Times Per Week:{exercise.timesPerWeek}</div>
-                    </div>
-                  </div>
-                  <div className="exerciseDescription">
-                    {exercise.description}
-                  </div>
-                  <button
-                    onClick={() => deleteExercise(exercise.id, user.id)}
-                    className="deleteButton"
-                  >
-                    <DeleteIcon />
-                  </button>
-                </div>
+                <EditExercise
+                  exercise={exercise}
+                  exercises={exercises}
+                  setExercises={setExercises}
+                  key={idx}
+                />
               ))}
             </div>
 

@@ -56,9 +56,10 @@
 }
 
 .questionContainer {
-    height: 25vh;
+    /* height: 25vh; */
     width: 50vw;
     display: flex;
+    flex-direction: column;
     border: 4px solid #154360;
     justify-content: center;
     align-items: center;
@@ -77,4 +78,10 @@
 .prompt {
     text-align: center;
     line-height: 40px;
+}
+
+.backButton {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }

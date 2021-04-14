@@ -27,6 +27,17 @@ const StyledButton = styled(Button)`
     background-color: #5b7b90;
 `;
 
+const StyledButton2 = styled(Button)`
+  background-color: #d42d30;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  justify-content: center;
+  margin-top: 20px;
+  &:hover {
+    background-color: #5b7b90;
+`;
+
 function QuestionRouter() {
   const dispatch = useDispatch();
 
@@ -70,6 +81,7 @@ function QuestionRouter() {
         {question.displayText && (
           <div className="promptAndButtons">
             <div className="prompt">{question?.prompt}</div>
+
             <div className="promptButtons">
               <StyledButton onClick={() => handleClickYes(displayValue[0])}>
                 {displayText[0]}
@@ -78,13 +90,13 @@ function QuestionRouter() {
                 {displayText[1]}
               </StyledButton>
             </div>
-            <div className="backButton">
-              <StyledButton onClick={goBack}>
-                <ArrowBackIcon />
-              </StyledButton>
-            </div>
           </div>
         )}
+        <div className="backButton">
+          <StyledButton2 onClick={goBack}>
+            <ArrowBackIcon />
+          </StyledButton2>
+        </div>
       </div>
     </>
   );
