@@ -99,3 +99,4 @@ function EditExercise({ exercise, exercises, setExercises }) {
 }
 
 export default EditExercise;
+1;
