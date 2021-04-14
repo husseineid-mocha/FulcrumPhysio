@@ -8,7 +8,6 @@ import "./EditExercise.css";
 
 function EditExercise({ exercise, exercises, setExercises }) {
   const [showEditExercise, setShowEditExercise] = useState(false);
-  //   const [exercises, setExercises] = useState({});
   const [user, setUser] = useState({});
 
   const { id } = useParams();
@@ -76,6 +75,7 @@ function EditExercise({ exercise, exercises, setExercises }) {
           ) : (
             <div>
               <img className="ExerciseImage" src={exercise.image} />
+              <form></form>
             </div>
           )}
           <div>
@@ -99,3 +99,5 @@ function EditExercise({ exercise, exercises, setExercises }) {
 }
 
 export default EditExercise;
+
+1;
