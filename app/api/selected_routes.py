@@ -53,3 +53,15 @@ def delete_userExercise():
     db.session.delete(entry)
     db.session.commit()
     return {"message": 'success'}
+
+
+@selected_routes.route('/edit', methods=['POST'])
+def edit_exercise():
+    exercise = request.get_json()
+    matched_exercise = Exercise.query.get(exercise['id'])
+    matched_exercise.reps = exercise['reps']
+    matched_exercise.sets = exercise['sets']
+    matched_exercise.timesPerWeek = exercise['timesPerWeek']
+    matched_exercise.description = exercise['description']
+    db.session.commit()
+    return matched_exercise.to_dict()

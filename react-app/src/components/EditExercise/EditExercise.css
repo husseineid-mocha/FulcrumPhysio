@@ -1,0 +1,24 @@
+.editContainer {
+    display: flex;
+}
+
+form.editForm {
+    display: flex;
+}
+
+textarea {
+    height: 74px;
+    width: 230px;
+}
+
+.descriptionEditDiv {
+    margin: 0px 16px;
+}
+
+.submitButton {
+    width: -webkit-fill-available;
+    background: transparent;
+    border-radius: 4px;
+    height: 20px;
+    cursor: pointer;
+}

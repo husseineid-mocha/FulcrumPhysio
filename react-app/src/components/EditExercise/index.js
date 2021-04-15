@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { editSelectedExercise } from "../../store/selected";
 
 import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
 import "./EditExercise.css";
 
 function EditExercise({ exercise, exercises, setExercises }) {
+  const dispatch = useDispatch();
+
   const [showEditExercise, setShowEditExercise] = useState(false);
   const [user, setUser] = useState({});
+  const [reps, setReps] = useState(exercise.reps);
+  const [sets, setSets] = useState(exercise.sets);
+  const [timesPerWeek, setTimesPerWeek] = useState(exercise.timesPerWeek);
+  const [description, setDescription] = useState(exercise.description);
 
   const { id } = useParams();
 
@@ -54,7 +61,21 @@ function EditExercise({ exercise, exercises, setExercises }) {
 
   const editExercise = async (e) => {
     e.preventDefault();
+    const updatedExercise = {
+      description: description,
+      reps: reps,
+      sets: sets,
+      timesPerWeek: timesPerWeek,
+      id: exercise.id,
+      categoryId: exercise.categoryId,
+      name: exercise.name,
+      image: exercise.image,
+    };
+    // console.log(updatedExercise);
+    await dispatch(editSelectedExercise(updatedExercise));
+    setShowEditExercise(false);
   };
+  //   console.log(showEditExercise);
 
   return (
     <>
@@ -78,8 +99,54 @@ function EditExercise({ exercise, exercises, setExercises }) {
             </>
           ) : (
             <div>
-              <img className="ExerciseImage" src={exercise.image} />
-              <form onSubmit={editExercise}></form>
+              <div className="editContainer">
+                <img className="ExerciseImage" src={exercise.image} />
+                <form className="editForm" onSubmit={editExercise}>
+                  <div className="editInputDivs">
+                    <label htmlFor="set">Sets</label>
+                    <div>
+                      <input
+                        name="sets"
+                        type="text"
+                        value={sets}
+                        onChange={(e) => setSets(e.target.value)}
+                      />
+                    </div>
+                    <label htmlFor="reps">Reps</label>
+                    <div>
+                      <input
+                        name="reps"
+                        type="text"
+                        value={reps}
+                        onChange={(e) => setReps(e.target.value)}
+                      />
+                    </div>
+                    <label htmlFor="timesPerWeek">Times Per Week</label>
+                    <div>
+                      <input
+                        name="timesPerWeek"
+                        type="text"
+                        value={timesPerWeek}
+                        onChange={(e) => setTimesPerWeek(e.target.value)}
+                      />
+                    </div>
+                  </div>
+                  <div className="descriptionEditDiv">
+                    <label htmlFor="description">Description</label>
+                    <div>
+                      <textarea
+                        name="description"
+                        type="textarea"
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
+                      />
+                    </div>
+                    <button className="submitButton" type="submit">
+                      Submit Changes
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           )}
           <div>
