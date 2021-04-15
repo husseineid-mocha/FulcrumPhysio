@@ -17,6 +17,14 @@ function EditExercise({ exercise, exercises, setExercises }) {
   const [timesPerWeek, setTimesPerWeek] = useState(exercise.timesPerWeek);
   const [description, setDescription] = useState(exercise.description);
 
+  //   const data = useSelector((state) => state.selected);
+  //   console.log(data);
+  //   const [state, setState] = useState(false);
+
+  //   useEffect(() => {
+  //     setState(false);
+  //   }, [setState]);
+
   const { id } = useParams();
 
   useEffect(() => {
@@ -59,22 +67,30 @@ function EditExercise({ exercise, exercises, setExercises }) {
     console.log(list);
   };
 
+  const updatedExercise = {};
+
   const editExercise = async (e) => {
     e.preventDefault();
-    const updatedExercise = {
-      description: description,
-      reps: reps,
-      sets: sets,
-      timesPerWeek: timesPerWeek,
-      id: exercise.id,
-      categoryId: exercise.categoryId,
-      name: exercise.name,
-      image: exercise.image,
-    };
-    // console.log(updatedExercise);
+    updatedExercise["description"] = description;
+    updatedExercise["reps"] = reps;
+    updatedExercise["sets"] = sets;
+    updatedExercise["timesPerWeek"] = timesPerWeek;
+    updatedExercise["id"] = exercise.id;
+    updatedExercise["categoryId"] = exercise.categoryId;
+    updatedExercise["name"] = exercise.name;
+    updatedExercise["image"] = exercise.image;
+
     await dispatch(editSelectedExercise(updatedExercise));
+    const res = await fetch(`/api/selected/get/${id}`);
+    const data = await res.json();
+    if (res.ok) setExercises(data);
+    // const list = { ...exercises};
+    // setExercises(data);
+    //! REFETCH
     setShowEditExercise(false);
   };
+
+  //   console.log(updatedExercise);
   //   console.log(showEditExercise);
 
   return (

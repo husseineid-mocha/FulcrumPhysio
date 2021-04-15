@@ -96,7 +96,7 @@ const selectedReducer = (state = {}, action) => {
     case CLEAR_SELECTED:
       return newState;
     case EDIT_SELECTED:
-      return action.exercise;
+      return { ...action.exercise };
     default:
       return state;
   }
