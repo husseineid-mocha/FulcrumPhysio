@@ -100,7 +100,7 @@ function Exercises({ authenticated, setAuthenticated }) {
             </div>
 
             <div className="bigSelectedBox">
-              {Object.values(selected).length !== 0 ? (
+              {Object.values(selected)?.length !== 0 ? (
                 Object.values(selected)?.map((exercise, idx) => (
                   <div className="miniExerciseBox" key={idx}>
                     <div>

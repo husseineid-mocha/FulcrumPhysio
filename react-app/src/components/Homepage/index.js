@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Redirect, useHistory } from "react-router-dom";
 //? MODAL BELOW IS IN CASE WE NEED REACT MODAL QUESTIONMODAL
 import Modal from "react-modal";
 import { useDispatch } from "react-redux";
 import { openQuestion } from "../../store/modal";
+import { clearSelectedExercises } from "../../store/selected";
 // import Modal from "react-bootstrap/Modal"; //GET RID OF BOOTSTRAP
 
 import "./Homepage.css";
@@ -24,6 +25,10 @@ const StyledButton = styled(Button)`
 `;
 
 function Homepage({ authenticated, setAuthenticated }) {
+  useEffect(() => {
+    dispatch(clearSelectedExercises());
+  }, []); //this useEffect is to fill the selected state in the store so it is not null and can render the exercises page
+
   const dispatch = useDispatch();
   const history = useHistory();
 

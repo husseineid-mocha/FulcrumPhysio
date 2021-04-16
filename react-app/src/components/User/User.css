@@ -40,13 +40,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 10px;
+    min-width: 305px;
 }
 
 .ExerciseName {
     margin-bottom: 10px;
     font-weight: 800px;
-    min-width: 116px;
+    min-width: 130px;
     max-width: 130px;
 }
 
@@ -120,6 +121,7 @@
 
 .exerciseDescription {
     padding: 10px;
+    width: 28vw;
 }
 
 button.deleteButton {
@@ -156,4 +158,21 @@ button.editButton:hover {
     border-radius: 5px;
     height: 63em;
     overflow: scroll;
+}
+
+.SetsRepsTimes {
+    min-width: fit-content;
+}
+
+.userSets {
+    margin-bottom: 8px;
+}
+
+.userTimesPerWeek {
+    margin-top: 8px;
+}
+
+.deleteAndEditButtons {
+    display: flex;
+    flex-direction: column;
 }

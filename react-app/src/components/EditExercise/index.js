@@ -17,14 +17,6 @@ function EditExercise({ exercise, exercises, setExercises }) {
   const [timesPerWeek, setTimesPerWeek] = useState(exercise.timesPerWeek);
   const [description, setDescription] = useState(exercise.description);
 
-  //   const data = useSelector((state) => state.selected);
-  //   console.log(data);
-  //   const [state, setState] = useState(false);
-
-  //   useEffect(() => {
-  //     setState(false);
-  //   }, [setState]);
-
   const { id } = useParams();
 
   useEffect(() => {
@@ -67,10 +59,9 @@ function EditExercise({ exercise, exercises, setExercises }) {
     console.log(list);
   };
 
-  const updatedExercise = {};
-
   const editExercise = async (e) => {
     e.preventDefault();
+    const updatedExercise = {};
     updatedExercise["description"] = description;
     updatedExercise["reps"] = reps;
     updatedExercise["sets"] = sets;
@@ -84,14 +75,8 @@ function EditExercise({ exercise, exercises, setExercises }) {
     const res = await fetch(`/api/selected/get/${id}`);
     const data = await res.json();
     if (res.ok) setExercises(data);
-    // const list = { ...exercises};
-    // setExercises(data);
-    //! REFETCH
     setShowEditExercise(false);
   };
-
-  //   console.log(updatedExercise);
-  //   console.log(showEditExercise);
 
   return (
     <>
@@ -106,9 +91,14 @@ function EditExercise({ exercise, exercises, setExercises }) {
                 <img className="ExerciseImage" src={exercise.image} />
 
                 <div className="SetsRepsTimes">
-                  <div> Sets: {exercise.sets}</div>
-                  <div> Reps: {exercise.reps}</div>
-                  <div> Times Per Week:{exercise.timesPerWeek}</div>
+                  <div className="userDetailDivs">
+                    <div className="userSets"> Sets: {exercise.sets}</div>
+                    <div className="userReps"> Reps: {exercise.reps}</div>
+                    <div className="userTimesPerWeek">
+                      {" "}
+                      Times Per Week:{exercise.timesPerWeek}
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="exerciseDescription">{exercise.description}</div>
@@ -119,32 +109,41 @@ function EditExercise({ exercise, exercises, setExercises }) {
                 <img className="ExerciseImage" src={exercise.image} />
                 <form className="editForm" onSubmit={editExercise}>
                   <div className="editInputDivs">
-                    <label htmlFor="set">Sets</label>
-                    <div>
-                      <input
-                        name="sets"
-                        type="text"
-                        value={sets}
-                        onChange={(e) => setSets(e.target.value)}
-                      />
+                    <div className="setInputDiv">
+                      <label htmlFor="set">Sets</label>
+                      <div>
+                        <input
+                          className="inputDiv"
+                          name="sets"
+                          type="text"
+                          value={sets}
+                          onChange={(e) => setSets(e.target.value)}
+                        />
+                      </div>
                     </div>
-                    <label htmlFor="reps">Reps</label>
-                    <div>
-                      <input
-                        name="reps"
-                        type="text"
-                        value={reps}
-                        onChange={(e) => setReps(e.target.value)}
-                      />
+                    <div className="repInputDiv">
+                      <label htmlFor="reps">Reps</label>
+                      <div>
+                        <input
+                          className="inputDiv"
+                          name="reps"
+                          type="text"
+                          value={reps}
+                          onChange={(e) => setReps(e.target.value)}
+                        />
+                      </div>
                     </div>
-                    <label htmlFor="timesPerWeek">Times Per Week</label>
-                    <div>
-                      <input
-                        name="timesPerWeek"
-                        type="text"
-                        value={timesPerWeek}
-                        onChange={(e) => setTimesPerWeek(e.target.value)}
-                      />
+                    <div className="timesPerWeekInputDiv">
+                      <label htmlFor="timesPerWeek">Times Per Week</label>
+                      <div>
+                        <input
+                          className="inputDiv"
+                          name="timesPerWeek"
+                          type="text"
+                          value={timesPerWeek}
+                          onChange={(e) => setTimesPerWeek(e.target.value)}
+                        />
+                      </div>
                     </div>
                   </div>
                   <div className="descriptionEditDiv">
@@ -165,7 +164,7 @@ function EditExercise({ exercise, exercises, setExercises }) {
               </div>
             </div>
           )}
-          <div>
+          <div className="deleteAndEditButtons">
             <button
               onClick={() => deleteExercise(exercise.id, user.id)}
               className="deleteButton"

@@ -8,7 +8,7 @@ form.editForm {
 
 textarea {
     height: 74px;
-    width: 230px;
+    width: 22rem;
 }
 
 .descriptionEditDiv {
@@ -21,4 +21,41 @@ textarea {
     border-radius: 4px;
     height: 20px;
     cursor: pointer;
+    background: #3252a8;
+    color: white;
+    font-weight: 500;
+}
+
+.submitButton:hover {
+    background: #5b7b90;
+}
+
+.editInputDivs {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input.inputDiv {
+    margin-left: 5px;
+    padding-left: 5px;
+    width: 35px;
+}
+
+.setInputDiv {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.repInputDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.timesPerWeekInputDiv {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    align-items: center;
 }
