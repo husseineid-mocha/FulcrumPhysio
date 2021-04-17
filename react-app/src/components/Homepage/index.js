@@ -27,7 +27,7 @@ const StyledButton = styled(Button)`
 function Homepage({ authenticated, setAuthenticated }) {
   useEffect(() => {
     dispatch(clearSelectedExercises());
-  }, []); //this useEffect is to fill the selected state in the store so it is not null and can render the exercises page
+  }, []); //this useEffect is to fill the selected state in the store so it is not null and can render the exercises page when the history.push is clicked on.
 
   const dispatch = useDispatch();
   const history = useHistory();

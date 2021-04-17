@@ -30,24 +30,19 @@ const StyledButton = styled(Button)`
 `;
 
 function Exercises({ authenticated, setAuthenticated }) {
-  // const [exercise, setExercise] = useState([]);
-  // console.log(exercise);
   const dispatch = useDispatch();
 
   const categories = useSelector((state) => Object.values(state.category));
   const exercises = useSelector((state) => state.exercise);
   const selected = useSelector((state) => state.selected);
   const user = useSelector((state) => state.session.user);
-  // console.log(selectedExercises);
-  // console.log(user);
+
+  useEffect(() => {
+    dispatch(clearSelectedExercises());
+  }, []); //clears the selected exercises when page is first visited
 
   useEffect(() => {
     dispatch(fetchCategories());
-    //! FIGURE THIS OUT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    //? FIGURE THIS OUT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    // if (select) {
-    //   dispatch(restoreSelectedExercises(select));
-    // }
   }, []);
 
   const clickCategory = (category) => {
