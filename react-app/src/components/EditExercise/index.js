@@ -169,13 +169,13 @@ function EditExercise({ exercise, exercises, setExercises }) {
               onClick={() => deleteExercise(exercise.id, user.id)}
               className="deleteButton"
             >
-              <DeleteIcon />
+              <DeleteIcon style={{ fill: "#3050a6" }} />
             </button>
             <button
               onClick={() => setShowEditExercise(true)}
               className="editButton"
             >
-              <EditIcon />
+              <EditIcon style={{ fill: "#3050a6" }} />
             </button>
           </div>
         </div>

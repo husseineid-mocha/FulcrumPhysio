@@ -17,6 +17,13 @@ def seed_exercises():
     pendulums = Exercise(
         name='Pendulums', image='https://fulcrumphysio.s3.amazonaws.com/Pendulums.jpeg', description='Shift your body weight side to side to allow your injured arm to swing side to side freely. Your injured arm should be fully relaxed.', categoryId=4)
 
+    db.session.add(shoulder_retraction)
+    db.session.add(shoulder_external_rotation)
+    db.session.add(open_book)
+    db.session.add(band_rows)
+    db.session.add(shoulder_extensions)
+    db.session.add(pendulums)
+
     sideplank_hip_abduction = Exercise(
         name='Hip Abduction', image='https://fulcrumphysio.s3.amazonaws.com/sideplank-hip-abduction.jpeg', description='Sideplank with active hip abduction to facilitate improved core and hip strength and coordination.', categoryId=1)
     kneeling_hip_flexor_stretch = Exercise(
@@ -31,6 +38,13 @@ def seed_exercises():
         name='Lateral Moster Walk', image='https://fulcrumphysio.s3.amazonaws.com/lateralMonsterWalk.jpeg', description='Place a looped elastic band around both thighs. Next, bend your knees and step to the side while keeping tension on the band the entire time.  After taking sidesteps to the side in one direction, reverse the direction taking sidesteps until you return to the starting position. Repeat.', categoryId=1)
     piriformis_stretch = Exercise(
         name='Piriformis Stretch', image='https://fulcrumphysio.s3.amazonaws.com/piriformisStretch.jpeg', description='While lying on your back with both knee bent, cross your affected leg on the other knee. Next, hold your unaffected thigh and pull it up towards your chest until a stretch is felt in the buttock.', categoryId=1)
+
+    db.session.add(sideplank_hip_abduction)
+    db.session.add(kneeling_hip_flexor_stretch)
+    db.session.add(sidelying_clam)
+    db.session.add(seated_hamstring_stretch)
+    db.session.add(squat)
+    db.session.add(lateral_monster_walk)
 
     quad_set = Exercise(
         name='Quad Set', image='https://fulcrumphysio.s3.amazonaws.com/quad+set.jpeg', description='Tighten your top thigh muscle as you attempt to press the back of your knee downward towards the table.', categoryId=2)
@@ -47,12 +61,20 @@ def seed_exercises():
     squatKnee = Exercise(
         name='Squat', image='https://fulcrumphysio.s3.amazonaws.com/squat.jpeg', description='While standing, lean towards your unaffected leg and then raise up on your toes as you lift your heels off the ground. There should be reduced body weight on the affected side while lifting and lowering your heels. ', categoryId=2)
 
+    db.session.add(quad_set)
+    db.session.add(prone_quad_stretch)
+    db.session.add(seated_hamstring_stretch_knee)
+    db.session.add(calf_stretch_towel)
+    db.session.add(foamroll_ITB)
+    db.session.add(hamstring_set)
+    db.session.add(squatKnee)
+
     heel_raise = Exercise(
         name='Heel Raise', image='https://fulcrumphysio.s3.amazonaws.com/heelRaise.jpeg', description='While standing, lean towards your unaffected leg and then raise up on your toes as you lift your heels off the ground. There should be reduced body weight on the affected side while lifting and lowering your heels. ', categoryId=3)
     gastroc_stretch = Exercise(
-        name='Standing Gastrocnemius Stretch', image='https://fulcrumphysio.s3.amazonaws.com/gastrocStretch.jpeg', description='Start by standing in front of a wall or other sturdy object. Step forward with one foot and maintain your toes on both feet to be pointed straight forward. Keep the leg behind you with a straight knee during the stretch. Lean forward towards the wall and support yourself with your arms as you allow your front knee to bend until a gentle stretch is felt along the back of your leg that is most behind you. Move closer or further away from the wall to control the stretch of the back leg. Also you can adjust the bend of the front knee to control the stretch as well.', categoryId=3)
+        name='Standing Gastrocnemius Stretch', image='https://fulcrumphysio.s3.amazonaws.com/gastrocStretch.jpeg', description='Start by standing in front of a wall or other sturdy object. Step forward with one foot and maintain your toes on both feet to be pointed straight forward. Keep the leg behind you with a straight knee during the stretch. Lean forward towards the wall and support yourself with your arms as you allow your front knee to bend until a gentle stretch is felt along the back of your leg that is most behind you.', categoryId=3)
     soleus_stretch = Exercise(
-        name='Standing Soleus Stretch', image='https://fulcrumphysio.s3.amazonaws.com/soleus+stretch.jpeg', description='Start by standing in front of a wall or other sturdy object. Step forward with one foot and maintain your toes on both feet to be pointed straight forward. Keep the leg behind you with a bent knee during the stretch. Lean forward towards the wall and support yourself with your arms as you allow your front knee to bend until a gentle stretch is felt along the back of your leg that is most behind you. Move closer or further away from the wall to control the stretch of the back leg. Also you can adjust the bend of the front knee to control the stretch as well.', categoryId=3)
+        name='Standing Soleus Stretch', image='https://fulcrumphysio.s3.amazonaws.com/soleus+stretch.jpeg', description='Start by standing in front of a wall or other sturdy object. Step forward with one foot and maintain your toes on both feet to be pointed straight forward. Keep the leg behind you with a bent knee during the stretch. Lean forward towards the wall and support yourself with your arms as you allow your front knee to bend until a gentle stretch is felt along the back of your leg that is most behind you.', categoryId=3)
     ankle_Inversion = Exercise(
         name='Ankle Inversion With Band', image='https://fulcrumphysio.s3.amazonaws.com/ankleInversionBand.jpeg', description='While seated, cross your legs and using an elastic band attached to your foot, hook it under your opposite foot and up to your hand. Next, draw your foot inward. Be sure to keep your heel in contact with the floor the entire time.', categoryId=3)
     ankle_Eversion = Exercise(
@@ -63,6 +85,15 @@ def seed_exercises():
         name='Ankle Dorsiflexion With Band', image='https://fulcrumphysio.s3.amazonaws.com/ankleDFBand.jpeg', description='While seated, use an elastic band attached to your foot and draw your foot upward. Be sure to keep your heel in contact with the floor the entire time.', categoryId=3)
     ankle_circles = Exercise(
         name='Ankle Circles', image='https://fulcrumphysio.s3.amazonaws.com/ankleCircles.jpeg', description='Move your ankle in a circular clockwise pattern for several repetitions and then repeat in the reverse counterclockwise direction.', categoryId=3)
+
+    db.session.add(heel_raise)
+    db.session.add(gastroc_stretch)
+    db.session.add(soleus_stretch)
+    db.session.add(ankle_Inversion)
+    db.session.add(ankle_Eversion)
+    db.session.add(ankle_plantarFlexion)
+    db.session.add(ankle_dorsiFlexion)
+    db.session.add(ankle_circles)
 
     wristFlexorStretch = Exercise(
         name='Wrist Flexor Stretch', image='https://fulcrumphysio.s3.amazonaws.com/wristFlexorstretch.jpeg', description='Use your unaffected hand to bend the affected wrist up as shown. Keep the elbow straight on the affected side the entire time.', categoryId=5)
@@ -81,37 +112,6 @@ def seed_exercises():
     isometricWristFlexion = Exercise(
         name='Isometric Wrist Flexion', image='https://fulcrumphysio.s3.amazonaws.com/wristFlexionIsometric.jpeg', description='Bend your wrist forward and resist into your other hand.', categoryId=5)
 
-    db.session.add(shoulder_retraction)
-    db.session.add(shoulder_external_rotation)
-    db.session.add(open_book)
-    db.session.add(band_rows)
-    db.session.add(shoulder_extensions)
-    db.session.add(pendulums)
-
-    db.session.add(sideplank_hip_abduction)
-    db.session.add(kneeling_hip_flexor_stretch)
-    db.session.add(sidelying_clam)
-    db.session.add(seated_hamstring_stretch)
-    db.session.add(squat)
-    db.session.add(lateral_monster_walk)
-
-    db.session.add(quad_set)
-    db.session.add(prone_quad_stretch)
-    db.session.add(seated_hamstring_stretch_knee)
-    db.session.add(calf_stretch_towel)
-    db.session.add(foamroll_ITB)
-    db.session.add(hamstring_set)
-    db.session.add(squatKnee)
-
-    db.session.add(heel_raise)
-    db.session.add(gastroc_stretch)
-    db.session.add(soleus_stretch)
-    db.session.add(ankle_Inversion)
-    db.session.add(ankle_Eversion)
-    db.session.add(ankle_plantarFlexion)
-    db.session.add(ankle_dorsiFlexion)
-    db.session.add(ankle_circles)
-
     db.session.add(wristExtensorStretch)
     db.session.add(wristFlexorStretch)
     db.session.add(towelGrip)
@@ -120,6 +120,35 @@ def seed_exercises():
     db.session.add(bicepCurl)
     db.session.add(isometricWristFlexion)
     db.session.add(isometricWristExtension)
+
+    wristFlexorStretch2 = Exercise(
+        name='Wrist Flexor Stretch', image='https://fulcrumphysio.s3.amazonaws.com/wristFlexorstretch.jpeg', description='Use your unaffected hand to bend the affected wrist up as shown. Keep the elbow straight on the affected side the entire time.', categoryId=6)
+    wristExtensorStretch2 = Exercise(
+        name='Wrist Extensor Stretch', image='https://fulcrumphysio.s3.amazonaws.com/wristExtensionStretch.jpeg', description='Use your unaffected hand to bend the affected wrist down as shown. Keep the elbow straight on the affected side the entire time.', categoryId=6)
+    towelGrip2 = Exercise(
+        name='Towel Grip', image='https://fulcrumphysio.s3.amazonaws.com/wristTowelGrip.jpeg', description='Place a rolled up towel in your hand and squeeze.', categoryId=6)
+    isometricWristExtension2 = Exercise(
+        name='Isometric Wrist Extension', image='https://fulcrumphysio.s3.amazonaws.com/wristExtensionIsometric.jpeg', description='Bend your wrist back and resist into your other hand.', categoryId=6)
+    isometricWristFlexion2 = Exercise(
+        name='Isometric Wrist Flexion', image='https://fulcrumphysio.s3.amazonaws.com/wristFlexionIsometric.jpeg', description='Bend your wrist forward and resist into your other hand.', categoryId=6)
+    tendonGlides = Exercise(
+        name='Tendon Glides', image='https://fulcrumphysio.s3.amazonaws.com/handtendonglides.jpeg', description='Start with an open palm and then bend your fingers to a claw hand as in the upper right image. Next, return to an open palm and then to an "L" hand" as shown in the bottom right image. Next, return to an open palm and then make a fist as in the bottom left image. Finally, return to an open palm and then repeat the series.', categoryId=6)
+    wristExtensionCurls = Exercise(
+        name='Wrist Extension Curls', image='https://fulcrumphysio.s3.amazonaws.com/wristExtensionCurls.jpeg', description='Hold a small free weight / dumbbell, rest your forearm on a table and bend your wrist up and down with your palm face down as shown.', categoryId=6)
+    wristFlexionCurls = Exercise(
+        name='Wrist Flexion Curls', image='https://fulcrumphysio.s3.amazonaws.com/wristFlexionCurls.jpeg', description='Hold a small free weight / dumbbell, rest your forearm on a table and bend your wrist up and down with your palm face up as shown.', categoryId=6)
+    rubberBandExtension = Exercise(
+        name='Rubber Band Extension', image='https://fulcrumphysio.s3.amazonaws.com/rubberBandExtension.jpeg', description='Expand a rubber band wrapped around your fingers.', categoryId=6)
+
+    db.session.add(isometricWristFlexion2)
+    db.session.add(isometricWristExtension2)
+    db.session.add(tendonGlides)
+    db.session.add(wristExtensionCurls)
+    db.session.add(wristFlexionCurls)
+    db.session.add(rubberBandExtension)
+    db.session.add(wristExtensorStretch2)
+    db.session.add(wristFlexorStretch2)
+    db.session.add(towelGrip2)
 
     db.session.commit()
 

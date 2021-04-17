@@ -34,6 +34,7 @@
     margin-top: 7px;
     font-weight: 450;
     height: 150px;
+    background: #f0f0f0;
 }
 
 .ExerciseImageAndInfo {
@@ -126,27 +127,37 @@
 
 button.deleteButton {
     /* color: blue; */
-    background: #3252a8;
+    /* background: #3252a8;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 4px; */
+    border: none;
     cursor: pointer;
+    outline: #f0f0f0;
 }
 
 button.deleteButton:hover {
-    background: #d42d30;
+    background: #60ce80;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
 }
 
 button.editButton {
     /* color: blue; */
-    background: #3252a8;
+    /* background: #3252a8;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 4px; */
     cursor: pointer;
+    border: none;
     margin-top: 5px;
+    outline: #f0f0f0;
 }
 
 button.editButton:hover {
-    background: #7c346c;
+    background: #60ce80;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
 }
 
 .userInfoContainer {
@@ -175,4 +186,7 @@ button.editButton:hover {
 .deleteAndEditButtons {
     display: flex;
     flex-direction: column;
+    width: 30px;
+    height: 70px;
+    justify-content: space-between;
 }

@@ -130,7 +130,7 @@ function Exercises({ authenticated, setAuthenticated }) {
                     className="exerciseImages"
                     src={exercise.image}
                   />
-                  <div>{exercise.name}</div>
+                  <div className="exerciseNameTile">{exercise.name}</div>
                 </div>
               ))
             ) : (

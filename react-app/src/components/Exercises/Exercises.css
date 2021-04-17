@@ -99,6 +99,16 @@
     flex-direction: column;
     padding: 10px;
     max-width: 190px;
+    border: 2px solid #3050a6;
+    min-width: 190px;
+    margin: 5px;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.exerciseNameTile {
+    text-align: center;
 }
 
 .textAndButton {

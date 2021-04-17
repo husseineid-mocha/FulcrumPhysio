@@ -39,9 +39,9 @@
     height: 100%;
     background: white;
     height: fit-content;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     overflow-y: scroll;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     outline: none;
     /* position: fixed; */
 }
@@ -60,16 +60,17 @@
     width: 50vw;
     display: flex;
     flex-direction: column;
-    border: 4px solid #154360;
+    border: 2px solid #154360;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     font-size: 25px;
     box-sizing: border-box;
     padding: 20px;
 }
 
 .promptAndButtons {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -18,10 +18,10 @@ const StyledButton = styled(Button)`
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   padding: 7px 14px;
   height: 3.1em;
-  border-radius: 4px;
+  border-radius: 2px;
   justify-content: center;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
   margin-top: 20px;
   &:hover {
     background-color: #5b7b90;
