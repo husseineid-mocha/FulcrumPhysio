@@ -179,6 +179,41 @@ def seed_exercises():
     db.session.add(medianNerveGlide)
     db.session.add(suboccipitalStretch)
 
+    lowerTrunkRotations = Exercise(
+        name='Lower Trunk Rotations', image='https://fulcrumphysio.s3.amazonaws.com/upperTrapStretch.jpeg', description='While sitting in a chair, hold the seat with one hand and place your other hand on your head to assist in bending your head to the side as shown. Bend your head towards the opposite side of the hand that is holding the chair seat. You should feel a stretch to the side of your neck. ', categoryId=8)
+    singleKneeToChest = Exercise(
+        name='Single Knee To Chest', image='https://fulcrumphysio.s3.amazonaws.com/levatorScapStretch.jpeg', description='Tilt your head to the side, then rotate to the side, then tip downward as in looking at your opposite pocket. Use your hand to pull your head downward and towards the opposite side for a gentle stretch. You should be looking towards your opposite pocket of the target side.', categoryId=8)
+    pelvicTilt = Exercise(
+        name='Pelvic Tilt', image='https://fulcrumphysio.s3.amazonaws.com/chinTuck.jpeg', description='While lying on your back, tuck your chin towards your chest and press the back of your head into the table. Maintain contact of the back of your head with the surface you are lying on the entire time. ', categoryId=8)
+    catCamel = Exercise(
+        name='Cat / Camel', image='https://fulcrumphysio.s3.amazonaws.com/cervicalrotationtowel.jpeg', description='Hold the ends of a small folded bath towel and wrap it around your head and neck as shown. Place the towel on your face so as to minimize placing pressure on your jaw. Pressure should be placed on the side of your face/cheek bone. Use your bottom most arm to anchor the towel in place. Use your top most arm to pull the towel to cause a gentle rotational stretch in your neck. Hold, then return to starting position and repeat. ', categoryId=8)
+    birdDog = Exercise(
+        name='Bird Dog', image='https://fulcrumphysio.s3.amazonaws.com/isometricSidebend.jpeg', description='Place your fingers on the side of your head and gently tilt your head to the side and into your fingers.', categoryId=8)
+    tvaBracing = Exercise(
+        name='Abdominal Bracing', image='https://fulcrumphysio.s3.amazonaws.com/8abdominalBracing.jpeg', description='While lying on your back, press your low back into the floor as you tighten your stomach muscles moving your navel down towards the floor. Place your thumbs 2 inches inward from your pelvic bone so that you can feel the muscle contracting.', categoryId=8)
+    bentKneeFallout = Exercise(
+        name='Bent Knee Fallout', image='https://fulcrumphysio.s3.amazonaws.com/8bentKneeFallout.jpeg', description='While lying on your back with both knees bent, stabilize your spine by bracing your abdominal muscles. Hold this contraction as you slowly lower one knee to the side. Your pelvis should not move. You can place your thumbs on your pelvic bone to get feedback of any movements that occur. If your pelvis moves too much, then next time lower the leg less to maintain good control.', categoryId=8)
+    childPose = Exercise(
+        name='Child Pose', image='https://fulcrumphysio.s3.amazonaws.com/8childsPose.jpeg', description='While in a crawl position, slowly lower your buttocks towards your feet until a stretch is felt along your back and or buttocks.', categoryId=8)
+    pronePressUps = Exercise(
+        name='Prone Press Ups', image='https://fulcrumphysio.s3.amazonaws.com/8pronePressups.jpeg', description='Lying face down, slowly press up and arch your back using your arms.', categoryId=8)
+    openBook = Exercise(
+        name='Sidelying Trunk Rotation', image='https://fulcrumphysio.s3.amazonaws.com/openBook.jpeg', description='While lying on your side with your arms out-stretched in front of your body, slowly twist your upper body to the side and rotated your spine. Your arms and head should also be rotating along with the spine as shown. Follow your head with your hand.', categoryId=8)
+    deadBug = Exercise(
+        name='Dead Bug', image='https://fulcrumphysio.s3.amazonaws.com/deadBug.jpeg', description='While lying on your back with your knees and hips bent to 90 degrees, use your stomach muscles and maintain pelvic neutral position. Do not allow your spine to move. Hold pelvic neutral and then slowly straighten out a leg without touching the floor.  At the same time raise an opposite arm over head. Do not allow your spine to arch during this movement. Return to starting position and then repeat on the opposite side. ', categoryId=8)
+
+    db.session.add(lowerTrunkRotations)
+    db.session.add(singleKneeToChest)
+    db.session.add(pelvicTilt)
+    db.session.add(catCamel)
+    db.session.add(birdDog)
+    db.session.add(tvaBracing)
+    db.session.add(bentKneeFallout)
+    db.session.add(childPose)
+    db.session.add(pronePressUps)
+    db.session.add(openBook)
+    db.session.add(deadBug)
+
     db.session.commit()
 
 
