@@ -10,7 +10,7 @@
     border: 5px solid #3252a8;
     display: flex;
     padding: 15px;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     background: #f0f0f0;
 }
 
@@ -72,6 +72,8 @@
     padding: 8px;
     display: flex;
     flex-wrap: wrap;
+    overflow: scroll;
+    max-height: 957px;
 }
 
 .exercisesText {
@@ -88,9 +90,9 @@
 .exerciseImages {
     height: 190px;
     width: 190px;
-    max-width: 160px;
+    max-width: 190px;
     margin-bottom: 3px;
-    cursor: pointer;
+    /* cursor: pointer; */
     /* padding: 10px; */
 }
 
@@ -99,11 +101,11 @@
     flex-direction: column;
     padding: 10px;
     max-width: 190px;
-    border: 2px solid #3050a6;
+    /* border: 2px solid #3050a6; */
     min-width: 190px;
     margin: 5px;
     border-radius: 4px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -177,3 +179,27 @@
     height: 24em;
     align-items: center;
 }
+
+
+/* .MuiTypography-h6-336 {
+    font-size: 1rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.0075em;
+} */
+
+.cardContent {
+    padding: 16px 16px 0px 16px;
+}
+
+.MuiCardActions-root {
+    display: flex;
+    /* padding: 8px; */
+    align-items: center;
+}
+
+
+/* .MuiCardContent-root {
+    padding: 16px 16px 0px 16px;
+} */

@@ -35,7 +35,7 @@ def seed_exercises():
     squat = Exercise(
         name='Squat', image='https://fulcrumphysio.s3.amazonaws.com/squat.jpeg', description='Stand with feet shoulder width apart and toes pointed forward to slightly turned out. Bend knees and lower buttock towards floor keeping your back straight and bending at your hips. Allow your arms to raise up forward as you lower down and then return arms to side as you straight back up.', categoryId=1)
     lateral_monster_walk = Exercise(
-        name='Lateral Moster Walk', image='https://fulcrumphysio.s3.amazonaws.com/lateralMonsterWalk.jpeg', description='Place a looped elastic band around both thighs. Next, bend your knees and step to the side while keeping tension on the band the entire time.  After taking sidesteps to the side in one direction, reverse the direction taking sidesteps until you return to the starting position. Repeat.', categoryId=1)
+        name='Lateral Monster Walk', image='https://fulcrumphysio.s3.amazonaws.com/lateralMonsterWalk.jpeg', description='Place a looped elastic band around both thighs. Next, bend your knees and step to the side while keeping tension on the band the entire time.  After taking sidesteps to the side in one direction, reverse the direction taking sidesteps until you return to the starting position. Repeat.', categoryId=1)
     piriformis_stretch = Exercise(
         name='Piriformis Stretch', image='https://fulcrumphysio.s3.amazonaws.com/piriformisStretch.jpeg', description='While lying on your back with both knee bent, cross your affected leg on the other knee. Next, hold your unaffected thigh and pull it up towards your chest until a stretch is felt in the buttock.', categoryId=1)
 
@@ -149,6 +149,35 @@ def seed_exercises():
     db.session.add(wristExtensorStretch2)
     db.session.add(wristFlexorStretch2)
     db.session.add(towelGrip2)
+
+    upperTrapStretch = Exercise(
+        name='Upper Trapezius Stretch', image='https://fulcrumphysio.s3.amazonaws.com/upperTrapStretch.jpeg', description='While sitting in a chair, hold the seat with one hand and place your other hand on your head to assist in bending your head to the side as shown. Bend your head towards the opposite side of the hand that is holding the chair seat. You should feel a stretch to the side of your neck. ', categoryId=7)
+    levatorScapStretch = Exercise(
+        name='Levator Scapulae Stretch', image='https://fulcrumphysio.s3.amazonaws.com/levatorScapStretch.jpeg', description='Tilt your head to the side, then rotate to the side, then tip downward as in looking at your opposite pocket. Use your hand to pull your head downward and towards the opposite side for a gentle stretch. You should be looking towards your opposite pocket of the target side.', categoryId=7)
+    chinTuck = Exercise(
+        name='Chin Tuck', image='https://fulcrumphysio.s3.amazonaws.com/chinTuck.jpeg', description='While lying on your back, tuck your chin towards your chest and press the back of your head into the table. Maintain contact of the back of your head with the surface you are lying on the entire time. ', categoryId=7)
+    cervicalTowelRotationStretch = Exercise(
+        name='Cervical Towel Rotation Stretch', image='https://fulcrumphysio.s3.amazonaws.com/cervicalrotationtowel.jpeg', description='Hold the ends of a small folded bath towel and wrap it around your head and neck as shown. Place the towel on your face so as to minimize placing pressure on your jaw. Pressure should be placed on the side of your face/cheek bone. Use your bottom most arm to anchor the towel in place. Use your top most arm to pull the towel to cause a gentle rotational stretch in your neck. Hold, then return to starting position and repeat. ', categoryId=7)
+    isometricSideBend = Exercise(
+        name='Isometric Sidebend', image='https://fulcrumphysio.s3.amazonaws.com/isometricSidebend.jpeg', description='Place your fingers on the side of your head and gently tilt your head to the side and into your fingers.', categoryId=7)
+    cervicalExtensionTowel = Exercise(
+        name='Cervical Extension With Towel', image='https://fulcrumphysio.s3.amazonaws.com/cervicalExtensionTowel.jpeg', description='Start with a small hand towel wrapped around the base of your skull and holding the ends of the towel forward as shown. Next, perform a chin tuck and extend your neck back and upwards as if you are going to look up at the ceiling. Then, return to starting position. Your hands should follow with your head during the movement. ', categoryId=7)
+    firstRibMobilization = Exercise(
+        name='Self First Rib Mobilization', image='https://fulcrumphysio.s3.amazonaws.com/firstRibMob.jpeg', description='Sitting on one end of a belt or strap, wrap it up behind you and over opposite shoulder near the base of your cervical spine/neck. Use one hand to pull the belt or strap down in front of you and towards the opposite shoulder side as shown. Pull firmly without pain and hold. Next, side bend your head away from the belt side.', categoryId=7)
+    medianNerveGlide = Exercise(
+        name='Median Nerve Glide', image='https://fulcrumphysio.s3.amazonaws.com/medianNerveGlide.jpeg', description='Start with your arm up and out to the side with a straight elbow as shown. Your palm should be facing upwards. Next, bend your wrist upwards as you side bend your head away from the target arm as shown. Then, bend your wrist downward as you side bend your head towards the target arm.', categoryId=7)
+    suboccipitalStretch = Exercise(
+        name='Suboccipital Stretch', image='https://fulcrumphysio.s3.amazonaws.com/suboccipitalStretch.jpeg', description='Gently draw your chin downward towards your chest as your fingers assist in adding a stretch to the back of your head.', categoryId=7)
+
+    db.session.add(upperTrapStretch)
+    db.session.add(levatorScapStretch)
+    db.session.add(chinTuck)
+    db.session.add(cervicalTowelRotationStretch)
+    db.session.add(isometricSideBend)
+    db.session.add(cervicalExtensionTowel)
+    db.session.add(firstRibMobilization)
+    db.session.add(medianNerveGlide)
+    db.session.add(suboccipitalStretch)
 
     db.session.commit()
 

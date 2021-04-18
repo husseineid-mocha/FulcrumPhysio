@@ -15,6 +15,51 @@ import { Button } from "@material-ui/core";
 import styled from "styled-components";
 import Tooltip from "@material-ui/core/Tooltip";
 
+//card
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Typography from "@material-ui/core/Typography";
+import { createMuiTheme, MuiThemeProvider } from "@material-ui/core";
+
+const theme = createMuiTheme({
+  overrides: {
+    MuiTypography: {
+      h6: {
+        fontSize: "1rem",
+        fontWeight: "600",
+        lineHeight: "1.2",
+        letterSpacing: "0.0075em",
+      },
+    },
+    MuiButton: {
+      label: {
+        cursor: "pointer",
+      },
+    },
+    MuiButtonBase: {
+      root: {
+        cursor: "auto",
+      },
+      props: {
+        disableRipple: true,
+      },
+    },
+  },
+});
+
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 190,
+  },
+  media: {
+    height: 140,
+  },
+});
+
 const StyledButton = styled(Button)`
   background-color: #2657bc;
   color: #fff;
@@ -124,14 +169,30 @@ function Exercises({ authenticated, setAuthenticated }) {
           <div className="exerciseContainer">
             {exercises.length !== 0 ? (
               exercises?.map((exercise, idx) => (
-                <div key={idx} className="exerciseTile">
-                  <img
-                    onClick={() => dispatch(openExercise(exercise))}
-                    className="exerciseImages"
-                    src={exercise.image}
-                  />
-                  <div className="exerciseNameTile">{exercise.name}</div>
-                </div>
+                <MuiThemeProvider theme={theme}>
+                  <Card className="exerciseTile">
+                    <CardActionArea disableRipple>
+                      <CardMedia className="cardMedia">
+                        <img className="exerciseImages" src={exercise.image} />
+                      </CardMedia>
+                      <CardContent className="cardContent">
+                        <Typography gutterBottom variant="h6" component="h2">
+                          {exercise.name}
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                      <Button
+                        size="small"
+                        color="primary"
+                        onClick={() => dispatch(openExercise(exercise))}
+                        className="addButton"
+                      >
+                        Add Exercise
+                      </Button>
+                    </CardActions>
+                  </Card>
+                </MuiThemeProvider>
               ))
             ) : (
               <div className="pleaseSelectText">

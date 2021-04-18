@@ -10,6 +10,49 @@ import "./ShowDiagnosis.css";
 import { Button } from "@material-ui/core";
 import styled from "styled-components";
 
+//card
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Typography from "@material-ui/core/Typography";
+import { createMuiTheme, MuiThemeProvider } from "@material-ui/core";
+
+const theme = createMuiTheme({
+  overrides: {
+    MuiPaper: {
+      root: {
+        margin: "5px",
+      },
+    },
+    MuiCardMedia: {
+      root: {
+        display: "flex",
+        justifyContent: "center",
+      },
+    },
+    MuiButtonBase: {
+      root: {
+        cursor: "auto",
+      },
+      props: {
+        disableRipple: true,
+      },
+    },
+  },
+});
+
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 345,
+  },
+  media: {
+    height: 140,
+  },
+});
+
 const StyledButton = styled(Button)`
   background-color: #2657bc;
   color: #fff;
@@ -87,15 +130,30 @@ function ShowDiagnosis() {
           <div className="tryTheseText">Try these recommended exercises:</div>
           <div className="diagnosisExerciseContainer">
             {exerciseNames.map((name, idx) => (
-              <div className="diagnosisExerciseTile" key={idx}>
-                <div className="diagnosisExerciseName">{name}</div>
-                <div>
-                  <img className="exerciseImage" src={exerciseImages[idx]} />
-                </div>
-                <div className="diagnosisExerciseDescription">
-                  {exerciseDescriptions[idx]}
-                </div>
-              </div>
+              <MuiThemeProvider theme={theme}>
+                <Card className="dxExerciseCard">
+                  <CardActionArea disableRipple>
+                    <CardMedia className="dxCardMedia">
+                      <img
+                        className="dxExerciseImages"
+                        src={exerciseImages[idx]}
+                      />
+                    </CardMedia>
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        {name}
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        {exerciseDescriptions[idx]}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </MuiThemeProvider>
             ))}
           </div>
         </div>

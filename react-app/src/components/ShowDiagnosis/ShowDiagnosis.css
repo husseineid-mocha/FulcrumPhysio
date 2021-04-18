@@ -69,3 +69,8 @@ img.exerciseImage {
     text-align: justify;
     line-height: 30px;
 }
+
+.diagnosisExerciseContainer {
+    display: flex;
+    padding: 25px;
+}
