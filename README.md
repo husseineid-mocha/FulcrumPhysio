@@ -158,6 +158,9 @@ Several design decisions needed to be made to ensure speed and efficiency, makin
 These thunks manage these individual backend calls.
 ![Thunks](READMEImages/thunks.png)
 
+The frontend React uses the seeded promptIds to fetch the next questions, these Ids are stored in an array and popped off to allow the user to go back in case they need to revisit a question.
+![Frontend](READMEImages/frontEndmanagement.png)
+
 <!-- ROADMAP -->
 ## Roadmap
 
