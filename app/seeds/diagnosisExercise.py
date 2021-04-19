@@ -42,6 +42,56 @@ def seed_diagnosisExercise():
     db.session.add(scapular_winging)
     db.session.add(scapular_winging2)
 
+    hip_impingement = DiagnosisExercise(
+        diagnosisId=7, exerciseId=4)
+    hip_impingement2 = DiagnosisExercise(
+        diagnosisId=7, exerciseId=7)
+    hip_bursitis = DiagnosisExercise(
+        diagnosisId=8, exerciseId=4)
+    hip_bursitis2 = DiagnosisExercise(
+        diagnosisId=8, exerciseId=5)
+    hip_labral_tear = DiagnosisExercise(
+        diagnosisId=9, exerciseId=5)
+    hip_labral_tear2 = DiagnosisExercise(
+        diagnosisId=9, exerciseId=7)
+    hip_osteoarthritis = DiagnosisExercise(
+        diagnosisId=10, exerciseId=3)
+    hip_osteoarthritis2 = DiagnosisExercise(
+        diagnosisId=10, exerciseId=6)
+    itbs = DiagnosisExercise(
+        diagnosisId=11, exerciseId=5)
+    itbs2 = DiagnosisExercise(
+        diagnosisId=11, exerciseId=4)
+    piriformis_sx = DiagnosisExercise(
+        diagnosisId=12, exerciseId=3)
+    piriformis_sx2 = DiagnosisExercise(
+        diagnosisId=12, exerciseId=7)
+    snapping_hip_sx = DiagnosisExercise(
+        diagnosisId=13, exerciseId=3)
+    snapping_hip_sx2 = DiagnosisExercise(
+        diagnosisId=13, exerciseId=6)
+    adductor_strain = DiagnosisExercise(
+        diagnosisId=14, exerciseId=5)
+    adductor_strain2 = DiagnosisExercise(
+        diagnosisId=14, exerciseId=4)
+
+    db.session.add(hip_impingement)
+    db.session.add(hip_impingement2)
+    db.session.add(hip_bursitis)
+    db.session.add(hip_bursitis2)
+    db.session.add(hip_labral_tear)
+    db.session.add(hip_labral_tear2)
+    db.session.add(hip_osteoarthritis)
+    db.session.add(hip_osteoarthritis2)
+    db.session.add(itbs)
+    db.session.add(itbs2)
+    db.session.add(piriformis_sx)
+    db.session.add(piriformis_sx2)
+    db.session.add(snapping_hip_sx)
+    db.session.add(snapping_hip_sx2)
+    db.session.add(adductor_strain)
+    db.session.add(adductor_strain2)
+
     db.session.commit()
 
 

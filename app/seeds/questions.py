@@ -55,6 +55,80 @@ def seed_questions():
     db.session.add(question17)
     db.session.add(question12)
 
+    hipQuestion1 = Question(
+        promptId=100, prompt='Is the pain in the front of your hip?', promptType='radio', displayText='["yes", "no"]', displayValue='[101, 102]', diagnosisId=None)
+    hipQuestion2 = Question(
+        promptId=101, prompt='Do you have pain with long periods of sitting/standing?', promptType='radio', displayText='["yes", "no"]', displayValue='[103, 106]', diagnosisId=None)
+    hipQuestion3 = Question(
+        promptId=103, prompt='Do you experience any clicking or locking in your hip?', promptType='radio', displayText='["yes", "no"]', displayValue='[105, 106]', diagnosisId=None)
+    hipQuestion4 = Question(
+        promptId=105, prompt=None, promptType=None, displayText=None, displayValue=None, diagnosisId=9)
+    hipQuestion5 = Question(
+        promptId=106, prompt='Do you get knee pain on the outside of your knee on the same side as your hip pain?', promptType='radio', displayText='["yes", "no"]', displayValue='[104, 107]', diagnosisId=None)
+    hipQuestion6 = Question(
+        promptId=104, prompt=None, promptType=None, displayText=None, displayValue=None, diagnosisId=11)
+    hipQuestion7 = Question(
+        promptId=107, prompt='Do you ever feel a pinching feeling in the front of your hip?', promptType='radio', displayText='["yes", "no"]', displayValue='[108, 109]', diagnosisId=None)
+    hipQuestion8 = Question(
+        promptId=108, prompt=None, promptType=None, displayText=None, displayValue=None, diagnosisId=7)
+    hipQuestion9 = Question(
+        promptId=109, prompt='Is your pain in/around your groin or inner thigh?', promptType='radio', displayText='["yes", "no"]', displayValue='[110, 111]', diagnosisId=None)
+    hipQuestion10 = Question(
+        promptId=110, prompt=None, promptType=None, displayText=None, displayValue=None, diagnosisId=14)
+    hipQuestion11 = Question(
+        promptId=102, prompt='Is the pain on the side of your hip?', promptType='radio', displayText='["yes", "no"]', displayValue='[112, 113]', diagnosisId=None)
+    hipQuestion12 = Question(
+        promptId=112, prompt='Is the pain more intense when you sleep or lay on the hurt hip?', promptType='radio', displayText='["yes", "no"]', displayValue='[114, 115]', diagnosisId=None)
+    hipQuestion13 = Question(
+        promptId=114, prompt='Is the side of your hip tender to touch?', promptType='radio', displayText='["yes", "no"]', displayValue='[116, 123]', diagnosisId=None)
+    hipQuestion14 = Question(
+        promptId=116, prompt=None, promptType=None, displayText=None, displayValue=None, diagnosisId=8)
+    hipQuestion15 = Question(
+        promptId=115, prompt='Does your hip hurt if you lift your knee up to your chest?', promptType='radio', displayText='["yes", "no"]', displayValue='[118, 111]', diagnosisId=None)
+    hipQuestion16 = Question(
+        promptId=118, prompt='Do you feel a snapping sensation on the side of your hip when moving or going from sit to stand?', promptType='radio', displayText='["yes", "no"]', displayValue='[120, 111]', diagnosisId=None)
+    hipQuestion17 = Question(
+        promptId=120, prompt=None, promptType=None, displayText=None, displayValue=None, diagnosisId=13)
+    hipQuestion18 = Question(
+        promptId=113, prompt='Is the pain on the back of your hip sharp and in one spot?', promptType='radio', displayText='["yes", "no"]', displayValue='[121, 122]', diagnosisId=None)
+    hipQuestion19 = Question(
+        promptId=121, prompt='Does the pain radiate down the back of your leg?', promptType='radio', displayText='["yes", "no"]', displayValue='[126, 111]', diagnosisId=None)
+    hipQuestion20 = Question(
+        promptId=126, prompt=None, promptType=None, displayText=None, displayValue=None, diagnosisId=12)
+    hipQuestion21 = Question(
+        promptId=123, prompt='Is the pain going down the front of your leg or down the side?', promptType='radio', displayText='["yes", "no"]', displayValue='[111, 125]', diagnosisId=None)
+    hipQuestion22 = Question(
+        promptId=111, prompt=None, promptType=None, displayText=None, displayValue=None, diagnosisId=10)
+    hipQuestion23 = Question(
+        promptId=122, prompt='Does the pain radiate to the side or top of your hip?', promptType='radio', displayText='["yes", "no"]', displayValue='[123, 111]', diagnosisId=None)
+    hipQuestion24 = Question(
+        promptId=125, prompt='Is there any numbness or tingling in your hip or down the leg?', promptType='radio', displayText='["yes", "no"]', displayValue='[126, 111]', diagnosisId=None)
+
+    db.session.add(hipQuestion1)
+    db.session.add(hipQuestion2)
+    db.session.add(hipQuestion3)
+    db.session.add(hipQuestion4)
+    db.session.add(hipQuestion5)
+    db.session.add(hipQuestion6)
+    db.session.add(hipQuestion7)
+    db.session.add(hipQuestion8)
+    db.session.add(hipQuestion9)
+    db.session.add(hipQuestion10)
+    db.session.add(hipQuestion11)
+    db.session.add(hipQuestion12)
+    db.session.add(hipQuestion13)
+    db.session.add(hipQuestion14)
+    db.session.add(hipQuestion15)
+    db.session.add(hipQuestion16)
+    db.session.add(hipQuestion17)
+    db.session.add(hipQuestion18)
+    db.session.add(hipQuestion19)
+    db.session.add(hipQuestion20)
+    db.session.add(hipQuestion21)
+    db.session.add(hipQuestion22)
+    db.session.add(hipQuestion23)
+    db.session.add(hipQuestion24)
+
     db.session.commit()
 
 
