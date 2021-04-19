@@ -44,9 +44,10 @@ export const closeExercise = () => {
   };
 };
 
-export const openQuestion = () => {
+export const openQuestion = (id) => {
   return {
     type: MODAL_OPEN_QUESTION,
+    id,
   };
 };
 
@@ -54,6 +55,10 @@ export const closeQuestion = () => {
   return {
     type: MODAL_CLOSE_QUESTION,
   };
+};
+
+export const openQuestionModal = (id) => (dispatch) => {
+  dispatch(openQuestion(id));
 };
 
 const initialState = {
@@ -88,7 +93,10 @@ const modalReducer = (state = initialState, action) => {
       newState = Object.assign({}, state, { exerciseShow: false });
       return newState;
     case MODAL_OPEN_QUESTION:
-      newState = Object.assign({}, state, { questionShow: true });
+      newState = Object.assign({}, state, {
+        questionShow: true,
+        id: action.id,
+      });
       return newState;
     case MODAL_CLOSE_QUESTION:
       newState = Object.assign({}, state, { questionShow: false });

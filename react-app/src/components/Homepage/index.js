@@ -3,7 +3,7 @@ import { Redirect, useHistory } from "react-router-dom";
 //? MODAL BELOW IS IN CASE WE NEED REACT MODAL QUESTIONMODAL
 import Modal from "react-modal";
 import { useDispatch } from "react-redux";
-import { openQuestion } from "../../store/modal";
+import { openQuestionModal } from "../../store/modal";
 import { clearSelectedExercises } from "../../store/selected";
 // import Modal from "react-bootstrap/Modal"; //GET RID OF BOOTSTRAP
 
@@ -52,11 +52,11 @@ function Homepage({ authenticated, setAuthenticated }) {
           <div className="mainBodyImage">
             <div className="bodyPartButtons">
               <div
-                onClick={() => dispatch(openQuestion())}
+                onClick={() => dispatch(openQuestionModal(1))}
                 className="shoulderClickRight"
               ></div>
               <div
-                onClick={() => dispatch(openQuestion())}
+                onClick={() => dispatch(openQuestionModal(1))}
                 className="shoulderClickLeft"
               ></div>
               <div className="neckClick"></div>
@@ -64,8 +64,14 @@ function Homepage({ authenticated, setAuthenticated }) {
               <div className="elbowClickLeft"></div>
               <div className="wristClickRight"></div>
               <div className="wristClickLeft"></div>
-              <div className="hipClickRight"></div>
-              <div className="hipClickLeft"></div>
+              <div
+                onClick={() => dispatch(openQuestionModal(100))}
+                className="hipClickRight"
+              ></div>
+              <div
+                onClick={() => dispatch(openQuestionModal(100))}
+                className="hipClickLeft"
+              ></div>
               <div className="kneeClickRight"></div>
               <div className="kneeClickLeft"></div>
               <div className="ankleClickRight"></div>

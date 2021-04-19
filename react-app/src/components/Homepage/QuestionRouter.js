@@ -44,11 +44,13 @@ function QuestionRouter(number) {
   const [idList, setIdList] = useState([]);
 
   const question = useSelector((state) => state.question);
+  const modalId = useSelector((state) => state.modal.id);
+  // console.log(modalId);
   const displayText = eval(question?.displayText);
   const displayValue = eval(question?.displayValue);
 
   useEffect(() => {
-    dispatch(findFirstQuestion(1));
+    dispatch(findFirstQuestion(modalId));
   }, []);
 
   if (question.diagnosisId !== null) {
