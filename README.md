@@ -144,13 +144,13 @@ Here is everything we need you to do to get started with Discordanc3.
 ### Hover over injured body part to answer questions and receive personalized program
 ![Create Own Plan](READMEImages/createOwnPlan.gif)
 ### Create your own plan and add / edit / delete exercises
-![Exercises](READMEIMAGES/addEditDelete.gif)
+![Exercises](READMEImages/addEditDelete.gif)
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [Project Wiki](https://github.com/husseineid-mocha/FulcrumPhysio/wiki) for more details about Discordanc3.
+See the [Project Wiki](https://github.com/husseineid-mocha/FulcrumPhysio/wiki) for more details about FulcrumPhysio.
 
 <!-- CONTRIBUTING -->
 ## Contributing
