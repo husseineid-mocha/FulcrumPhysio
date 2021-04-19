@@ -148,12 +148,13 @@ Here is everything we need you to do to get started with Discordanc3.
 
 ## Challenges
 Intricate graphs were created for each body part in order to navigate the user responses and to reach an appropriate diagnosis/education/exercises, below are segments from the graphs for the shoulder and hip.
-Shoulder
+
 ![Shoulder](READMEImages/shoulderGraph.jpeg)
-Hip
+
 ![Hip](READMEImages/hipGraph.jpeg)
 
 Several design decisions needed to be made to ensure speed and efficiency, making individual backend calls for each question/response/diagnosis proved to be more efficient than loading the entire graph into redux by about 16%.
+
 These thunks manage these individual backend calls.
 ![Thunks](READMEImages/thunks.png)
 
