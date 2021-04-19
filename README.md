@@ -1,13 +1,109 @@
-# Flask React Project
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
 
-This is the backend for the Flask React project.
 
-## Getting started
+
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://fulcrumphysio.herokuapp.com/">
+    <img src="./READMEImages/fulcrumLogo.png" alt="Logo" style="background-color:white">
+  </a>
+
+  <h3 align="center">Fulcrum Physio</h3>
+
+  <p align="center">
+   Fulcrum Physio is an orthopedic physical therapy symptom checker. Create your own program or have us create one for you by tapping into the experience of several Doctors of Physical Therapy. We'll ask you the same questions we ask our patients to guarantee we have an accurate diagnosis and helpful advice and exercises based on your pathology. 
+    <br />
+    <a href="https://github.com/husseineid-mocha/FulcrumPhysio/wiki"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://fulcrumphysio.herokuapp.com/">View Site</a>
+    ·
+    <a href="https://github.com/husseineid-mocha/FulcrumPhysio/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/husseineid-mocha/FulcrumPhysio/issues">Request Feature</a>
+  </p>
+</p>
+
+
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[Click here to view FulcrumPhysio live on the web!](https://fulcrumphysio.herokuapp.com/)
+<br>
+</br>
+![homepage-screenshot](READMEImages/splash.png)
+
+## Overall Structure
+
+### Back End
+The app was built using Flask, SQLAlchemy, and Python on the back end with a PostgreSQL database. The backend structure is RESTful API. Model associations are used to minimize database queries to the backend, assuring speed and reliability.
+
+### Front End
+The front end is built with React and Javascript while utilizing Redux architecture, producing a lightning-fast user interface and calling upon dynamically rendered components.
+
+### Built With
+
+* [React](https://reactjs.org/)
+* [JavaScript](https://www.javascript.com/)
+* [Python](https://docs.python.org/3/)
+* [Redux](https://redux.js.org/)
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+* [SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
+* [PostgreSQL](https://www.postgresql.org/docs/current/)
+* [CSS](http://www.css3.info/)
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+To get a local copy up and running follow these simple steps.
+
+### Prerequisites
+
+Here is everything we need you to do to get started with Discordanc3.
+
+### Installation
 
 1. Clone this repository (only this branch)
 
    ```bash
-   git clone https://github.com/appacademy-starters/python-project-starter.git
+   git clone https://github.com/husseineid-mocha/FulcrumPhysio.git
    ```
 
 2. Install dependencies
@@ -40,59 +136,39 @@ This is the backend for the Flask React project.
 
 6. To run the React App in development, checkout the [README](./react-app/README.md) inside the `react-app` directory.
 
-***
-*IMPORTANT!*
-   If you add any python dependencies to your pipfiles, you'll need to regenerate your requirements.txt before deployment.
-   You can do this by running:
 
-   ```bash
-   pipenv lock -r > requirements.txt
-   ```
+<!-- USAGE EXAMPLES -->
+## Usage
+### An easy-to-use login with a pre-configured Demo User.
+![Login](READMEImages/demoLogin.png)
+### Hover over injured body part to answer questions and receive personalized program
+![Create Own Plan](READMEImages/createOwnPlan.gif)
+### Create your own plan and add / edit / delete exercises
+![Exercises](READMEIMAGES/addEditDelete.gif)
 
-*ALSO IMPORTANT!*
-   psycopg2-binary MUST remain a dev dependency because you can't install it on apline-linux.
-   There is a layer in the Dockerfile that will install psycopg2 (not binary) for us.
-***
 
-## Deploy to Heroku
+<!-- ROADMAP -->
+## Roadmap
 
-1. Create a new project on Heroku
-2. Under Resources click "Find more add-ons" and add the add on called "Heroku Postgres"
-3. Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line)
-4. Run
+See the [Project Wiki](https://github.com/husseineid-mocha/FulcrumPhysio/wiki) for more details about Discordanc3.
 
-   ```bash
-   heroku login
-   ```
+<!-- CONTRIBUTING -->
+## Contributing
 
-5. Login to the heroku container registry
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-   ```bash
-   heroku container:login
-   ```
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-6. Update the `REACT_APP_BASE_URL` variable in the Dockerfile.
-   This should be the full URL of your Heroku app: i.e. "https://flask-react-aa.herokuapp.com"
-7. Push your docker container to heroku from the root directory of your project.
-   This will build the dockerfile and push the image to your heroku container registry
 
-   ```bash
-   heroku container:push web -a {NAME_OF_HEROKU_APP}
-   ```
 
-8. Release your docker container to heroku
+<!-- CONTACT -->
+## Contact 
 
-   ```bash
-   heroku container:release web -a {NAME_OF_HEROKU_APP}
-   ```
+* Hussein Eid - [LinkedIn](https://www.linkedin.com/in/hussein-eid/) - [GitHub](https://github.com/husseineid-mocha)
 
-9. set up your database:
 
-   ```bash
-   heroku run -a {NAME_OF_HEROKU_APP} flask db upgrade
-   heroku run -a {NAME_OF_HEROKU_APP} flask seed all
-   ```
-
-10. Under Settings find "Config Vars" and add any additional/secret .env variables.
-
-11. profit
+Project Link: [https://github.com/husseineid-mocha/FulcrumPhysio/](https://github.com/husseineid-mocha/FulcrumPhysio/)
