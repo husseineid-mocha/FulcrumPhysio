@@ -38,7 +38,7 @@ const StyledButton2 = styled(Button)`
     background-color: #5b7b90;
 `;
 
-function QuestionRouter() {
+function QuestionRouter(number) {
   const dispatch = useDispatch();
 
   const [idList, setIdList] = useState([]);
