@@ -36,6 +36,10 @@ function Homepage({ authenticated, setAuthenticated }) {
     history.push("/exercises");
   };
 
+  const comingSoon = () => {
+    alert("This is coming soon, please try to shoulder or hip instead!");
+  };
+
   return (
     <div className="containers">
       <div className="container1">
@@ -59,11 +63,11 @@ function Homepage({ authenticated, setAuthenticated }) {
                 onClick={() => dispatch(openQuestionModal(1))}
                 className="shoulderClickLeft"
               ></div>
-              <div className="neckClick"></div>
-              <div className="elbowClickRight"></div>
-              <div className="elbowClickLeft"></div>
-              <div className="wristClickRight"></div>
-              <div className="wristClickLeft"></div>
+              <div onClick={comingSoon} className="neckClick"></div>
+              <div onClick={comingSoon} className="elbowClickRight"></div>
+              <div onClick={comingSoon} className="elbowClickLeft"></div>
+              <div onClick={comingSoon} className="wristClickRight"></div>
+              <div onClick={comingSoon} className="wristClickLeft"></div>
               <div
                 onClick={() => dispatch(openQuestionModal(100))}
                 className="hipClickRight"
@@ -72,11 +76,11 @@ function Homepage({ authenticated, setAuthenticated }) {
                 onClick={() => dispatch(openQuestionModal(100))}
                 className="hipClickLeft"
               ></div>
-              <div className="kneeClickRight"></div>
-              <div className="kneeClickLeft"></div>
-              <div className="ankleClickRight"></div>
-              <div className="ankleClickLeft"></div>
-              <div className="backClick"></div>
+              <div onClick={comingSoon} className="kneeClickRight"></div>
+              <div onClick={comingSoon} className="kneeClickLeft"></div>
+              <div onClick={comingSoon} className="ankleClickRight"></div>
+              <div onClick={comingSoon} className="ankleClickLeft"></div>
+              <div onClick={comingSoon} className="backClick"></div>
             </div>
           </div>
         </div>

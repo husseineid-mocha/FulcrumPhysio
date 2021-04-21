@@ -27,16 +27,17 @@ const StyledButton = styled(Button)`
     background-color: #5b7b90;
 `;
 
-const StyledButton2 = styled(Button)`
-  background-color: #d42d30;
-  color: #fff;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-  border-radius: 4px;
-  justify-content: center;
-  margin-top: 20px;
-  &:hover {
-    background-color: #5b7b90;
-`;
+// const StyledButton2 = styled(Button)`
+//   background-color: #d42d30;
+//   // color: #fff;
+//   // box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+//   border-radius: 4px;
+//   justify-content: center;
+//   // margin-top: 20px;
+//   &:hover {
+//     background-color: #d42d30;
+//     box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+// `;
 
 function QuestionRouter(number) {
   const dispatch = useDispatch();
@@ -45,7 +46,6 @@ function QuestionRouter(number) {
 
   const question = useSelector((state) => state.question);
   const modalId = useSelector((state) => state.modal.id);
-  // console.log(modalId);
   const displayText = eval(question?.displayText);
   const displayValue = eval(question?.displayValue);
 
@@ -80,25 +80,27 @@ function QuestionRouter(number) {
   return (
     <>
       <div className="questionContainer">
+        <div className="backButton">
+          {/* <StyledButton2 onClick={goBack}> */}
+          <ArrowBackIcon className="arrowBackButton" onClick={goBack} />
+          {/* </StyledButton2> */}
+        </div>
         {question.displayText && (
-          <div className="promptAndButtons">
-            <div className="prompt">{question?.prompt}</div>
+          <div className="">
+            <div className="promptAndButtons">
+              <div className="prompt">{question?.prompt}</div>
 
-            <div className="promptButtons">
-              <StyledButton onClick={() => handleClickYes(displayValue[0])}>
-                {displayText[0]}
-              </StyledButton>
-              <StyledButton onClick={() => handleClickNo(displayValue[1])}>
-                {displayText[1]}
-              </StyledButton>
+              <div className="promptButtons">
+                <StyledButton onClick={() => handleClickYes(displayValue[0])}>
+                  {displayText[0]}
+                </StyledButton>
+                <StyledButton onClick={() => handleClickNo(displayValue[1])}>
+                  {displayText[1]}
+                </StyledButton>
+              </div>
             </div>
           </div>
         )}
-        <div className="backButton">
-          <StyledButton2 onClick={goBack}>
-            <ArrowBackIcon />
-          </StyledButton2>
-        </div>
       </div>
     </>
   );

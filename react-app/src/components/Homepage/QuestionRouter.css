@@ -59,7 +59,7 @@
     /* height: 25vh; */
     width: 50vw;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     border: 2px solid #154360;
     justify-content: center;
     align-items: center;
@@ -67,6 +67,7 @@
     font-size: 25px;
     box-sizing: border-box;
     padding: 20px;
+    position: relative;
 }
 
 .promptAndButtons {
@@ -83,6 +84,16 @@
 
 .backButton {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    display: flex;
+    position: absolute;
+}
+
+.backButton .MuiSvgIcon-root {
+    color: #c4b6b0;
+    cursor: pointer;
+}
+
+.backButton .MuiSvgIcon-root:hover {
+    color: #d42d30;
 }
