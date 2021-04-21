@@ -82,9 +82,10 @@ function EditExercise({ exercise, exercises, setExercises }) {
     <>
       <div>
         <div className="ExerciseBox">
-          <div>
-            <div className="ExerciseName">{exercise.name} </div>
+          <div className="ExerciseName">
+            <h3>{exercise.name}</h3>
           </div>
+
           {!showEditExercise ? (
             <>
               <div className="ExerciseImageAndInfo">
@@ -104,7 +105,7 @@ function EditExercise({ exercise, exercises, setExercises }) {
               <div className="exerciseDescription">{exercise.description}</div>
             </>
           ) : (
-            <div>
+            <>
               <div className="editContainer">
                 <img className="ExerciseImage" src={exercise.image} />
                 <form className="editForm" onSubmit={editExercise}>
@@ -162,7 +163,7 @@ function EditExercise({ exercise, exercises, setExercises }) {
                   </div>
                 </form>
               </div>
-            </div>
+            </>
           )}
           <div className="deleteAndEditButtons">
             <button

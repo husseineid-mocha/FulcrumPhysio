@@ -22,8 +22,12 @@ textarea {
     height: 20px;
     cursor: pointer;
     background: #3252a8;
+    background-color: #2a265f;
     color: white;
-    font-weight: 500;
+    box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+    font-weight: 700;
+    border: 0;
+    letter-spacing: 1px;
 }
 
 .submitButton:hover {
@@ -58,4 +62,70 @@ input.inputDiv {
     justify-content: space-between;
     margin-top: 8px;
     align-items: center;
+}
+
+.ExerciseBox {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    max-width: 100%;
+    margin: 10px;
+    /* padding: 15px; */
+    overflow: hidden;
+    width: auto;
+}
+
+.ExerciseName h3 {
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+
+.ExerciseImageAndInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    min-width: 305px;
+    padding: 15px;
+    width: 30%;
+}
+
+.editContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    min-width: 305px;
+    padding: 15px;
+}
+
+.ExerciseName {
+    /* margin-bottom: 10px; */
+    min-width: 115px;
+    max-width: 110px;
+    background-color: #2a265f;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exerciseDescription {
+    padding: 10px;
+    width: 28vw;
+    display: flex;
+    align-items: center;
+}
+
+.deleteAndEditButtons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 38px;
+    margin-right: 10px;
+    width: 30px;
+    height: 70px;
+    justify-content: space-between;
 }

@@ -22,9 +22,10 @@
     margin-right: 25px;
 }
 
+
+/* 
 .ExerciseBox {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     padding: 10px;
@@ -35,22 +36,16 @@
     font-weight: 450;
     height: 150px;
     background: #f0f0f0;
-}
+} */
 
-.ExerciseImageAndInfo {
+
+/* .ExerciseImageAndInfo {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 10px;
     min-width: 305px;
-}
-
-.ExerciseName {
-    margin-bottom: 10px;
-    font-weight: 800px;
-    min-width: 130px;
-    max-width: 130px;
-}
+} */
 
 .profileSidebar {
     display: flex;
@@ -106,6 +101,7 @@
     border-radius: 5px;
     height: 63em;
     overflow: scroll;
+    box-shadow: 10px 10px 10px rgb(0 0 0 / 20%);
 }
 
 .addExerciseButton {
@@ -116,13 +112,10 @@
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    padding-bottom: 20px;
     font-size: 20px;
     font-weight: 600;
-}
-
-.exerciseDescription {
-    padding: 10px;
-    width: 28vw;
+    border-bottom: 1px solid black;
 }
 
 button.deleteButton {
@@ -133,6 +126,7 @@ button.deleteButton {
     border: none;
     cursor: pointer;
     outline: #f0f0f0;
+    background-color: transparent;
 }
 
 button.deleteButton:hover {
@@ -151,6 +145,7 @@ button.editButton {
     border: none;
     margin-top: 5px;
     outline: #f0f0f0;
+    background-color: transparent;
 }
 
 button.editButton:hover {
@@ -181,12 +176,4 @@ button.editButton:hover {
 
 .userTimesPerWeek {
     margin-top: 8px;
-}
-
-.deleteAndEditButtons {
-    display: flex;
-    flex-direction: column;
-    width: 30px;
-    height: 70px;
-    justify-content: space-between;
 }
