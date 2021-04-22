@@ -16,7 +16,6 @@ function Footer() {
         <div className="footerInformation">
           <NavLink to="/about">About</NavLink>
           <div>
-            Meet the creator
             <div className="link__logo">
               <div className="link__logo1">
                 <a

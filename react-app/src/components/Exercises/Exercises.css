@@ -7,11 +7,11 @@
 .outerExerciseContainer {
     height: 1000px;
     width: 100vw;
-    border: 5px solid #3252a8;
+    /* border: 5px solid #3252a8; */
     display: flex;
     padding: 15px;
     /* border-radius: 8px; */
-    background: #f0f0f0;
+    /* background: #f0f0f0; */
 }
 
 .categoryAndSelectedContainer {

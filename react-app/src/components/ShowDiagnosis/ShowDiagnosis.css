@@ -77,7 +77,7 @@ img.exerciseImage {
 
 img.dxExerciseImages {
     height: 220px;
-    max-height: 220px;
+    /* max-height: 220px;
     width: 220px;
-    max-width: 220px;
+    max-width: 220px; */
 }
