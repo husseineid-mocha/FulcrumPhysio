@@ -34,6 +34,9 @@ const theme = createMuiTheme({
         lineHeight: "1.2",
         letterSpacing: "0.0075em",
       },
+      h2: {
+        fontWeight: "normal",
+      },
     },
     MuiButton: {
       label: {
@@ -69,6 +72,7 @@ const StyledButton = styled(Button)`
   height: 4.1em;
   border-radius: 0px;
   justify-content: left;
+  font-weight: normal;
   &:hover {
     background-color: #5b7b90;
   }

@@ -20,7 +20,7 @@
 
 .categoryContainer {
     height: 50%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -29,10 +29,15 @@
 }
 
 .selectedContainer {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 5px;
     height: 47.5%;
     overflow: scroll;
+}
+
+.categoryContainer,
+.selectedContainer {
+    border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 ::-webkit-scrollbar {
@@ -42,7 +47,7 @@
 
 .exercisesContainer {
     flex: 0.78;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.12);
     margin-left: 20px;
     border-radius: 5px;
     background: snow;
@@ -65,7 +70,7 @@
     width: 100%;
     background-color: #3252a8;
     color: white;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .exerciseContainer {
@@ -84,7 +89,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .exerciseImages {
@@ -121,7 +126,7 @@
     width: 100%;
     background-color: #3252a8;
     color: white;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .miniExerciseImage {
@@ -140,7 +145,7 @@
     border: 2px solid #3252a8;
     padding: 7px;
     margin-top: 7px;
-    font-weight: 450;
+    /* font-weight: 450; */
 }
 
 .miniExerciseImageAndInfo {
@@ -151,7 +156,7 @@
 
 .miniExerciseName {
     margin-bottom: 10px;
-    font-weight: 800px;
+    /* font-weight: 800px; */
 }
 
 .bigSelectedBox {
@@ -181,12 +186,9 @@
 }
 
 
-/* .MuiTypography-h6-336 {
-    font-size: 1rem;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    font-weight: 600;
-    line-height: 1.2;
-    letter-spacing: 0.0075em;
+/* 
+.MuiTypography-h6-336 {
+    font-weight: normal;
 } */
 
 .cardContent {
