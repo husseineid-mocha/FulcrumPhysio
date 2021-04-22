@@ -1,0 +1,33 @@
+.parContainers {
+    padding: 40px;
+    font-size: 33px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    margin: 35px;
+}
+
+.par1AndImage {
+    display: flex;
+}
+
+.headshot {
+    height: 300px;
+    border-radius: 50%;
+}
+
+.par1 {
+    margin-bottom: 20px;
+}
+
+.par2 {
+    margin-bottom: 20px;
+}
+
+.h2Text {
+    margin-bottom: 25px;
+}
+
+.aboutMeButtons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}

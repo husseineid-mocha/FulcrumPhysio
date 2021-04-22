@@ -7,7 +7,10 @@
 .profileWelcome {
     /* display: flex; */
     padding: 30px 30px 0px 30px;
+    letter-spacing: 1px;
     font-size: larger;
+    margin: 6px;
+    font-size: x-large;
 }
 
 .exerciseContainers {
@@ -53,7 +56,7 @@
     align-items: center;
     flex: 0.33 1;
     justify-content: center;
-    border: 3px solid #3252a8;
+    border: 1px solid rgba(0, 0, 0, 0.12);
     height: fit-content;
     margin-right: 14px;
     border-radius: 3px;
@@ -65,12 +68,14 @@
 }
 
 .exercisesDiv {
-    height: 40px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #3252a8;
+    /* border-bottom: 1px solid #3252a8; */
     cursor: pointer;
+    background: #697eda;
+    color: white;
 }
 
 .exercisesDiv:hover {
@@ -79,12 +84,16 @@
 }
 
 .userInfoDiv {
-    height: 40px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid #3252a8;
+    /* border-top: 1px solid #3252a8; */
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
     cursor: pointer;
+    background: #697eda;
+    color: white;
+    border-top: 1px solid #3251a8;
 }
 
 .userInfoDiv:hover {
@@ -96,12 +105,13 @@
     display: flex;
     flex-direction: column;
     flex: 1 1;
-    border: 6px solid #3252a8;
+    /* border: 1px solid #3252a8; */
+    border: 1px solid rgba(0, 0, 0, 0.12);
     padding: 20px;
     border-radius: 5px;
     height: 63em;
     overflow: scroll;
-    box-shadow: 10px 10px 10px rgb(0 0 0 / 20%);
+    /* box-shadow: 10px 10px 10px rgb(0 0 0 / 15%); */
 }
 
 .addExerciseButton {
@@ -116,6 +126,7 @@
     font-size: 20px;
     font-weight: 600;
     border-bottom: 1px solid black;
+    letter-spacing: 1px;
 }
 
 button.deleteButton {

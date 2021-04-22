@@ -67,13 +67,14 @@ input.inputDiv {
 .ExerciseBox {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 10px rgb(0 0 0 / 12%);
     display: flex;
     max-width: 100%;
     margin: 10px;
     /* padding: 15px; */
     overflow: hidden;
     width: auto;
+    border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .ExerciseName h3 {
@@ -102,9 +103,9 @@ input.inputDiv {
 
 .ExerciseName {
     /* margin-bottom: 10px; */
-    min-width: 115px;
-    max-width: 110px;
-    background-color: #2a265f;
+    min-width: 105px;
+    max-width: 100px;
+    background-color: #2657bc;
     color: #fff;
     padding: 30px;
     text-align: center;

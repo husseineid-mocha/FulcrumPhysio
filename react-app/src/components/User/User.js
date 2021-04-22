@@ -17,7 +17,7 @@ const StyledButton = styled(Button)`
   border-radius: 4px;
   justify-content: center;
   &:hover {
-    background-color: #5b7b90;
+    background-color: #516bb5;
 `;
 
 function User() {
