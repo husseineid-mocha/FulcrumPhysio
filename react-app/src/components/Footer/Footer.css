@@ -1,9 +1,16 @@
 .footerContainer {
-    height: 160px;
+    height: 130px;
     border-top: 1px solid grey;
     display: flex;
     justify-content: space-between;
     bottom: 0px;
+    z-index: 100;
+    width: 100%;
+}
+
+.fixedContainer {
+    position:fixed;
+    bottom: 0px
 }
 
 .footerContent {

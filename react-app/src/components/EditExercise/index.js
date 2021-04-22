@@ -97,7 +97,7 @@ function EditExercise({ exercise, exercises, setExercises }) {
                     <div className="userReps"> Reps: {exercise.reps}</div>
                     <div className="userTimesPerWeek">
                       {" "}
-                      Times Per Week:{exercise.timesPerWeek}
+                      Times Per Week: {exercise.timesPerWeek}
                     </div>
                   </div>
                 </div>

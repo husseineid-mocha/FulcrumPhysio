@@ -148,7 +148,7 @@
     align-items: center;
     padding: 10px;
     border-radius: 4px;
-    border: 2px solid #3252a8;
+   border: 1px solid rgba(0, 0, 0, 0.12);
     padding: 7px;
     margin-top: 7px;
     /* font-weight: 450; */

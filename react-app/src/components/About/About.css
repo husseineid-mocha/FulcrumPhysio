@@ -16,14 +16,24 @@
 
 .par1 {
     margin-bottom: 20px;
+        font-size: 25px;
 }
 
 .par2 {
     margin-bottom: 20px;
+        font-size: 25px;
+}
+
+.par3 {
+        font-size: 25px;
 }
 
 .h2Text {
     margin-bottom: 25px;
+    font-size: 38px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #2657bc;
+    width: fit-content;
 }
 
 .aboutMeButtons {

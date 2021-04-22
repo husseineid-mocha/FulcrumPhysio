@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Redirect, useHistory } from "react-router-dom";
 
 import headshot from "../../images/headshot.png";
@@ -45,11 +45,16 @@ function About() {
     history.push("/home");
   };
 
+  useEffect(()=> {
+document.querySelector('.footerContainer').classList.add('fixedContainer')
+document.querySelector('.footerContent').classList.add('fixedContainer')
+  }, [])
+
   return (
-    <div>
+    <div className='heightDiv'>
       <div className="parContainers">
         <div>
-          <h2 className="h2Text">Meet the Doctor</h2>
+          <h2 className="h2Text">Meet the Doctor / Developer</h2>
         </div>
         <div className="par1AndImage">
           <div className="par1">

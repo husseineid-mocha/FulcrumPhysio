@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Redirect, useHistory } from "react-router-dom";
 import {
   saveExerciseToSelected,
   saveExercisesToUser,
@@ -67,14 +68,12 @@ const StyledButton = styled(Button)`
 
 function ShowDiagnosis() {
   const dispatch = useDispatch();
+  const history = useHistory()
 
   const user = useSelector((state) => state.session);
-  // const selected = useSelector((state) => state.selected);
-  //   console.log(user.user.id);
   const question = useSelector((state) => state?.question);
   console.log(question.exercises); //[0][0].name);
 
-  //   const userId = user.user.id;
   const exerciseNames = [];
   const exerciseDescriptions = [];
   const exerciseImages = [];
@@ -95,7 +94,6 @@ function ShowDiagnosis() {
     exerciseObject["timesPerWeek"] = 10;
 
     localStorage.setItem(x, JSON.stringify(exerciseObject));
-    // dispatch(saveExerciseToSelected(exerciseObject));
   }
 
   const data1 = JSON.parse(localStorage.getItem("0"));
@@ -105,13 +103,11 @@ function ShowDiagnosis() {
   sendExercises["1"] = data1;
   sendExercises["2"] = data2;
   console.log(sendExercises);
-  //   console.log(exerciseNames);
-  //   console.log(exerciseDescriptions);
-  //   console.log(exerciseObject);
 
   const submitDiagnosisExercises = () => {
     dispatch(saveExercisesToUser(Object.values(sendExercises), user.user.id));
     dispatch(closeQuestion());
+    history.push(`/users/${user.user.id}`)
   };
 
   return (
