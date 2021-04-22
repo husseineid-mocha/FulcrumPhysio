@@ -102,7 +102,12 @@ function EditExercise({ exercise, exercises, setExercises }) {
                   </div>
                 </div>
               </div>
-              <div className="exerciseDescription">{exercise.description}</div>
+              <div className="exerciseDescription">
+                <div className="strongDescription">
+                  <strong>Description:</strong>
+                </div>
+                <div>{exercise.description}</div>
+              </div>
             </>
           ) : (
             <>

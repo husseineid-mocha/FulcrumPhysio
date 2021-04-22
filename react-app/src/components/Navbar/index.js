@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { openLogin, openSignup } from "../../store/modal";
 import { logout } from "../../store/session";
 import { removeSelectedExercise } from "../../store/selected";
-import logo from "../../images/fulcrumLogo.png";
+import logo from "../../images/FulcrumLogo2.png";
 
 import "./Navbar.css";
 import { Button } from "@material-ui/core";

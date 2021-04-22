@@ -87,7 +87,7 @@ input.inputDiv {
     align-items: center;
     margin-right: 10px;
     min-width: 305px;
-    padding: 15px;
+    /* padding: 15px; */
     width: 30%;
 }
 
@@ -97,7 +97,7 @@ input.inputDiv {
     align-items: center;
     margin-right: 10px;
     min-width: 305px;
-    padding: 15px;
+    /* padding: 15px; */
 }
 
 .ExerciseName {
@@ -117,7 +117,8 @@ input.inputDiv {
     padding: 10px;
     width: 28vw;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .deleteAndEditButtons {
@@ -128,4 +129,8 @@ input.inputDiv {
     width: 30px;
     height: 70px;
     justify-content: space-between;
+}
+
+.strongDescription {
+    margin-bottom: 0.5em;
 }
