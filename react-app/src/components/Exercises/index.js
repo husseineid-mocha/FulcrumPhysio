@@ -30,12 +30,9 @@ const theme = createMuiTheme({
     MuiTypography: {
       h6: {
         fontSize: "1rem",
-        fontWeight: "600",
+        fontWeight: "normal",
         lineHeight: "1.2",
         letterSpacing: "0.0075em",
-      },
-      h2: {
-        fontWeight: "normal",
       },
     },
     MuiButton: {
@@ -64,7 +61,8 @@ const useStyles = makeStyles({
 });
 
 const StyledButton = styled(Button)`
-  background-color: #2657bc;
+  background-color: #697eda;
+  border-bottom: 1px solid #3251a8;
   color: #fff;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   padding: 7px 14px;
@@ -74,7 +72,7 @@ const StyledButton = styled(Button)`
   justify-content: left;
   font-weight: normal;
   &:hover {
-    background-color: #5b7b90;
+    background-color: #516bb5;
   }
 `;
 
