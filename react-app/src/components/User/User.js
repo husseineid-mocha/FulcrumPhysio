@@ -29,6 +29,15 @@ function User() {
   const { id } = useParams();
 
   useEffect(() => {
+    document
+      .querySelector(".footerContainer")
+      .classList.remove("fixedContainer");
+    document.querySelector(".footerContainer").classList.add("footerColor");
+
+    document.querySelector(".footerContent").classList.remove("fixedContainer");
+  }, []);
+
+  useEffect(() => {
     async function fetchExercises() {
       const res = await fetch(`/api/selected/get/${id}`);
       const data = await res.json();

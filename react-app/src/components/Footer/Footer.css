@@ -9,8 +9,12 @@
 }
 
 .fixedContainer {
-    position:fixed;
-    bottom: 0px
+    position: fixed;
+    bottom: 0px;
+}
+
+.footerColor {
+    background: #f0f0f0;
 }
 
 .footerContent {
@@ -51,5 +55,5 @@ h5 {
 
 .disclaimer {
     font-size: 12px;
-    padding: 35px;
+    padding: 30px;
 }

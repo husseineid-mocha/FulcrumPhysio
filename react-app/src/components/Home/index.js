@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 import { useDispatch } from "react-redux";
 import { openSignup } from "../../store/modal";
@@ -21,6 +21,13 @@ const StyledButton1 = styled(Button)`
 `;
 
 function Home({ authenticated, setAuthenticated }) {
+  useEffect(() => {
+    document
+      .querySelector(".footerContainer")
+      .classList.remove("fixedContainer");
+    document.querySelector(".footerContainer").classList.remove("footerColor");
+    document.querySelector(".footerContent").classList.remove("fixedContainer");
+  }, []);
   const dispatch = useDispatch();
 
   if (authenticated) {
