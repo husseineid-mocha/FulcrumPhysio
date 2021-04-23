@@ -98,8 +98,8 @@
 
 .exerciseImages {
     height: 190px;
-    width: 190px;
-    max-width: 190px;
+    width: 225px;
+    max-width: 230px;
     margin-bottom: 3px;
     /* cursor: pointer; */
     /* padding: 10px; */
@@ -109,9 +109,9 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
-    max-width: 190px;
+    max-width: 225px;
     /* border: 2px solid #3050a6; */
-    min-width: 190px;
+    min-width: 220px;
     margin: 5px;
     border-radius: 4px;
     justify-content: space-between;
@@ -148,7 +148,7 @@
     align-items: center;
     padding: 10px;
     border-radius: 4px;
-   border: 1px solid rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.12);
     padding: 7px;
     margin-top: 7px;
     /* font-weight: 450; */

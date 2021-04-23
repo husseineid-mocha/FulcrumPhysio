@@ -3,7 +3,8 @@
     width: 75vw;
     display: flex;
     flex-direction: column;
-    border: 2px solid #154360;
+    /* border: 2px solid #154360; */
+    border: 1px solid rgba(0, 0, 0, 0.12);
     justify-content: center;
     align-items: center;
     /* border-radius: 10px; */
@@ -11,6 +12,7 @@
     box-sizing: border-box;
     padding: 20px;
     overflow: scroll;
+    /* background-color: #f0f0f0; */
 }
 
 .recommendedContainer {

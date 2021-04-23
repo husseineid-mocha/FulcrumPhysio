@@ -85,9 +85,11 @@ function Exercises({ authenticated, setAuthenticated }) {
   const user = useSelector((state) => state.session.user);
 
   useEffect(() => {
-    document.querySelector(".footerContainer").classList.add("fixedContainer");
+    document
+      .querySelector(".footerContainer")
+      .classList.remove("fixedContainer");
     document.querySelector(".footerContainer").classList.add("footerColor");
-    document.querySelector(".footerContent").classList.add("fixedContainer");
+    document.querySelector(".footerContent").classList.remove("fixedContainer");
   }, []);
 
   useEffect(() => {
