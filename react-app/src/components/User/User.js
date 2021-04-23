@@ -26,8 +26,6 @@ function User() {
   const [exercises, setExercises] = useState({});
   const [navId, setNavId] = useState(1);
 
-  // Notice we use useParams here instead of getting the params
-  // From props.
   const { id } = useParams();
 
   useEffect(() => {
