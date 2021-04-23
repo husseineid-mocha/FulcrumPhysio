@@ -3,6 +3,8 @@
     font-size: 33px;
     border: 1px solid rgba(0, 0, 0, 0.12);
     margin: 35px;
+    text-align: justify;
+    line-height: 32px;
 }
 
 .par1AndImage {
@@ -16,16 +18,17 @@
 
 .par1 {
     margin-bottom: 20px;
-        font-size: 25px;
+    font-size: 25px;
+    padding-right: 25px;
 }
 
 .par2 {
     margin-bottom: 20px;
-        font-size: 25px;
+    font-size: 25px;
 }
 
 .par3 {
-        font-size: 25px;
+    font-size: 25px;
 }
 
 .h2Text {
