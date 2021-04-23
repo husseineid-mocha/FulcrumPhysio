@@ -84,10 +84,11 @@ function Exercises({ authenticated, setAuthenticated }) {
   const selected = useSelector((state) => state.selected);
   const user = useSelector((state) => state.session.user);
 
-      useEffect(()=> {
-document.querySelector('.footerContainer').classList.add('fixedContainer')
-document.querySelector('.footerContent').classList.add('fixedContainer')
-  }, [])
+  useEffect(() => {
+    document.querySelector(".footerContainer").classList.add("fixedContainer");
+    document.querySelector(".footerContainer").classList.add("footerColor");
+    document.querySelector(".footerContent").classList.add("fixedContainer");
+  }, []);
 
   useEffect(() => {
     dispatch(clearSelectedExercises());

@@ -33,7 +33,6 @@ function User() {
       .querySelector(".footerContainer")
       .classList.remove("fixedContainer");
     document.querySelector(".footerContainer").classList.add("footerColor");
-
     document.querySelector(".footerContent").classList.remove("fixedContainer");
   }, []);
 
