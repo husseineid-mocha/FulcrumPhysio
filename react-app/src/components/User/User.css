@@ -170,11 +170,13 @@ button.editButton:hover {
     display: flex;
     flex-direction: column;
     flex: 1 1;
-    border: 6px solid #3252a8;
+    /* border: 1px solid #3252a8; */
+    border: 1px solid rgba(0, 0, 0, 0.12);
     padding: 20px;
     border-radius: 5px;
     height: 63em;
     overflow: scroll;
+    /* box-shadow: 10px 10px 10px rgb(0 0 0 / 15%); */
 }
 
 .SetsRepsTimes {
@@ -187,4 +189,8 @@ button.editButton:hover {
 
 .userTimesPerWeek {
     margin-top: 8px;
+}
+
+.personalInformation {
+    padding: 15px;
 }

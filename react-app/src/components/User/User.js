@@ -111,8 +111,15 @@ function User() {
 
         {navId === 2 && (
           <div className="userInfoContainer">
-            <div>Email : {user.email}</div>
-            <div>Username : {user.username}</div>
+            <div className="yourExercisesText">Your Personal Information</div>
+            <div className="personalInformation">
+              <div>
+                <strong>Email :</strong> {user.email}
+              </div>
+              <div>
+                <strong>Username :</strong> {user.username}
+              </div>
+            </div>
           </div>
         )}
       </div>
