@@ -122,6 +122,7 @@ img.exercise-image {
 }
 
 .inputField {
+    border: none;
     height: 20px;
     padding-left: 5px;
     border-radius: 4px;
