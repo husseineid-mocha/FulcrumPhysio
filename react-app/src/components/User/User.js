@@ -117,7 +117,7 @@ function User() {
                 <strong>Email :</strong> {user.email}
               </div>
               <div>
-                <strong>Usernamesss :</strong> {user.username}
+                <strong>Usernames :</strong> {user.username}
               </div>
             </div>
           </div>
