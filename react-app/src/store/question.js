@@ -32,14 +32,12 @@ export const findFirstQuestion = (questionId) => async (dispatch) => {
 export const fetchNextQuestion = (questionId) => async (dispatch) => {
   const response = await fetch(`/api/questions/${questionId}`);
   const question = await response.json();
-  // console.log(question);
   dispatch(findNextQuestion(question));
 };
 
 export const fetchDx = (DxId) => async (dispatch) => {
   const response = await fetch(`/api/questions/diagnosis/${DxId}`);
   const dx = await response.json();
-  console.log(dx);
   dispatch(findDx(dx));
 };
 

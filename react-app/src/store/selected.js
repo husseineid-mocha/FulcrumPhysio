@@ -34,7 +34,6 @@ const editSelected = (exercise) => ({
 });
 
 export const saveExerciseToSelected = (exercise) => (dispatch) => {
-  console.log(exercise);
   dispatch(saveToSelected(exercise));
 };
 
@@ -51,7 +50,6 @@ export const clearSelectedExercises = () => (dispatch) => {
 };
 
 export const saveExercisesToUser = (exercises, userId) => async (dispatch) => {
-  console.log(exercises, userId);
   const response = await fetch(`/api/selected/`, {
     method: "POST",
     headers: {
@@ -65,7 +63,6 @@ export const saveExercisesToUser = (exercises, userId) => async (dispatch) => {
 };
 
 export const editSelectedExercise = (exercise) => async (dispatch) => {
-  // console.log(exercise);
   const response = await fetch("/api/selected/edit", {
     method: "POST",
     headers: {
@@ -74,7 +71,6 @@ export const editSelectedExercise = (exercise) => async (dispatch) => {
     body: JSON.stringify(exercise),
   });
   const data = await response.json();
-  console.log(data);
   dispatch(editSelected(data));
   return data;
 };
@@ -85,7 +81,6 @@ const selectedReducer = (state = {}, action) => {
     case SAVE_TO_SELECTED:
       newState = { ...state };
       newState[action.exercise.id] = action.exercise;
-      console.log(newState);
       return newState;
     case REMOVE_SELECTED:
       newState = null;

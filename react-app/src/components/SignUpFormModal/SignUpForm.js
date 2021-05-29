@@ -40,7 +40,6 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
       sessionActions.signup(username, email, password)
     );
     if (password === repeatPassword) {
-      console.log(username);
       // const user = await signUp(username, email, password);
       if (!user.errors) {
         setAuthenticated(true);

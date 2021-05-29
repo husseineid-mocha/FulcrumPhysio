@@ -68,11 +68,10 @@ const StyledButton = styled(Button)`
 
 function ShowDiagnosis() {
   const dispatch = useDispatch();
-  const history = useHistory()
+  const history = useHistory();
 
   const user = useSelector((state) => state.session);
   const question = useSelector((state) => state?.question);
-  console.log(question.exercises); //[0][0].name);
 
   const exerciseNames = [];
   const exerciseDescriptions = [];
@@ -102,12 +101,11 @@ function ShowDiagnosis() {
   const sendExercises = {};
   sendExercises["1"] = data1;
   sendExercises["2"] = data2;
-  console.log(sendExercises);
 
   const submitDiagnosisExercises = () => {
     dispatch(saveExercisesToUser(Object.values(sendExercises), user.user.id));
     dispatch(closeQuestion());
-    history.push(`/users/${user.user.id}`)
+    history.push(`/users/${user.user.id}`);
   };
 
   return (

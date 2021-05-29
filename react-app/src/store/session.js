@@ -34,7 +34,6 @@ export const signup = (username, email, password) => async (dispatch) => {
     }),
   });
   const data = await response.json();
-  // console.log(data);
   dispatch(setUser(data));
   return data;
 };
@@ -53,8 +52,6 @@ export const login = (user) => async (dispatch) => {
     }),
   });
   const data = await response.json();
-  // console.log(data);
-  // console.log(response);
   dispatch(setUser(data));
   return data;
 };
@@ -74,13 +71,11 @@ export const restoreUser = () => async (dispatch) => {
 
 //edit user data
 export const updateExistingUser = (user) => async (dispatch) => {
-  console.log(user);
   const response = await fetch("/api/auth/edit/", {
     method: "PUT",
     body: user,
   });
   const updatedUser = await response.json();
-  console.log("----------------");
   dispatch(editUser(updatedUser));
 };
 

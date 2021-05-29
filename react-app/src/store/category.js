@@ -14,7 +14,6 @@ export const fetchCategories = () => async (dispatch) => {
     const data = await response.json();
     dispatch(getCategories(data));
   }
-  //   console.log(response);
   return response;
 };
 
