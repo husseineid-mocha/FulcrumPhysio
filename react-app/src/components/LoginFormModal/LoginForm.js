@@ -57,7 +57,6 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
   const onLogin = async (e) => {
     e.preventDefault();
     const user = await dispatch(sessionActions.login({ email, password }));
-    console.log(user);
 
     if (!user.errors) {
       setAuthenticated(true);
@@ -78,7 +77,6 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
     dispatch(closeLogin());
   };
 
-  console.log(authenticated);
   if (authenticated) {
     return <Redirect to="/home" />;
   }

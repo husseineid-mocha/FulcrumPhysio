@@ -56,7 +56,6 @@ function EditExercise({ exercise, exercises, setExercises }) {
     const list = { ...exercises };
     delete list[exerciseId];
     setExercises(list);
-    console.log(list);
   };
 
   const editExercise = async (e) => {

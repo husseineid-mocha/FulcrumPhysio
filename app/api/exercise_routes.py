@@ -18,7 +18,6 @@ def get_exercises():
 @exercise_routes.route('/add/<int:id>', methods=['POST'])
 def save_userExercise():
     userExercise = request.json
-    console.log(userExercise)
     new_userExercise = UserExercise(
         userId=userExercise['userId'],
         exerciseId=userExercise['exerciseId'])

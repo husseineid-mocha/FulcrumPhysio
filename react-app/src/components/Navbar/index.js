@@ -26,8 +26,6 @@ const NavBar = ({ authenticated, setAuthenticated }) => {
   const history = useHistory();
 
   const user = useSelector((state) => state.session);
-  console.log(user);
-  console.log(user.id);
 
   const onLogout = (e) => {
     dispatch(removeSelectedExercise());

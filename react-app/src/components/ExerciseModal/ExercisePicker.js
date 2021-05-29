@@ -23,7 +23,6 @@ const ExercisePicker = ({ authenticated, setAuthenticated }) => {
   const dispatch = useDispatch();
 
   const exercise = useSelector((state) => state.modal.exercise);
-  // console.log(exercise);
 
   const [name, setName] = useState(exercise.name);
   const [image, setImage] = useState(exercise.image);
@@ -31,7 +30,6 @@ const ExercisePicker = ({ authenticated, setAuthenticated }) => {
   const [reps, setReps] = useState("");
   const [sets, setSets] = useState("");
   const [timesPerWeek, setTimesPerWeek] = useState("");
-  // console.log(reps);
 
   const submitExercise = (e) => {
     e.preventDefault();
@@ -44,7 +42,6 @@ const ExercisePicker = ({ authenticated, setAuthenticated }) => {
       sets: sets,
       timesPerWeek: timesPerWeek,
     };
-    // console.log(formData);
 
     dispatch(saveExerciseToSelected(formData));
 
